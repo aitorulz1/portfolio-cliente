@@ -1,4 +1,6 @@
-
+import {
+    REGISTRO_EXITOSO
+} from '../../types';
 
 export default ( state, action ) => {
 
