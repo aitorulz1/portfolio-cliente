@@ -5,28 +5,26 @@ import Register from './components/Auth/Register';
 import Login from './components/Auth/Login';
 
 
-import AuthState from './context/auth/authState';
+
 
 import tokenAuth from './config/token';
 
 const token = localStorage.getItem('token');
-if(token) {
-  tokenAuth(token);
+if (token) {
+    tokenAuth(token);
 }
 console.log(token)
 
 
 function App() {
-  return (
-    <AuthState>
-      <Router>
+    return ( 
+    <Router>
         <Switch>
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
+            <Route exact path = "/register" component = { Register }/> 
+            <Route exact path = "/login" component = { Login } /> 
         </Switch>
-      </Router>
-    </AuthState>
-  );
+    </Router>
+    );
 }
 
 export default App;
