@@ -55,13 +55,15 @@ const Register = () => {
 
                 { error ? 'Todos los campos son obligatorios' : null }
 
+                
+
                 <div className="login-wrap">
                     
                     <div className="log-form-group">
-                    <input 
+                    <input
+                        placeholder="nombre" 
                         className="log-form-group"
                         type = "text"
-                        placeholder = "name"
                         name = "name"
                         value = { name }
                         onChange = { onChange }
@@ -69,10 +71,10 @@ const Register = () => {
                     </div>
                     
                     <div className="log-form-group">
-                    <input 
+                    <input
+                        placeholder="username" 
                         className="log-form-group"
                         type = "text"
-                        placeholder = "username"
                         name = "username"
                         value = { username }
                         onChange = { onChange }
@@ -80,21 +82,22 @@ const Register = () => {
                     </div>
                     
                     <div className="log-form-group">
-                    <input 
+                    <input
+                        placeholder="email" 
                         className="log-form-group"
                         type = "text"
-                        placeholder = "email"
                         name = "email"
                         value = { email }
                         onChange = { onChange }
+                        
                     />
                     </div>
                     
                     <div className="log-form-group">
-                    <input 
+                    <input
+                        placeholder="password" 
                         className="log-form-group"
                         type = "password"
-                        placeholder = "password"
                         name = "password"
                         value = { password }
                         onChange = { onChange }
