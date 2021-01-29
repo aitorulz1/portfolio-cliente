@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import clienteAxios from '../../service/axios';
+//import clienteAxios from '../../service/axios';
 
 import './Register.css';
 
@@ -38,7 +38,7 @@ const Register = () => {
             email: '',
             password: ''
         });
-
+        
     }
 
 

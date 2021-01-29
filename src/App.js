@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Register from './components/Auth/Register';
 import Login from './components/Auth/Login';
-
+import AllCategories from './components/Global/AllCategories';
 
 
 
@@ -13,7 +13,7 @@ const token = localStorage.getItem('token');
 if (token) {
     tokenAuth(token);
 }
-console.log(token)
+
 
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
         <Switch>
             <Route exact path = "/register" component = { Register }/> 
             <Route exact path = "/login" component = { Login } /> 
+            <Route exact path = "/categories" component = { AllCategories } /> 
         </Switch>
     </Router>
     );

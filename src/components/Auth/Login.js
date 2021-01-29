@@ -39,35 +39,62 @@ export default function Login() {
 
 
     return (
-        
-        <form
-            onSubmit = { onSubmit }
-        >
 
-            {error ? 'Email o Password Incorrectos' : null} 
+    <div className="register-background">
+        <div className="register-container">
 
-            <input
-                type= 'text'
-                placeholder='email'
-                name= 'email'
-                value= {email}
-                onChange={onChange}
-            />
+            <form
+                onSubmit = { onSubmit }
+            >
 
-            <input
-                type= 'password'
-                placeholder='password'
-                name= 'password'
-                value= {password}
-                onChange={onChange}
-            />
+                {error ? 'Email o Password Incorrectos' : null} 
+                
+                
+                    <div className="login-wrap">
+                        <div className="log-form-group">
+                        
+                            <input
+                                className="log-form-group"
+                                type= 'text'
+                                placeholder='email'
+                                name= 'email'
+                                value= {email}
+                                onChange={onChange}
+                            />
 
-            <input 
-                type='submit'
-                value='Login'
-            />
-            
-        </form>
+                        </div>
+                    
+
+                
+                            
+                        <div className="log-form-group">
+
+                            <input
+                                className="log-form-group"
+                                type= 'password'
+                                placeholder='password'
+                                name= 'password'
+                                value= {password}
+                                onChange={onChange}
+                            />
+
+                        </div>
+                
+                    
+                    <div className="log-form-group">
+                        <input 
+                            className="button"
+                            type='submit'
+                            value='Login'
+                        />
+                    </div>
+                
+                </div>
+                
+            </form>
+
+        </div>
+    </div>
 
         
     )
