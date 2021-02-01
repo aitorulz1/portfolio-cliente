@@ -1,0 +1,13 @@
+.sidebar-container {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    min-width: 200px;
+    height: 100vh;
+    float: left;
+    border-right: 1px solid rgb(235, 235, 235);
+    text-align: center;
+    background: linear-gradient( 
+        -45deg
+         , #ffffff, #e8e8e8fa);
+}

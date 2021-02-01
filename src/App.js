@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Register from './components/Auth/Register';
 import Login from './components/Auth/Login';
 import AllCategories from './components/Global/AllCategories';
+import Main from './components/Layout/Main';
 
 
 
@@ -23,6 +24,7 @@ function App() {
             <Route exact path = "/register" component = { Register }/> 
             <Route exact path = "/login" component = { Login } /> 
             <Route exact path = "/categories" component = { AllCategories } /> 
+            <Route exact path = "/" component = { Main } /> 
         </Switch>
     </Router>
     );
