@@ -5,8 +5,6 @@ export default function Menu(categoryx) {
 
     const { category, id } = categoryx.categoryx;
 
-    console.log(id) 
-
     return (
         <div>
             <Link to={`/categories/${category}`}>

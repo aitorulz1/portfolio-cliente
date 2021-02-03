@@ -22,7 +22,7 @@ export default function AllCategories() {
             }
         }
         getData();
-    }, [categories])
+    }, [categories]);
 
     return (
         <div>
@@ -32,9 +32,6 @@ export default function AllCategories() {
                     categoryx={categoryx}
                 />
             ))}
-            <ProyectoNuevo
-                categories={categories}
-            />
         </div>
     )
 }

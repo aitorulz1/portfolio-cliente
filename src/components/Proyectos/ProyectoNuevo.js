@@ -3,7 +3,8 @@ import clienteAxios from '../../service/axios';
 
 
 
-export default function ProyectoNuevo({categories}) {
+
+export default function ProyectoNuevo() {
     
     const [ proyecto, guardarProyecto ] = useState({
         name:'',
@@ -14,10 +15,24 @@ export default function ProyectoNuevo({categories}) {
         end: ''
     })
     
+    const { name, productPicture, category, description, begin, end } = proyecto;
 
-   
+    const [ categorias, guardarCategorias ]  = useState([]);
 
+    useEffect( () => {
+        const getData = async () => {
 
+            try {
+                const respuesta = await clienteAxios.get('/categories');
+                guardarCategorias(respuesta.data);                    
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        getData();
+    }, [])
+
+    console.log(categorias);
 
     return (
         <Fragment>
@@ -28,23 +43,28 @@ export default function ProyectoNuevo({categories}) {
                     className=""
                     type="text"
                     name='name'
-                    placeholder=''
-                    
-                    
+                    placeholder='nombre'
+                />
+                
+                <input
+                    className=""
+                    type="text"
+                    name='name'
+                    placeholder='nombre'
                 />
 
                 <select 
                     className=""
-                    name='category'  
+                    name='category' 
                 >
-                {!categories ? null : categories.map((category) => {
-                    return <option 
-                        key={category.id}
-                        value={category}>
-                            {category}
-                        </option>
-                })}
-
+                {categorias.map((categorySelect) => (
+                    <option
+                        key={categorySelect.id}
+                        value={categorySelect.category}
+                    >
+                        {categorySelect.category}
+                    </option>
+                ))}
                 </select>
                 
             </form>
@@ -52,4 +72,7 @@ export default function ProyectoNuevo({categories}) {
         </Fragment>
 
     )
+    
 }
+
+
