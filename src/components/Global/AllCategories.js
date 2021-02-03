@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import clienteAxios from '../../service/axios';
 
-import Menu from './Menu'
+import Menu from './Menu';
+import ProyectoNuevo from '../Proyectos/ProyectoNuevo';
 
 
 
@@ -31,6 +32,9 @@ export default function AllCategories() {
                     categoryx={categoryx}
                 />
             ))}
+            <ProyectoNuevo
+                categories={categories}
+            />
         </div>
     )
 }

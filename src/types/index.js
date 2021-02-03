@@ -1,4 +1,3 @@
-
 // Register + Login
 
 export const REGISTRO_EXITOSO = 'REGISTRO_EXITOSO'
@@ -7,4 +6,14 @@ export const LOGIN_EXITOSO = 'LOGIN_EXITOSO'
 export const LOGIN_ERROR = 'LOGIN_ERROR'
 export const LOGOUT = 'LOGOUT'
 export const OBTENER_USUARIO = 'OBTENER_USUARIO'
+
+
+// Agregar y Obtener Proyectos
+
+export const AGREGAR_PROYECTO = 'AGREGAR_PROYECTO'
+export const OBTENER_PROYECTO = 'OBTENER_PROYECTO'
+export const ELIMINAR_PROYECTO = 'ELIMINAR_PROYECTO'
+export const EDITAR_PROYECTO = 'EDITAR_PROYECTO'
+export const PROYECTO_ACTUAL = 'PROYECTO_ACTUAL'
+export const PROYECTO_ERROR = 'PROYECTO_ERROR'
 
