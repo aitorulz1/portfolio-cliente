@@ -3,7 +3,7 @@
     position: relative;
     width: 100%;
     text-align: center;
-    top: calc(100% - 350px);
+    top: calc(100vh - 350px);
     color: #000;
 }
 

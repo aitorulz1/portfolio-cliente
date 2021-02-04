@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 
+import './Register.css';
+
 
 export default function Login() {
 
