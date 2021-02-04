@@ -9,7 +9,7 @@
     max-width: 350px;
     height: 100vh;
     float: left;
-    border-right: 1px solid rgb(235, 235, 235);
+    border-right: 1px solid #f9f9f9;
 }
 
 .middle-area{
@@ -23,5 +23,5 @@
     float: left;
     width: Calc(15% - 2px);
     height: 100vh;
-    border-left: 1px solid #000;
+    border-left: 1px solid  #f9f9f9;
 }

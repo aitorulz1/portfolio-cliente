@@ -5,7 +5,7 @@ import Register from './components/Auth/Register';
 import Login from './components/Auth/Login';
 import AllCategories from './components/Global/AllCategories';
 import Main from './components/Layout/Main';
-import ProyectoNuevo from './components/Proyectos/ProyectoNuevo';
+import ProyectosScreen from './components/Proyectos/ProyectosScreen';
 
 
 
@@ -26,7 +26,7 @@ function App() {
             <Route exact path = "/register" component = { Register }/> 
             <Route exact path = "/login" component = { Login } /> 
             <Route exact path = "/categories" component = { AllCategories } /> 
-            <Route exact path = "/proyecto/nuevo" component = { ProyectoNuevo } /> 
+            <Route exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
         </Switch>
     </Router>
     );

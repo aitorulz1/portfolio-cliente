@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Sidebar from './Sidebar';
-import Topbar from './Topbar';
-import Middlebar from './Middlebar';
-import Buttonbar from './Buttonbar';
+import Sidebar from '../Layout/Sidebar';
+import Topbar from '../Layout/Topbar';
+import Buttonbar from '../Layout/Buttonbar';
+import ProyectoNuevo from './ProyectoNuevo'
 
-import './Main.css'
+import '../Layout/Main.css'
 
-export default function Main() {
+export default function ProyectosScreen() {
 
   
     return (
@@ -22,8 +22,11 @@ export default function Main() {
                 <div className="middle-area">
 
                     <Topbar />
-                    {/* Middlebar se sistuitirá por Home, Projects, Jobs, Studies, Profile,... */}
-                    <Middlebar />
+
+                    <div className="middle-container">
+                        <ProyectoNuevo />
+                    </div>
+                    
                     <Buttonbar />
                     
                 </div>
