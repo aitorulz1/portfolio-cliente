@@ -9,18 +9,20 @@ import {
     OBTENER_PROYECTO,
     ELIMINAR_PROYECTO,
     EDITAR_PROYECTO,
-    PROYECTO_ACTUAL
+    PROYECTO_ACTUAL,
+    PROYECTO_ERROR
 } from '../../types';
 
 
-const initialState = {
-    proyectos: [],
-    proyecto: null
-}
 
-const [ state, dispatch ] = useReducer (proyectoReducer, initialState);
+const ProyectoState = props => {
 
-const proyectoState = props => {
+    const initialState = {
+        proyectos: [],
+        proyecto: null
+    }
+    
+    const [ state, dispatch ] = useReducer (proyectoReducer, initialState);
 
     const agregarProyecto = async proyecto => {
         try {
@@ -46,4 +48,21 @@ const proyectoState = props => {
 
 
 
+
+    return (
+        <proyectoContext.Provider
+            value={{
+                proyectos: state.proyectos,
+                proyecto: state.proyecto,
+                agregarProyecto
+            }}
+        >
+            {props.children}
+        </proyectoContext.Provider>
+    )
+
+
+
 }
+
+export default ProyectoState;

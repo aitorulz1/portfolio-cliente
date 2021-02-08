@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import clienteAxios from '../../service/axios';
+
+import proyectoContext from '../../context/proyectos/proyectoContext';
 
 import './ProyectoNuevo.css';
 
 
 export default function ProyectoNuevo() {
+
+    const proyectosContext = useContext(proyectoContext);
+    const {agregarProyecto} = proyectosContext;
+
     
     const [ proyecto, guardarProyecto ] = useState({
         name:'',
@@ -48,12 +54,23 @@ export default function ProyectoNuevo() {
         e.preventDefault();
         
 
-        if(name.trim() === '' || productPicture.trim() === '' || category.trim() === '' || description.trim() === '' || begin.trim() === '' || end.trim() === '' ) {
+        if(name.trim() === '' || category.trim() === '' || description.trim() === '' || begin.trim() === '' || end.trim() === '' ) {
             guardarError(true);
             return;
         }
 
         guardarError(false);
+
+        agregarProyecto(proyecto);
+
+        guardarProyecto({
+            name:'',
+            productPicture: null,
+            category: '',
+            description: '',
+            begin: '',
+            end: ''
+        })
     }
 
 
