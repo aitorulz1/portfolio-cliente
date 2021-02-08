@@ -1,7 +1,7 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import clienteAxios from '../../service/axios';
 
-
+import './ProyectoNuevo.css';
 
 
 export default function ProyectoNuevo() {
@@ -60,85 +60,115 @@ export default function ProyectoNuevo() {
     
 
     return (
-        <Fragment>
+        <div className="proyect-form-container">
+        
+            <div className="proyect-form">
 
-            <form
-                onSubmit={onSubmit}
-            >
-
-                {error ? 'Completa todos los campos' : null}
-
-                <input
-                    className=""
-                    type="text"
-                    name='name'
-                    placeholder='nombre'
-                    value={name}
-                    onChange={onChange}
-                />
-                
-                <input
-                    className=""
-                    type="file"
-                    name='productPicture'
-                    placeholder='imagen'
-                    onChange={onChange}
-                />
-
-                <select 
-                    className=""
-                    name='category' 
-                    onChange={onChange}
+                <form
+                    onSubmit={onSubmit}
                 >
 
-                {categorias.map((categorySelect) => (
-                    <option
-                        key={categorySelect.id}
-                        value={categorySelect.category}
-                    >
-                        {categorySelect.category}
-                    </option>
-                ))}
+                    {error ? 'Completa todos los campos' : null}
 
-                </select>
+                    <div className="cajetin-form">
+
+                        <input
+                            className="line-form"
+                            type="text"
+                            name='name'
+                            placeholder='nombre'
+                            value={name}
+                            onChange={onChange}
+                        />
+
+                    </div>
+
+                    <div className="cajetin-form">
+                        
+                        <input
+                            className="line-form"
+                            type="file"
+                            name='productPicture'
+                            placeholder='imagen'
+                            onChange={onChange}
+                        />
+
+                    </div>
+
+                    <div className="cajetin-form">
+
+                        <select 
+                            className="line-form"
+                            name='category' 
+                            onChange={onChange}
+                        >
+
+                        {categorias.map((categorySelect) => (
+                            <option
+                                key={categorySelect.id}
+                                value={categorySelect.category}
+                            >
+                                {categorySelect.category}
+                            </option>
+                        ))}
+
+                        </select>
+
+                    </div>
+
+                    <div className="cajetin-form">
+                    
+                        <input
+                            className="line-form"
+                            type="text"
+                            name='description'
+                            placeholder='descripción'
+                            value={description}
+                            onChange={onChange}
+                        />
+                        
+                    </div>
+
+                    <div className="cajetin-form">
+
+                        <input
+                            className="line-form"
+                            type="date"
+                            name='begin'
+                            placeholder='incicio'
+                            value={begin}
+                            onChange={onChange}
+                        />
+
+                    </div>
+
+                    <div className="cajetin-form">
+                    
+                        <input
+                            className="line-form"
+                            type="date"
+                            name='end'
+                            placeholder='finalizado'
+                            value={end}
+                            onChange={onChange}
+                        />
+                    
+                    </div>
 
 
-                <input
-                    className=""
-                    type="text"
-                    name='description'
-                    placeholder='descripción'
-                    value={description}
-                    onChange={onChange}
-                />
+                    <div className="">
+                        <input
+                            className=""
+                            type="submit"
+                            value="Subir Proyecto"
+                        />
+                    </div>
+                    
+                </form>
                 
-                <input
-                    className=""
-                    type="date"
-                    name='begin'
-                    placeholder='incicio'
-                    value={begin}
-                    onChange={onChange}
-                />
-                
-                <input
-                    className=""
-                    type="date"
-                    name='end'
-                    placeholder='finalizado'
-                    value={end}
-                    onChange={onChange}
-                />
+            </div>
 
-                <input
-                    className=""
-                    type="submit"
-                    value="Subir Proyecto"
-                />
-                
-            </form>
-            
-        </Fragment>
+        </div>
 
     )
     

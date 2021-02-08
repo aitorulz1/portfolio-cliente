@@ -2,10 +2,9 @@ import React from 'react';
 
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
-import Middlebar from './Middlebar';
-import Buttonbar from './Buttonbar';
+import Rightbar from './Rightbar';
 
-import './Main.css'
+import './Main.css';
 
 export default function Main() {
 
@@ -22,15 +21,12 @@ export default function Main() {
                 <div className="middle-area">
 
                     <Topbar />
-                    {/* Middlebar se sistuitirá por Home, Projects, Jobs, Studies, Profile,... */}
-                    <Middlebar />
-                    <Buttonbar />
                     
                 </div>
 
                 <div className="right-area">
 
-                    
+                    <Rightbar />
                     
                 </div>
 

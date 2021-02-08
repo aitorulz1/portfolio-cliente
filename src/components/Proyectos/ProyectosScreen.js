@@ -3,7 +3,8 @@ import React from 'react';
 import Sidebar from '../Layout/Sidebar';
 import Topbar from '../Layout/Topbar';
 import Buttonbar from '../Layout/Buttonbar';
-import ProyectoNuevo from './ProyectoNuevo'
+import ProyectoNuevo from './ProyectoNuevo';
+import Rightbar from '../Layout/Rightbar';
 
 import '../Layout/Main.css'
 
@@ -33,7 +34,7 @@ export default function ProyectosScreen() {
 
                 <div className="right-area">
 
-                    
+                    <Rightbar />
                     
                 </div>
 
