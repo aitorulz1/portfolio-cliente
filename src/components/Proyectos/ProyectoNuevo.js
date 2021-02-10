@@ -14,7 +14,7 @@ export default function ProyectoNuevo() {
     
     const [ proyecto, guardarProyecto ] = useState({
         name:'',
-        productPicture: null,
+        productPicture: '',
         category: '',
         description: '',
         begin: '',

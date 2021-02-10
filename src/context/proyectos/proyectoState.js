@@ -22,12 +22,13 @@ const ProyectoState = props => {
         proyecto: null
     }
     
-    const [ state, dispatch ] = useReducer (proyectoReducer, initialState);
+    const [ state, dispatch ] = useReducer(proyectoReducer, initialState);
 
     const agregarProyecto = async proyecto => {
         try {
             const resultado = await clienteAxios.post('/products', proyecto);
             console.log(resultado);
+            console.log(proyecto);
 
             dispatch({
                 type: AGREGAR_PROYECTO,
