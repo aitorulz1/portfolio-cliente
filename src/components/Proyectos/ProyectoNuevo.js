@@ -9,7 +9,7 @@ import './ProyectoNuevo.css';
 export default function ProyectoNuevo() {
 
     const proyectosContext = useContext(proyectoContext);
-    const {agregarProyecto} = proyectosContext;
+    const { formulario, mostrarFormulario, agregarProyecto } = proyectosContext;
 
     
     const [ proyecto, guardarProyecto ] = useState({
@@ -39,6 +39,10 @@ export default function ProyectoNuevo() {
         }
         getData();
     }, [])
+
+    const onClickFormulario = () => {
+        mostrarFormulario()
+    }
 
     
 
@@ -78,10 +82,17 @@ export default function ProyectoNuevo() {
 
     return (
         <div className="proyect-form-container">
+
         
             <div className="proyect-form">
+            
+            <button onClick={onClickFormulario}>Ver Fomulario</button>
 
-                <form
+
+            { formulario ?
+
+                (
+                    <form
                     onSubmit={onSubmit}
                 >
 
@@ -182,6 +193,10 @@ export default function ProyectoNuevo() {
                     </div>
                     
                 </form>
+                ) : null
+            }
+
+                
                 
             </div>
 

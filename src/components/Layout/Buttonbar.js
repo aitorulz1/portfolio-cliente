@@ -1,6 +1,7 @@
 import React from 'react';
 import './Buttonbar.css';
 
+import ListadoProyectos from '../Proyectos/ListadoProyectos';
 
 
 export default function Buttonbar() {
@@ -8,7 +9,7 @@ export default function Buttonbar() {
         
         <div className="button-container">
                  
-              
+              <ListadoProyectos />
 
         </div>
     )
