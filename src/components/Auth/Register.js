@@ -86,7 +86,7 @@ const Register = () => {
                     <input
                         placeholder="email" 
                         className="log-form-group"
-                        type = "text"
+                        type = "email"
                         name = "email"
                         value = { email }
                         onChange = { onChange }

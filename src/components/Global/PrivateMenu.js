@@ -9,7 +9,7 @@ export default function PrivateMenu() {
         <div className="private-menu-container">
             <nav>
                 <ul>
-                    <li><Link to ={'/proyecto/nuevo'}><i class='far fa-arrow-alt-circle-up'></i> Project</Link></li>                
+                    <li><Link to ={'/proyecto/nuevo'}><i className='far fa-arrow-alt-circle-up'></i> Project</Link></li>                
                 </ul>
             </nav>
         </div>
