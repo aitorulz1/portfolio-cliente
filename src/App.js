@@ -8,6 +8,8 @@ import Main from './components/Layout/Main';
 import ProyectosScreen from './components/Proyectos/ProyectosScreen';
 
 import ProyectoState from './context/proyectos/proyectoState';
+import AlertaState from './context/alertas/alertaState';
+import AuthState from './context/auth/authState';
 
 
 
@@ -24,15 +26,19 @@ function App() {
     return ( 
         
 <ProyectoState>
-    <Router>
-        <Switch>
-            <Route exact path = "/" component = { Main } /> 
-            <Route exact path = "/register" component = { Register }/> 
-            <Route exact path = "/login" component = { Login } /> 
-            <Route exact path = "/categories" component = { AllCategories } /> 
-            <Route exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
-        </Switch>
-    </Router>
+    <AlertaState>
+        <AuthState>
+            <Router>
+                <Switch>
+                    <Route exact path = "/" component = { Main } /> 
+                    <Route exact path = "/register" component = { Register }/> 
+                    <Route exact path = "/login" component = { Login } /> 
+                    <Route exact path = "/categories" component = { AllCategories } /> 
+                    <Route exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
+                </Switch>
+            </Router>
+        </AuthState>
+    </AlertaState>
 </ProyectoState>
 
     );

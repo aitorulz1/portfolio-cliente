@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
-//import clienteAxios from '../../service/axios';
+import React, { useState, useContext } from 'react';
+import AlertaContext from '../../context/alertas/alertaContext';
+import AuthContext from '../../context/auth/authContext';
 
 import './Register.css';
 
 const Register = () => {
+
+
+    const alertaContext = useContext(AlertaContext);
+    const {alerta, mostrarAlerta} = alertaContext;
+
+    const authContext = useContext(AuthContext);
+    const { registrarUsuario } = authContext;
+
 
     const [data, guardarData] = useState({
         name: '',
@@ -11,7 +20,7 @@ const Register = () => {
         email: '',
         password: ''
     });
-    const [error, guardarError] = useState(false);
+
 
     const { name, username, email, password } = data;
 
@@ -26,11 +35,18 @@ const Register = () => {
         e.preventDefault();
 
         if (name.trim() === '' || username.trim() === '' || email.trim() === '' || password.trim() === '') {
-            guardarError(true);
+            mostrarAlerta('Todos los campos son obligatorios', 'alerta-error');
             return;
         }
 
-        guardarError(false);
+        if(password.length < 6) {
+            mostrarAlerta('La contraseña debe de contener al menos 6 caracteres', 'alerta-error');
+            return;
+        }
+
+
+        registrarUsuario(data)
+
 
         guardarData({
             name: '',
@@ -49,13 +65,12 @@ const Register = () => {
     <div className="register-background">
         <div className="register-container">
     
+            {alerta ? (<div className={`${alerta.categoria}`}>{alerta.msg}</div>) : null}
+
             <form 
                 className="login"
                 onSubmit = { onSubmit } 
-            >
-
-                { error ? 'Todos los campos son obligatorios' : null }
-
+            >                
                 
 
                 <div className="login-wrap">
