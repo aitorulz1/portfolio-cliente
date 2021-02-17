@@ -1,17 +1,27 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import AlertaContext from '../../context/alertas/alertaContext';
 import AuthContext from '../../context/auth/authContext';
 
 import './Register.css';
 
-const Register = () => {
+const Register = (props) => {
 
 
     const alertaContext = useContext(AlertaContext);
     const {alerta, mostrarAlerta} = alertaContext;
 
     const authContext = useContext(AuthContext);
-    const { registrarUsuario } = authContext;
+    const { mensaje, autenticado, registrarUsuario } = authContext;
+
+    // Una vez se registra y es autenticado le mando a...
+    useEffect(() => {
+        if(autenticado){
+            props.history.push('/login')
+        }
+        if(mensaje) {
+            mostrarAlerta(mensaje.msg, mensaje.categoria)
+        }
+    }, [mensaje, autenticado, props.history])
 
 
     const [data, guardarData] = useState({

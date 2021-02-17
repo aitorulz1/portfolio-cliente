@@ -37,7 +37,7 @@ export default function Login() {
             password: ''
         })
 
-        console.log(usuario)
+        // console.log(usuario)
     }
 
 

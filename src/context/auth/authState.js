@@ -4,6 +4,8 @@ import authReducer from './authReducer';
 
 import clienteAxios from '../../service/axios';
 
+import tokenAuth from '../../config/token';
+
 import {
     REGISTRO_EXITOSO,
     REGISTRO_ERROR,
@@ -24,10 +26,10 @@ const AuthState = props => {
 
     const [ state, dispatch] = useReducer (authReducer, initialState);
 
+    // 1. Registra al nuevo usuario
     const registrarUsuario = async datos => {
         try {
             const resultado = await clienteAxios.post('/users', datos);
-            console.log(resultado.data)
 
             dispatch({
                 type: REGISTRO_EXITOSO,
@@ -43,7 +45,30 @@ const AuthState = props => {
 
             dispatch({
                 type: REGISTRO_ERROR,
-                pauload: alerta 
+                payload: alerta 
+            })
+        }
+    }
+
+
+
+    // 2. Retorna el usuario autenticado
+    const usuarioAutenticado = async () => {
+        const token = localStorage.getItem('token');
+        if(token) {
+            tokenAuth(token);
+        }
+
+        try {
+            const respuesta = await clienteAxios.get('/users');
+            console.log(respuesta)
+            dispatch({
+                type: OBTENER_USUARIO,
+                payload: respuesta.data
+            })
+        } catch (error) {
+            dispatch({
+                type: LOGIN_ERROR,
             })
         }
     }
@@ -55,7 +80,8 @@ const AuthState = props => {
                     autenticado: state.autenticado,
                     usuario: state.usuario,
                     mensaje: state.mensaje,
-                    registrarUsuario
+                    registrarUsuario,
+                    usuarioAutenticado
                 }}
             >
                 {props.children}

@@ -34,7 +34,7 @@ const ProyectoState = props => {
     const obtenerProyectos = async proyectos => {
         try {
             const resultado = await clienteAxios.get('/products', proyectos)
-            console.log(resultado.data)
+            (resultado.data)
 
             dispatch({
                 type: OBTENER_PROYECTOS,
