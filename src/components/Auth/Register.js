@@ -55,7 +55,12 @@ const Register = (props) => {
         }
 
 
-        registrarUsuario(data)
+        registrarUsuario({
+            name,
+            username,
+            email, 
+            password
+        })
 
 
         guardarData({
