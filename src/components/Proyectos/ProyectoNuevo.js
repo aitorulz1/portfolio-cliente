@@ -65,7 +65,14 @@ export default function ProyectoNuevo() {
 
         guardarError(false);
 
-        agregarProyecto(proyecto);
+        agregarProyecto({
+            name,
+            productPicture,
+            category,
+            description,
+            begin,
+            end,
+        });
 
         guardarProyecto({
             name:'',

@@ -1,17 +1,37 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { Redirect } from 'react-router-dom';
+
+import AlertaContext from '../../context/alertas/alertaContext';
+import AuthContext from '../../context/auth/authContext';
 
 import './Register.css';
 
 
-export default function Login() {
+export default function Login(props) {
+
+
+    const alertaContext = useContext(AlertaContext);
+    const {alerta, mostrarAlerta} = alertaContext;
+
+    const authContext = useContext(AuthContext);
+    const { mensaje, autenticado, iniciarSesion } = authContext;
+
+    // Una vez se registra y es autenticado le mando a...
+    useEffect(() => {
+        if(autenticado){
+            props.history.push('/')
+        }
+        if(mensaje) {
+            mostrarAlerta(mensaje.msg, mensaje.categoria)
+        }
+    }, [mensaje, autenticado, props.history])
+
 
     const [ usuario, guardarUsuario] = useState({
         email: '',
         password: ''
     })
     
-    const [ error, guardarError ] = useState(false)
 
     const { email, password } = usuario;
 
@@ -26,11 +46,14 @@ export default function Login() {
         e.preventDefault();
 
         if( email.trim() === ''  || password.trim() === '') {
-            guardarError(true)
+            mostrarAlerta('Todos los campos son obligatorios', 'alerta-error');
             return;
         }
 
-        guardarError(false);
+        iniciarSesion({
+            email, 
+            password
+        })
 
         guardarUsuario({
             email:'',
@@ -46,16 +69,16 @@ export default function Login() {
     <div className="register-background">
         <div className="register-container">
 
+        {alerta ? (<div className={`${alerta.categoria}`}>{alerta.msg}</div>) : null}
+
             <form
                 onSubmit = { onSubmit }
-            >
-
-                {error ? 'Email o Password Incorrectos' : null} 
-                
+            >   
                 
                     <div className="login-wrap">
                         <div className="log-form-group">
                         
+                            <i class="fa fa-envelope-o fa-fw"></i>
                             <input
                                 className="log-form-group"
                                 type= 'text'

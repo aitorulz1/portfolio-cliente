@@ -11,7 +11,7 @@ import ProyectoState from './context/proyectos/proyectoState';
 import AlertaState from './context/alertas/alertaState';
 import AuthState from './context/auth/authState';
 
-
+import RutaPrivada from './components/Rutas/RutaPrivada'
 
 import tokenAuth from './config/token';
 
@@ -34,7 +34,7 @@ function App() {
                     <Route exact path = "/register" component = { Register }/> 
                     <Route exact path = "/login" component = { Login } /> 
                     <Route exact path = "/categories" component = { AllCategories } /> 
-                    <Route exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
+                    <RutaPrivada exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
                 </Switch>
             </Router>
         </AuthState>

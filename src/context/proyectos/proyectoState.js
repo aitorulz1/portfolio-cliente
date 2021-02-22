@@ -19,7 +19,7 @@ import {
 const ProyectoState = props => {
 
     const initialState = {
-        proyectos: [],
+        proyectos: null,
         formulario: false
     }
     
@@ -34,7 +34,7 @@ const ProyectoState = props => {
     const obtenerProyectos = async proyectos => {
         try {
             const resultado = await clienteAxios.get('/products', proyectos)
-            (resultado.data)
+            // console.log(resultado.data)
 
             dispatch({
                 type: OBTENER_PROYECTOS,
@@ -55,7 +55,7 @@ const ProyectoState = props => {
     const agregarProyecto = async proyecto => {
         try {
             const resultado = await clienteAxios.post('/products', proyecto);
-            console.log(resultado);
+            console.log(resultado.data);
 
             dispatch({
                 type: AGREGAR_PROYECTOS,
