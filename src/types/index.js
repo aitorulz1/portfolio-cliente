@@ -17,9 +17,14 @@ export const ELIMINAR_PROYECTO = 'ELIMINAR_PROYECTO'
 export const EDITAR_PROYECTO = 'EDITAR_PROYECTO'
 export const PROYECTO_ACTUAL = 'PROYECTO_ACTUAL'
 export const PROYECTO_ERROR = 'PROYECTO_ERROR'
+export const OBTENER_CATEGORY = 'OBTENER_CATEGORY'
 
 
 // Agregar y Obtener Proyectos
 
 export const MOSTRAR_ALERTA = 'MOSTRAR_ALERTA'
 export const OCULTAR_ALERTA = 'OCULTAR_ALERTA'
+
+
+
+

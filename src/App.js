@@ -6,6 +6,7 @@ import Login from './components/Auth/Login';
 import AllCategories from './components/Global/AllCategories';
 import Main from './components/Layout/Main';
 import ProyectosScreen from './components/Proyectos/ProyectosScreen';
+import ByCategory from './components/Category/ByCategory';
 
 import ProyectoState from './context/proyectos/proyectoState';
 import AlertaState from './context/alertas/alertaState';
@@ -33,6 +34,7 @@ function App() {
                     <Route exact path = "/" component = { Main } /> 
                     <Route exact path = "/register" component = { Register }/> 
                     <Route exact path = "/login" component = { Login } /> 
+                    <Route exact path = '/categories/:category' component={ ByCategory } />
                     <Route exact path = "/categories" component = { AllCategories } /> 
                     <RutaPrivada exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
                 </Switch>
