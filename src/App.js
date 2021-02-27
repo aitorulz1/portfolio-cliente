@@ -34,7 +34,7 @@ function App() {
                     <Route exact path = "/" component = { Main } /> 
                     <Route exact path = "/register" component = { Register }/> 
                     <Route exact path = "/login" component = { Login } /> 
-                    <Route exact path = '/categories/:category' component={ ByCategory } />
+                    <Route exact path = '/category/:category' component={ ByCategory } />
                     <Route exact path = "/categories" component = { AllCategories } /> 
                     <RutaPrivada exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
                 </Switch>
