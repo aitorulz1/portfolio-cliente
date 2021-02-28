@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import clienteAxios from '../../service/axios';
 
 import Menu from './Menu';
-import ProyectoNuevo from '../Proyectos/ProyectoNuevo';
+
 
 
 

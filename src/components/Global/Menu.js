@@ -9,7 +9,7 @@ export default function Menu(categoryx) {
 
     return (
         <div className="menu-items">
-            <Link to={`/categories/${category}`}>
+            <Link to={`/category/${category}`}>
                 {id}
             </Link>  
         </div>

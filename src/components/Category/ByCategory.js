@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import CategoryItems from '../Category/CategoryItems';
+import clienteAxios from '../../service/axios';
 
 import './ByCategory.css';
 
-import clienteAxios from 'axios';
+
 
 export default function ByCategory() {
 
-    const [ porcategoria, guardarPorCategoria] = useState([])
+    const [ porcategorias, guardarPorCategorias] = useState([]);
 
     useEffect(() => {
         const proyectosFiltrados = async() => {
+
             try {
-                const resultado = await clienteAxios.get('/category/:category')
-                console.log(resultado)
-                guardarPorCategoria(resultado)
+                const respuesta = await clienteAxios.get('/category/:category');
+                console.log(respuesta.data);
+                
             } catch (error) {
-                console.log(error)
+                console.error(error);
             }
         }
         proyectosFiltrados();
