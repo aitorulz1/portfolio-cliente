@@ -30,7 +30,7 @@ const AuthState = props => {
     const registrarUsuario = async datos => {
         try {
             const resultado = await clienteAxios.post('/users', datos);
-            console.log(resultado.data)
+            // console.log(resultado.data) el token...
 
             // Estoy enviando el TOKEN
             dispatch({
