@@ -4,8 +4,13 @@ import CategoryItems from './CategoryItems';
 
 import { useParams } from 'react-router-dom';
 
+import Sidebar from '../Layout/Sidebar';
+import Topbar from '../Layout/Topbar';
+import Buttonbar from '../Layout/Buttonbar';
+import Rightbar from '../Layout/Rightbar';
 
-import './ByCategory.css';
+
+import './css/ByCategory.css';
 
 
 
@@ -15,7 +20,6 @@ export default function ByCategory() {
 
     // para pasar los parametros
     const {category} = useParams()
-    console.log(category)
 
     useEffect(() => {
         const proyectosFiltrados = async() => {
@@ -34,13 +38,39 @@ export default function ByCategory() {
 
 
             return (
-                <div>
-                    {porcategorias.map(porcategoria => (
-                        <CategoryItems
-                            key= {porcategoria.id}
-                            porcategoria= {porcategoria}
-                        />
-                    ))}   
+            
+                <div className="main-container">
+
+                        <div className="left-area">
+
+                            <Sidebar />
+
+                        </div>
+
+                        <div className="middle-area">
+
+                            <Topbar />
+
+                                <div className="middle-container">
+                                        {porcategorias.map(porcategoria => (
+                                            <CategoryItems
+                                                key= {porcategoria.id}
+                                                porcategoria= {porcategoria}
+                                            />
+                                        ))}   
+                                </div>
+                                          
+                    
+                        </div>
+
+
+                        <div className="right-area">
+
+                            <Rightbar />
+                            
+                        </div>
+
                 </div>
-            )
+    )
+            
 }
