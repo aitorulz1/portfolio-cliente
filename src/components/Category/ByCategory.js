@@ -26,9 +26,8 @@ export default function ByCategory() {
 
             try {
                 const respuesta = await clienteAxios.get(`/category/${category}`);
-                console.log(respuesta.data);
+                // console.log(respuesta.data);
                 guardarPorCategorias(respuesta.data);
-                
             } catch (error) {
                 console.error(error);
             }

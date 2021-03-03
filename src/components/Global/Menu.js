@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
+
 import './Menu.css';
 
 export default function Menu(categoryx) {
@@ -11,7 +11,7 @@ export default function Menu(categoryx) {
     return (
         <div className="menu-items">
             
-            <Link  to={`/category/${category}`}>
+            <Link to={`/category/${category}`}>
                 {category}
             </Link>  
         </div>

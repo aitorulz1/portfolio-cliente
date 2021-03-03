@@ -4,7 +4,7 @@ import './css/CategoryItems.css';
 
 export default function CategoryItems({porcategoria}) {
 
-    const {category, begin, end, description, productPicture, user} = porcategoria
+    const {category, begin, end, description, productPicture, user} = porcategoria;
 
     return (
         <div className="project-container">
