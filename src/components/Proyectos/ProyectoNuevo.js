@@ -20,6 +20,25 @@ export default function ProyectoNuevo() {
         begin: '',
         end: ''
     })
+
+    const postDetails = () => {
+        const data = new FormData()
+
+        data.append("file", proyecto.productPicture)
+        data.append("upload_preset","portfolio-aitor")
+        data.append("cloud_name", "aitorcloud")
+        fetch("	https://api.cloudinary.com/v1_1/aitorcloud/image/upload", {
+            method: "post",
+            body: data
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
     
     const { name, productPicture, category, description, begin, end } = proyecto;
 
@@ -46,10 +65,11 @@ export default function ProyectoNuevo() {
 
     
 
-    const onChange = e => {
+const onChange = e => {
+        const {name, value, files} = e.target
         guardarProyecto({
             ...proyecto,
-            [e.target.name] : e.target.value
+            [name] : files ? files[0] : value
         })
     }
 
@@ -76,7 +96,7 @@ export default function ProyectoNuevo() {
 
         guardarProyecto({
             name:'',
-            productPicture: null,
+            productPicture: '',
             category: '',
             description: '',
             begin: '',
@@ -192,11 +212,12 @@ export default function ProyectoNuevo() {
 
 
                     <div className="">
-                        <input
+                        <button
                             className=""
                             type="submit"
                             value="Subir Proyecto"
-                        />
+                            onClick={() => postDetails()}
+                        >Subir Proyecto</button>
                     </div>
                     
                 </form>

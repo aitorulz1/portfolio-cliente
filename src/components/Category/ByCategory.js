@@ -33,7 +33,7 @@ export default function ByCategory() {
             }
         }
         proyectosFiltrados();
-    }, [])
+    }, [category])
 
 
             return (
