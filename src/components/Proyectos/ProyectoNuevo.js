@@ -21,19 +21,21 @@ export default function ProyectoNuevo() {
         end: ''
     })
 
+    
+
     const postDetails = () => {
         const data = new FormData()
 
-        data.append("file", proyecto.productPicture)
+        data.append("file", productPicture)
         data.append("upload_preset","portfolio-aitor")
         data.append("cloud_name", "aitorcloud")
-        fetch("	https://api.cloudinary.com/v1_1/aitorcloud/image/upload", {
+        fetch("https://api.cloudinary.com/v1_1/aitorcloud/image/upload", {
             method: "post",
             body: data
         })
         .then(res => res.json())
-        .then(data => {
-            console.log(data)
+        .then(file => {
+            console.log(file.secure_url)
         })
         .catch(err => {
             console.log(err)
@@ -85,6 +87,8 @@ const onChange = e => {
 
         guardarError(false);
 
+        
+
         agregarProyecto({
             name,
             productPicture,
@@ -96,13 +100,17 @@ const onChange = e => {
 
         guardarProyecto({
             name:'',
-            productPicture: '',
-            category: '',
+            productPicture: null,
+            category: 'web',
             description: '',
             begin: '',
             end: ''
         })
+
+        console.log(proyecto)
+
     }
+
 
 
     
@@ -144,6 +152,7 @@ const onChange = e => {
                             className="line-form"
                             type="file"
                             name='productPicture'
+                            id='productPicture'
                             placeholder='imagen'
                             onChange={onChange}
                         />
