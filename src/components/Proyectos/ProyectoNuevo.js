@@ -21,11 +21,12 @@ export default function ProyectoNuevo() {
         end: ''
     })
 
+
+
     
 
     const postDetails = () => {
         const data = new FormData()
-
         data.append("file", productPicture)
         data.append("upload_preset","portfolio-aitor")
         data.append("cloud_name", "aitorcloud")
@@ -41,6 +42,8 @@ export default function ProyectoNuevo() {
             console.log(err)
         })
     }
+
+    
     
     const { name, productPicture, category, description, begin, end } = proyecto;
 
