@@ -21,6 +21,9 @@ export default function ProyectoNuevo() {
         end: ''
     })
 
+    
+    
+
 
 
     
@@ -37,6 +40,7 @@ export default function ProyectoNuevo() {
         .then(res => res.json())
         .then(file => {
             console.log(file.secure_url)
+            
         })
         .catch(err => {
             console.log(err)
@@ -44,12 +48,12 @@ export default function ProyectoNuevo() {
     }
 
     
-    
     const { name, productPicture, category, description, begin, end } = proyecto;
 
     const [ error, guardarError ] = useState(false);
 
     const [ categorias, guardarCategorias ]  = useState([]);
+
 
     useEffect( () => {
         const getData = async () => {
@@ -69,14 +73,13 @@ export default function ProyectoNuevo() {
     }
 
     
-
-const onChange = e => {
-        const {name, value, files} = e.target
-        guardarProyecto({
-            ...proyecto,
-            [name] : files ? files[0] : value
-        })
-    }
+    const onChange = e => {
+            const {name, value, files} = e.target
+            guardarProyecto({
+                ...proyecto,
+                [name] : files ? files[0] : value
+            })
+        }
 
 
     const onSubmit = e => {
@@ -132,6 +135,7 @@ const onChange = e => {
                 (
                     <form
                     onSubmit={onSubmit}
+                    encType='multipart/form-data'
                 >
 
                     {error ? 'Completa todos los campos' : null}
