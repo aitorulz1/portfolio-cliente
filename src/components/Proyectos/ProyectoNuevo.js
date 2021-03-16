@@ -11,6 +11,7 @@ export default function ProyectoNuevo() {
     const proyectosContext = useContext(proyectoContext);
     const { formulario, mostrarFormulario, agregarProyecto } = proyectosContext;
 
+
     
     const [ proyecto, guardarProyecto ] = useState({
         name:'',
@@ -21,13 +22,8 @@ export default function ProyectoNuevo() {
         end: ''
     })
 
-    
-    
-
-
 
     
-
     const postDetails = () => {
         const data = new FormData()
         data.append("file", productPicture)
@@ -93,8 +89,6 @@ export default function ProyectoNuevo() {
 
         guardarError(false);
 
-        
-
         agregarProyecto({
             name,
             productPicture,
@@ -106,7 +100,7 @@ export default function ProyectoNuevo() {
 
         guardarProyecto({
             name:'',
-            productPicture: null,
+            productPicture:'',
             category: 'web',
             description: '',
             begin: '',
