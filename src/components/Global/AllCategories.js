@@ -32,6 +32,7 @@ export default function AllCategories() {
                     categoryx={categoryx}
                 />
             ))}
+             
         </div>
     )
 }

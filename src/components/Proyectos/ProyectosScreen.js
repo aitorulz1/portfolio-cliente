@@ -6,7 +6,8 @@ import Buttonbar from '../Layout/Buttonbar';
 import ProyectoNuevo from './ProyectoNuevo';
 import Rightbar from '../Layout/Rightbar';
 
-import '../Layout/Main.css'
+import '../Layout/css/Main.css';
+import './css/ProyectoScreen.css';
 
 export default function ProyectosScreen() {
 

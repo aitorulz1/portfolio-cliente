@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import Rightbar from './Rightbar';
 
-import './Main.css';
+import './css/Main.css';
 
 import AuthContext from '../../context/auth/authContext';
 

@@ -3,7 +3,7 @@ import clienteAxios from '../../service/axios';
 
 import proyectoContext from '../../context/proyectos/proyectoContext';
 
-import './ProyectoNuevo.css';
+import './css/ProyectoNuevo.css';
 
 
 export default function ProyectoNuevo() {
@@ -22,26 +22,6 @@ export default function ProyectoNuevo() {
         end: ''
     })
 
-
-    
-    const postDetails = () => {
-        const data = new FormData()
-        data.append("file", productPicture)
-        data.append("upload_preset","portfolio-aitor")
-        data.append("cloud_name", "aitorcloud")
-        fetch("https://api.cloudinary.com/v1_1/aitorcloud/image/upload", {
-            method: "post",
-            body: data
-        })
-        .then(res => res.json())
-        .then(file => {
-            console.log(file.secure_url)
-            
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    }
 
     
     const { name, productPicture, category, description, begin, end } = proyecto;
@@ -70,11 +50,13 @@ export default function ProyectoNuevo() {
 
     
     const onChange = e => {
-            const {name, value, files} = e.target
+            const {name, value, files, file} = e.target
             guardarProyecto({
                 ...proyecto,
                 [name] : files ? files[0] : value
             })
+            console.log(files&&files[0])
+            console.log(file)
         }
 
 
@@ -89,14 +71,34 @@ export default function ProyectoNuevo() {
 
         guardarError(false);
 
-        agregarProyecto({
-            name,
-            productPicture,
-            category,
-            description,
-            begin,
-            end,
-        });
+        // Cloudinary
+        const data = new FormData()
+        data.append("file", proyecto.productPicture)
+        data.append("upload_preset","portfolio-aitor")
+        data.append("cloud_name", "aitorcloud")
+        fetch("https://api.cloudinary.com/v1_1/aitorcloud/image/upload", {
+            method: "post",
+            body: data
+        })
+        .then(res => res.json())
+        .then(file => {
+            console.log(file.secure_url)
+            console.log(file)
+
+            // Agrego el producto 
+            agregarProyecto({
+                name,
+                productPicture: file.secure_url,
+                category,
+                description,
+                begin,
+                end,
+            });
+            
+        })
+        .catch(err => {
+            console.log(err)
+        })
 
         guardarProyecto({
             name:'',
@@ -226,7 +228,6 @@ export default function ProyectoNuevo() {
                             className=""
                             type="submit"
                             value="Subir Proyecto"
-                            onClick={() => postDetails()}
                         >Subir Proyecto</button>
                     </div>
                     

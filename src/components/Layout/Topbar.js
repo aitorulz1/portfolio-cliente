@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import PrivateMenu from '../Global/PrivateMenu';
 
-import './Topbar.css';
+import './css/Topbar.css';
 
 export default function Topbar() {
     return (

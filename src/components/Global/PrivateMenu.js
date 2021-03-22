@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Redirect } from 'react-router-dom';
 
-import './PrivateMenu.css'; 
+import './css/PrivateMenu.css'; 
 
 import AuthContext from '../../context/auth/authContext';
 

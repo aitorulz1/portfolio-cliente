@@ -1,5 +1,5 @@
 import React from 'react';
-import './Middlebar.css';
+import './css/Middlebar.css';
 
 export default function Middle() {
     return (

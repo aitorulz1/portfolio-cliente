@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import AllCategories from '../Global/AllCategories';
 import Social from '../Social/Social';
 
-import './Sidebar.css'
+import './css/Sidebar.css'
 
 export default function sidebar() {
     return (
