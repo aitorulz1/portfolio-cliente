@@ -3,3 +3,12 @@
     float: left;
     text-align: center;
 }
+
+.image-container {
+    width: 100%;
+}
+
+.image-container img{
+    width: 100%;
+}
+

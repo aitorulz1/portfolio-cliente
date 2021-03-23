@@ -20,6 +20,7 @@ export default function PrivateMenu(props) {
             <nav>
                 <ul>
                     <li><Link to ={'/proyecto/nuevo'}><i className='far fa-arrow-alt-circle-up'></i> Project</Link></li> 
+                    <li><Link to ={'/job/nuevo'}><i className='far fa-arrow-alt-circle-up'></i> Job</Link></li> 
                     <li><button  
                             className="logout-botton"                           
                             onClick={() => cerrarSesion() }

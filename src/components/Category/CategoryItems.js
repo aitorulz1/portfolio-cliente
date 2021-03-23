@@ -8,7 +8,10 @@ export default function CategoryItems({porcategoria}) {
 
     return (
         <div className="project-container">
-            {productPicture}<br />
+            <div className="image-container">
+                <img  src={productPicture} />
+            </div>
+            <br />
             {category}<br />
             {description}<br />
             {user}<br />

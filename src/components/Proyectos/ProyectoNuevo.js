@@ -118,6 +118,7 @@ export default function ProyectoNuevo() {
     
 
     return (
+        
         <div className="proyect-form-container">
 
         
@@ -170,6 +171,7 @@ export default function ProyectoNuevo() {
                             onChange={onChange}
                         >
 
+                        <option>-- Select --</option>
                         {categorias.map((categorySelect) => (
                             <option
                                 key={categorySelect.id}

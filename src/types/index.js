@@ -8,6 +8,12 @@ export const LOGOUT = 'LOGOUT'
 export const OBTENER_USUARIO = 'OBTENER_USUARIO'
 
 
+// Alertas
+
+export const MOSTRAR_ALERTA = 'MOSTRAR_ALERTA'
+export const OCULTAR_ALERTA = 'OCULTAR_ALERTA'
+
+
 // Agregar y Obtener Proyectos
 
 export const MOSTRAR_FORMULARIO = 'MOSTRAR_FORMULARIO'
@@ -20,11 +26,11 @@ export const PROYECTO_ERROR = 'PROYECTO_ERROR'
 export const OBTENER_CATEGORY = 'OBTENER_CATEGORY'
 
 
-// Agregar y Obtener Proyectos
+// Agregar y Obtener Jobs
 
-export const MOSTRAR_ALERTA = 'MOSTRAR_ALERTA'
-export const OCULTAR_ALERTA = 'OCULTAR_ALERTA'
-
-
-
-
+export const AGREGAR_JOBS = 'AGREGAR_JOBS'
+export const OBTENER_JOBS = 'OBTENER_JOBS'
+export const ELIMINAR_JOBS = 'ELIMINAR_JOBS'
+export const EDITAR_JOB = 'EDITAR_JOB'
+export const JOB_ACTUAL = 'JOB_ACTUAL'
+export const JOB_ERROR = 'JOB_ERROR'

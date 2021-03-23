@@ -3,14 +3,18 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Register from './components/Auth/Register';
 import Login from './components/Auth/Login';
+
 import AllCategories from './components/Global/AllCategories';
 import Main from './components/Layout/Main';
 import ProyectosScreen from './components/Proyectos/ProyectosScreen';
+import JobsScreen from './components/Jobs/JobsScreen';
 import ByCategory from './components/Category/ByCategory';
 
-import ProyectoState from './context/proyectos/proyectoState';
 import AlertaState from './context/alertas/alertaState';
 import AuthState from './context/auth/authState';
+
+import ProyectoState from './context/proyectos/proyectoState';
+import JobsState from './context/jobs/jobsState';
 
 import RutaPrivada from './components/Rutas/RutaPrivada'
 
@@ -26,22 +30,25 @@ if (token) {
 function App() {
     return ( 
         
-<ProyectoState>
-    <AlertaState>
-        <AuthState>
-            <Router>
-                <Switch>
-                    <Route exact path = "/" component = { Main } /> 
-                    <Route exact path = "/register" component = { Register }/> 
-                    <Route exact path = "/login" component = { Login } /> 
-                    <Route exact path = "/category/:category" component={ ByCategory } />
-                    <Route exact path = "/categories" component = { AllCategories } /> 
-                    <RutaPrivada exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
-                </Switch>
-            </Router>
-        </AuthState>
-    </AlertaState>
-</ProyectoState>
+    <JobsState>
+        <ProyectoState>
+            <AlertaState>
+                <AuthState>
+                    <Router>
+                        <Switch>
+                            <Route exact path = "/" component = { Main } />
+                            <Route exact path = "/register" component = { Register }/> 
+                            <Route exact path = "/login" component = { Login } /> 
+                            <Route exact path = "/category/:category" component={ ByCategory } />
+                            <Route exact path = "/categories" component = { AllCategories } /> 
+                            <RutaPrivada exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
+                            <RutaPrivada exact path = "/job/nuevo" component = { JobsScreen } /> 
+                        </Switch>
+                    </Router>
+                </AuthState>
+            </AlertaState>
+        </ProyectoState>
+    </JobsState>
 
     );
 }
