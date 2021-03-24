@@ -2,6 +2,7 @@ import React from 'react';
 import './css/Buttonbar.css';
 
 import ListadoProyectos from '../Proyectos/ListadoProyectos';
+import ListadoJobs from '../Jobs/ListadoJobs';
 
 
 export default function Buttonbar() {
@@ -9,7 +10,8 @@ export default function Buttonbar() {
         
         <div className="button-container">
                  
-              <ListadoProyectos />
+              {/* <ListadoProyectos /> */}
+              <ListadoJobs />
 
         </div>
     )

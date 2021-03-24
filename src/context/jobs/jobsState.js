@@ -27,11 +27,11 @@ const JobsState = props => {
     const obtenerJobs = async jobs => {
         try {
             const resultado = await clienteAxios.get('/jobs', jobs)
-            console.log(resultado);
+            console.log(resultado.data);
 
             dispatch({
                 type: OBTENER_JOBS,
-                payload: resultado
+                payload: resultado.data
             })
             
         } catch (error) {

@@ -34,3 +34,13 @@ export const ELIMINAR_JOBS = 'ELIMINAR_JOBS'
 export const EDITAR_JOB = 'EDITAR_JOB'
 export const JOB_ACTUAL = 'JOB_ACTUAL'
 export const JOB_ERROR = 'JOB_ERROR'
+
+
+// Agregar y Obtener Studies
+
+export const AGREGAR_STUDIES = 'AGREGAR_STUDIES'
+export const OBTENER_STUDIES = 'OBTENER_STUDIES'
+export const ELIMINAR_STUDIES = 'ELIMINAR_STUDIES'
+export const EDITAR_STUDY = 'EDITAR_STUDY'
+export const STUDY_ACTUAL = 'STUDY_ACTUAL'
+export const STUDY_ERROR = 'STUDY_ERROR'
