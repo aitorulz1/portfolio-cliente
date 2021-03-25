@@ -12,16 +12,17 @@ import {
 export default (state, action) => {
     switch( action.type) {
 
-        case AGREGAR_STUDIES:
-            return {    
-                ...state,
-                studies: [...studies, action.payload]
-            }
-
         case OBTENER_STUDIES:
             return {
                 ...state,
                 studies: action.payload
             }
+            
+        case AGREGAR_STUDIES:
+            return {    
+                ...state,
+                studies: [...state.studies, action.payload]
+            }
+
     }
 }

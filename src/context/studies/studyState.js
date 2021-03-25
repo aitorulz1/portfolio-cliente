@@ -10,30 +10,36 @@ import {
     STUDY_ERROR,
 } from '../../types';
 
-import studiesContext from './studiesContext';
-import studiesReducer from './studiesReducer';
+import studyContext from './studyContext';
+import studyReducer from './studyReducer';
 
 
-const StudiesState = props => {
+const StudyState = props => {
 
     const initialState = {
         studies: null
     }
 
-    const [ state, dispatch ] = useReducer(studiesReducer, initialState);
+    const [ state, dispatch ] = useReducer(studyReducer, initialState);
 
     const obtenerStudies = async studies => {
-
         try {
             const resultado = await clienteAxios.get('/studies', studies)
-            console.log(resultado);
+            console.log(resultado.data);
 
             dispatch({
                 type: OBTENER_STUDIES,
-                payload: resultado
+                payload: resultado.data
             })
         } catch (error) {
-            
+            const alerta = {
+                msg: 'Hubo un error',
+                categoria: 'alerta-error'
+            }
+            dispatch({
+                type: STUDY_ERROR,
+                payload: alerta
+            })
         }
     }
 
@@ -48,21 +54,28 @@ const StudiesState = props => {
                 payload: resultado
             })
         } catch (error) {
-            
+            const alerta = {
+                msg: 'Hubo un error',
+                categoria: 'alerta-error'
+            }
+            dispatch({
+                type: STUDY_ERROR,
+                payload: alerta
+            })
         }
     }
 
     return (
-        <studiesContext.Provider
+        <studyContext.Provider
             value={{
-                studies,
+                studies: state.studies,
                 obtenerStudies,
                 agregarStudy
             }}
         >
             {props.children}    
-        </studiesContext.Provider>
+        </studyContext.Provider>
     )
 }
 
-export default StudiesState;
+export default StudyState;
