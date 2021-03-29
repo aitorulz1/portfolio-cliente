@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react';
 
 import studyContext from '../../context/studies/studyContext';
+
 import Study from './Study';
 
 export default function ListadoStudies() {
@@ -17,12 +18,12 @@ export default function ListadoStudies() {
 
     return (
         <ul>
-            {/* {studies.map(study => (
+            {studies.map(study => (
                 <Study
                     key={study.id}
                     study={study}
                 />
-            ))} */}
+            ))}
         </ul>
     )
 }

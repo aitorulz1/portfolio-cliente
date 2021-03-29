@@ -1,6 +1,9 @@
 import React, { useReducer } from 'react';
 import clienteAxios from '../../service/axios';
 
+import studyContext from './studyContext';
+import studyReducer from './studyReducer';
+
 import {
     AGREGAR_STUDIES,
     OBTENER_STUDIES,
@@ -9,10 +12,6 @@ import {
     STUDY_ACTUAL,
     STUDY_ERROR,
 } from '../../types';
-
-import studyContext from './studyContext';
-import studyReducer from './studyReducer';
-
 
 const StudyState = props => {
 
@@ -31,6 +30,7 @@ const StudyState = props => {
                 type: OBTENER_STUDIES,
                 payload: resultado.data
             })
+            
         } catch (error) {
             const alerta = {
                 msg: 'Hubo un error',
@@ -43,16 +43,17 @@ const StudyState = props => {
         }
     }
 
-    const agregarStudy = async study => {
 
+    const agregarStudy = async study => {
         try {
             const resultado = await clienteAxios.post('/studies', study)
-            console.log(resultado)
-
+            console.log(resultado.data)
+            
             dispatch({
                 type: AGREGAR_STUDIES,
-                payload: resultado
+                payload: resultado.data
             })
+
         } catch (error) {
             const alerta = {
                 msg: 'Hubo un error',

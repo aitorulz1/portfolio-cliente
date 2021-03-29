@@ -103,7 +103,7 @@ export default function ProyectoNuevo() {
         guardarProyecto({
             name:'',
             productPicture:'',
-            category: 'web',
+            category: '',
             description: '',
             begin: '',
             end: ''

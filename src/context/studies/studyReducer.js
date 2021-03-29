@@ -6,22 +6,22 @@ import {
     ELIMINAR_STUDIES,
     EDITAR_STUDY,
     STUDY_ACTUAL,
-    STUDY_ERROR,
-} from '../../types';
+    STUDY_ERROR
+} from '../../types'
 
 export default (state, action) => {
-    switch( action.type) {
+    switch( action.type ) {
+
+        case AGREGAR_STUDIES:
+            return {
+                ...state,
+                studies: [...state.studies, action.payload]
+            }
 
         case OBTENER_STUDIES:
             return {
                 ...state,
                 studies: action.payload
-            }
-            
-        case AGREGAR_STUDIES:
-            return {    
-                ...state,
-                studies: [...state.studies, action.payload]
             }
 
     }

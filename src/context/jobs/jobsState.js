@@ -49,13 +49,14 @@ const JobsState = props => {
 
     const agregarJobs = async job => {
         try {
-            const resultado = await clienteAxios.post('jobs', job);
+            const resultado = await clienteAxios.post('/jobs', job);
             console.log(resultado.data)
 
             dispatch({
                 type: AGREGAR_JOBS,
                 payload: resultado.data
             })
+            
         } catch (error) {
             const alerta = {
                 msg: 'Hubo un error',
@@ -83,4 +84,5 @@ const JobsState = props => {
     )
 
 }
+
 export default JobsState;

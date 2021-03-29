@@ -30,5 +30,8 @@ export default (state, action) => {
                 ...state,
                 proyectos: [...state.proyectos, action.payload]
             }
+
+            default:
+                return state;
     }
 }

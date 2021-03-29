@@ -1,6 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 
-import studyContext from '../../context/studies/studyContext'
+import studyContext from '../../context/studies/studyContext';
+
 
 export default function StudyNuevo() {
 
@@ -15,19 +16,19 @@ export default function StudyNuevo() {
         begin: '',
         end: ''
     });
-
+ 
+    const { school, grade, logo, learned, begin, end } = study;
+    
     const [ error, guardarError ] = useState(false);
 
-    const { school, grade, logo, learned, begin, end } = study;
-
     const onChange = e => {
-        const {name, value, files, file} = e.target
+        const {name, value, files } = e.target
         guardarStudy({
             ...study,
             [name] : files ? files[0] : value
         })
-        console.log(files&&files[0])
-        console.log(file)
+        // console.log(files&&files[0])
+        // console.log(file)
     }
 
     const onSubmit= e => {
@@ -50,33 +51,33 @@ export default function StudyNuevo() {
         })
         .then(res => res.json())
         .then(file => {
-            console.log(file.secure_url)
-            console.log(file)
+            // console.log(file.secure_url)
+            // console.log(file)
+
+                // Agrego el producto
+        
+                agregarStudy({
+                    school,
+                    grade,
+                    logo: file.secure_url,
+                    learned,
+                    begin,
+                    end
+            });
         })
         .catch(err => {
             console.log(err)
         })
 
-            // Agrego el producto
 
-            agregarStudy({
-                school,
-                grade,
-                logo,
-                learned,
-                begin,
-                end
-            });
-
-            guardarStudy ({
-                school: '',
-                grade: '',
-                logo: '',
-                learned: '',
-                begin: '',
-                end: ''
-            });
-
+        guardarStudy ({
+            school: '',
+            grade: '',
+            logo: '',
+            learned: '',
+            begin: '',
+            end: ''
+        })
 
     }
 
@@ -95,7 +96,7 @@ export default function StudyNuevo() {
                 encType='multipart/form-data'
             >
 
-                {error ? 'Completa todos los campos' : null}
+                {/* {error ? 'Completa todos los campos' : null} */}
 
                 <div className="cajetin-form">
 
@@ -185,10 +186,7 @@ export default function StudyNuevo() {
                 </div>
                 
             </form>
-            
-
-            
-            
+                                
         </div>
 
     </div>
