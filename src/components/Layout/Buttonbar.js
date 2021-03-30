@@ -11,8 +11,8 @@ export default function Buttonbar() {
         
         <div className="button-container">
                  
-              {/* <ListadoProyectos /> */}
-              <ListadoStudies />
+              <ListadoProyectos />
+              {/* <ListadoStudies /> */}
 
         </div>
     )

@@ -31,6 +31,12 @@ export default (state, action) => {
                 proyectos: [...state.proyectos, action.payload]
             }
 
+        case PROYECTO_ACTUAL:
+            return {
+                ...state,
+                proyecto: state.proyectos.filter(proyecto => proyecto._id === action.payload)
+            }
+
             default:
                 return state;
     }

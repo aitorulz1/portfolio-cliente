@@ -22,7 +22,8 @@ const ProyectoState = props => {
     const initialState = {
         proyectos: null,
         formulario: false,
-        category: null
+        category: null,
+        proyecto: null
     }
     
     const [ state, dispatch ] = useReducer(proyectoReducer, initialState);
@@ -36,7 +37,6 @@ const ProyectoState = props => {
     const obtenerProyectos = async proyectos => {
         try {
             const resultado = await clienteAxios.get('/products', proyectos)
-            console.log(resultado.data)
 
             dispatch({
                 type: OBTENER_PROYECTOS,
@@ -92,6 +92,21 @@ const ProyectoState = props => {
         }
     }
 
+    // Selecciona el proyecto que queremos ver
+    const proyectoActual = async proyecto => {
+        try {
+            const resultado = await clienteAxios.get('/products/:productId', proyecto)
+            console.log(resultado.data)
+
+            dispatch({
+                type: PROYECTO_ACTUAL,  
+                payload: resultado.data
+            })
+        } catch (error) {
+            
+        }
+    }
+
 
 
 
@@ -101,10 +116,12 @@ const ProyectoState = props => {
                 proyectos: state.proyectos,
                 formulario: state.formulario,
                 category: state.category,
+                proyecto: state.proyecto,
                 mostrarFormulario,
                 obtenerProyectos,
                 agregarProyecto,
-                obtenerCategory
+                obtenerCategory,
+                proyectoActual
             }}
         >
             {props.children}
