@@ -7,8 +7,12 @@ export default function Proyecto({proyecto}) {
 
     const proyectosContext = useContext(proyectoContext);
     const { proyectoActual } = proyectosContext;
-    console.log(proyecto.id)
 
+    // const seleccionarProyecto = id => {
+    //     proyectoActual(id)
+    // }
+    
+    // console.log(seleccionarProyecto)
 
     return (
         <div>
@@ -17,7 +21,7 @@ export default function Proyecto({proyecto}) {
             <button
                 type='button'
                 className='vermas'
-                onClick={() => proyectoActual(proyecto._id)}
+                onClick={() =>  proyectoActual({id})}
             >
                 Ver Proyecto
             </button>

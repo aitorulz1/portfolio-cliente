@@ -20,6 +20,7 @@ export default (state, action) => {
             }
 
         case OBTENER_PROYECTOS:
+            // console.log(action.payload)
             return {
                 ...state,
                 proyectos: action.payload
@@ -32,9 +33,11 @@ export default (state, action) => {
             }
 
         case PROYECTO_ACTUAL:
+            console.log(action.payload)
             return {
                 ...state,
-                proyecto: state.proyectos.filter(proyecto => proyecto._id === action.payload)
+                // proyecto: state.proyectos.filter(proyecto => proyecto._id === action.payload)
+                proyecto: action.payload
             }
 
             default:
