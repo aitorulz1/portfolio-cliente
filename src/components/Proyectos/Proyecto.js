@@ -6,13 +6,16 @@ export default function Proyecto({proyecto}) {
     const { category, name, id } = proyecto;
 
     const proyectosContext = useContext(proyectoContext);
-    const { proyectoActual } = proyectosContext;
+    const { proyectoActual, eliminarProyecto } = proyectosContext;
 
-    // const seleccionarProyecto = id => {
-    //     proyectoActual(id)
-    // }
+    const seleccionarProyecto = id => {
+        proyectoActual(id)
+        eliminarProyecto(id)
+    }
     
-    // console.log(seleccionarProyecto)
+    
+    
+
 
     return (
         <div>
@@ -21,9 +24,17 @@ export default function Proyecto({proyecto}) {
             <button
                 type='button'
                 className='vermas'
-                onClick={() =>  proyectoActual({id})}
+                onClick={() => seleccionarProyecto([proyecto.id])}
             >
                 Ver Proyecto
+            </button>
+            
+            <button
+                type='button'
+                className='vermas'
+                onClick={() => eliminarProyecto([proyecto.id])}
+            >
+                Eliminar
             </button>
         </div>
     )

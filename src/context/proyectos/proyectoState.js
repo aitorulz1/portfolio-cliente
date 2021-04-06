@@ -95,13 +95,11 @@ const ProyectoState = props => {
     // Selecciona el proyecto que queremos ver
     const proyectoActual = async proyecto => {
         try {
-            const resultado = await clienteAxios.get('/products/:productId', proyecto)
-            console.log(resultado.data)
-            console.log(proyecto.id)
+            const resultado = await clienteAxios.get(`/products/${proyecto}`, proyecto)       
 
             dispatch({
                 type: PROYECTO_ACTUAL,  
-                payload: proyecto
+                payload: resultado.data
             })
         } catch (error) {
             const alerta = {
@@ -112,6 +110,21 @@ const ProyectoState = props => {
                 type: PROYECTO_ERROR,
                 payload: alerta
             })
+        }
+    }
+    
+
+    const eliminarProyecto = async proyecto => {
+        try {
+            const resultado = await clienteAxios.delete(`/products/${proyecto}`, proyecto)
+            console.log(resultado)
+
+            dispatch({
+                type: ELIMINAR_PROYECTO,
+                payload: resultado.data
+            })
+        } catch (error) {
+            
         }
     }
 
@@ -129,7 +142,8 @@ const ProyectoState = props => {
                 obtenerProyectos,
                 agregarProyecto,
                 obtenerCategory,
-                proyectoActual
+                proyectoActual,
+                eliminarProyecto
             }}
         >
             {props.children}

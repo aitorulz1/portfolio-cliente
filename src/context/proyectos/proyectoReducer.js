@@ -20,24 +20,29 @@ export default (state, action) => {
             }
 
         case OBTENER_PROYECTOS:
-            // console.log(action.payload)
             return {
                 ...state,
                 proyectos: action.payload
             }
-
-        case AGREGAR_PROYECTOS:
-            return{
-                ...state,
-                proyectos: [...state.proyectos, action.payload]
-            }
+            
+            case AGREGAR_PROYECTOS:
+                return{
+                    ...state,
+                    proyectos: [...state.proyectos, action.payload]
+                }
 
         case PROYECTO_ACTUAL:
             console.log(action.payload)
             return {
                 ...state,
-                // proyecto: state.proyectos.filter(proyecto => proyecto._id === action.payload)
-                proyecto: action.payload
+                proyecto: state.proyectos.filter(proyecto => proyecto.id === action.payload.id)
+            }
+
+        case ELIMINAR_PROYECTO:
+            console.log(action.payload.id)
+            return {
+                ...state,
+                proyecto: state.proyectos.filter(proyecto => proyecto.id !== action.payload.id)
             }
 
             default:

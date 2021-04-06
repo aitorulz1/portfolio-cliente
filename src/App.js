@@ -18,6 +18,8 @@ import ProyectoState from './context/proyectos/proyectoState';
 import JobsState from './context/jobs/jobsState';
 import StudyState from './context/studies/studyState';
 
+import ProyectoSelected from './components/Proyectos/ProyectoSelected';
+
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
 import tokenAuth from './config/token';
@@ -39,6 +41,7 @@ function App() {
                     <AuthState>
                         <Router>
                             <Switch>
+                                
                                 <Route exact path = "/" component = { Main } />
                                 <Route exact path = "/register" component = { Register }/> 
                                 <Route exact path = "/login" component = { Login } /> 
@@ -48,6 +51,9 @@ function App() {
                                 <RutaPrivada exact path = "/proyecto/nuevo" component = { ProyectosScreen } /> 
                                 <RutaPrivada exact path = "/job/nuevo" component = { JobsScreen } /> 
                                 <RutaPrivada exact path = "/study/nuevo" component = { StudiesScreen } /> 
+
+                                <Route exact path= "/proyecto/:proyecto" component = { ProyectoSelected } />
+
                             </Switch>
                         </Router>
                     </AuthState>
