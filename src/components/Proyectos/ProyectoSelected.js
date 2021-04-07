@@ -9,11 +9,13 @@ export default function ProyectoSelected() {
 
     useEffect(() => {
         proyectoActual()
-    }, [proyecto])
+    }, [])
+    
+    if(proyecto.length === 0) return null;
 
     return (
         <div>
-            
+            hola
         </div>
     )
 }

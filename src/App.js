@@ -19,6 +19,7 @@ import JobsState from './context/jobs/jobsState';
 import StudyState from './context/studies/studyState';
 
 import ProyectoSelected from './components/Proyectos/ProyectoSelected';
+import ProyectAll from './components/Proyectos/ProyectAll';
 
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
@@ -52,7 +53,9 @@ function App() {
                                 <RutaPrivada exact path = "/job/nuevo" component = { JobsScreen } /> 
                                 <RutaPrivada exact path = "/study/nuevo" component = { StudiesScreen } /> 
 
+                                <Route exact path= "/proyectos" component = { ProyectAll } />
                                 <Route exact path= "/proyecto/:proyecto" component = { ProyectoSelected } />
+
 
                             </Switch>
                         </Router>

@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Redirect } from 'react-router-dom';
 import proyectoContext from '../../context/proyectos/proyectoContext';
 
 export default function Proyecto({proyecto}) {
@@ -10,7 +11,6 @@ export default function Proyecto({proyecto}) {
 
     const seleccionarProyecto = id => {
         proyectoActual(id)
-        eliminarProyecto(id)
     }
     
     
@@ -26,16 +26,9 @@ export default function Proyecto({proyecto}) {
                 className='vermas'
                 onClick={() => seleccionarProyecto([proyecto.id])}
             >
-                Ver Proyecto
+                Proyecto
             </button>
             
-            <button
-                type='button'
-                className='vermas'
-                onClick={() => eliminarProyecto([proyecto.id])}
-            >
-                Eliminar
-            </button>
         </div>
     )
 }

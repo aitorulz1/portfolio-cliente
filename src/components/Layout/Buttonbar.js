@@ -6,6 +6,7 @@ import ListadoJobs from '../Jobs/ListadoJobs';
 import ListadoStudies from '../Studies/ListadoStudies';
 
 
+
 export default function Buttonbar() {
     return (
         
@@ -13,6 +14,7 @@ export default function Buttonbar() {
                  
               <ListadoProyectos />
               {/* <ListadoStudies /> */}
+              {/* <ProyectoSelected /> */}
 
         </div>
     )

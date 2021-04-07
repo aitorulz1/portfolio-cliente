@@ -19,7 +19,7 @@ export default function ByCategory() {
     const [ porcategorias, guardarPorCategorias] = useState([]);
 
     // para pasar los parametros
-    const {category} = useParams()
+    const { category } = useParams()
 
     useEffect(() => {
         const proyectosFiltrados = async() => {

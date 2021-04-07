@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import clienteAxios from '../../service/axios';
 
 import Menu from './Menu';
@@ -32,6 +33,8 @@ export default function AllCategories() {
                     categoryx={categoryx}
                 />
             ))}
+
+            <Link to={'/proyectos'}>all</Link>
              
         </div>
     )
