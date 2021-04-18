@@ -1,21 +1,68 @@
-import React, { useContext, useEffect } from 'react';
-import proyectoContext from '../../context/proyectos/proyectoContext';
+import React, { useState, useEffect } from 'react';
+import clienteAxios from '../../service/axios';
+
+import { useParams } from 'react-router-dom';
+
+import Sidebar from '../Layout/Sidebar';
+import Topbar from '../Layout/Topbar';
+import Rightbar from '../Layout/Rightbar';
 
 
 export default function ProyectoSelected() {
-    
-    const proyectosContext = useContext(proyectoContext);
-    const { proyecto, proyectoActual } = proyectosContext;
+
+    // para pasar los parametros
+    const { proyecto } = useParams()
+
+    const [ proyect, guardarProyect ] = useState({})
 
     useEffect(() => {
-        proyectoActual()
-    }, [])
-    
-    if(proyecto.length === 0) return null;
+        const proyectoSeleceted = async() => {
+            try {
+                const respuesta = await clienteAxios.get(`/products/${proyecto}`)
+                guardarProyect(respuesta.data)
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        proyectoSeleceted();
+    }, [proyecto])
+
+
+    const { name, productPicture, category, description, end, begin } = proyect;
+  
 
     return (
-        <div>
-            hola
-        </div>
+
+            <div className="main-container">
+
+                    <div className="left-area">
+
+                        <Sidebar />
+
+                    </div>
+
+                    <div className="middle-area">
+
+                        <Topbar />
+
+                            <div className="middle-container">
+                    
+                                <div>
+                                    <img src={productPicture} />
+                                </div>
+
+                            </div>
+                                    
+
+                    </div>
+
+
+                    <div className="right-area">
+
+                        <Rightbar />
+                        
+                    </div>
+
+            </div>
     )
 }

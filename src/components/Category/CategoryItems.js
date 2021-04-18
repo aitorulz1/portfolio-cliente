@@ -1,18 +1,14 @@
 import React, { useEffect, useContext } from 'react';
 import proyectoContext from '../../context/proyectos/proyectoContext';
+import { Link } from 'react-router-dom';
+
 
 import './css/CategoryItems.css';
 
 export default function CategoryItems({porcategoria}) {
 
-    const { category, begin, end, description, productPicture, user } = porcategoria;
-
-    const proyectosContext = useContext(proyectoContext);
-    const { proyecto, proyectoActual } = proyectosContext;
-
-    const seleccionarProyecto = id => {
-        proyectoActual(id)
-    }
+    const { category, begin, end, description, productPicture, user, id } = porcategoria;    
+   
     
 
     return (
@@ -26,14 +22,13 @@ export default function CategoryItems({porcategoria}) {
             {user}<br />
             {begin}<br />
             {end}<br />
+            {id}
 
-            <button
-                type='button'
-                className='vermas'
-                onClick={() => seleccionarProyecto([proyecto.id])}
-            >
+            <Link to={`/proyecto/${id}`}>
                 Proyecto
-            </button>
+            </Link>
+       
+
         </div>
     )
 }
