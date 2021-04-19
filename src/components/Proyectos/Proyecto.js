@@ -13,6 +13,10 @@ export default function Proyecto({proyecto}) {
         proyectoActual(id)
     }
     
+    const seleccionarProyectoEliminar = id => {
+        eliminarProyecto(id)
+    }
+    
     
     
 
@@ -27,6 +31,14 @@ export default function Proyecto({proyecto}) {
                 onClick={() => seleccionarProyecto([proyecto.id])}
             >
                 Proyecto
+            </button>
+
+            <button
+                type='button'
+                className=''
+                onClick={() => seleccionarProyectoEliminar([proyecto.id])}
+            >
+                Eliminar
             </button>
             
         </div>

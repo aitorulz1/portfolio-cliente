@@ -124,7 +124,14 @@ const ProyectoState = props => {
                 payload: resultado.data
             })
         } catch (error) {
-            
+            const alerta = {
+                msg: 'No recibo objeto',
+                categoria: 'alerta-error'
+            }
+            dispatch({
+                type: PROYECTO_ERROR,
+                payload: alerta
+            })
         }
     }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import clienteAxios from '../../service/axios';
 
 import { useParams } from 'react-router-dom';
@@ -7,8 +7,16 @@ import Sidebar from '../Layout/Sidebar';
 import Topbar from '../Layout/Topbar';
 import Rightbar from '../Layout/Rightbar';
 
+import proyectoContext from '../../context/proyectos/proyectoContext';
+
 
 export default function ProyectoSelected() {
+
+    const { eliminarProyecto } = useContext(proyectoContext)
+
+    const obtenerIdEliminar = id => {
+        eliminarProyecto(id)
+    }
 
     // para pasar los parametros
     const { proyecto } = useParams()
@@ -27,6 +35,7 @@ export default function ProyectoSelected() {
         proyectoSeleceted();
     }, [proyecto])
 
+    console.log(proyecto)
 
     const { name, productPicture, category, description, end, begin } = proyect;
   
@@ -48,6 +57,11 @@ export default function ProyectoSelected() {
                             <div className="middle-container">
                     
                                 <div>
+                                    <button
+                                        onClick={() => obtenerIdEliminar([proyecto.id])}
+                                    >
+                                        X
+                                    </button>
                                     <img src={productPicture} />
                                 </div>
 

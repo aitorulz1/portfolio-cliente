@@ -7,9 +7,18 @@ import './css/CategoryItems.css';
 
 export default function CategoryItems({porcategoria}) {
 
+    const proyectosContext = useContext(proyectoContext);
+    const { proyecto, eliminarProyecto } = proyectosContext;
+
     const { category, begin, end, description, productPicture, user, id } = porcategoria;    
    
+    const seleccionarProyecto = id => {
+        eliminarProyecto(id)
+    }
+        
+        
     
+    console.log(id)
 
     return (
         <div className="project-container">
@@ -27,6 +36,14 @@ export default function CategoryItems({porcategoria}) {
             <Link to={`/proyecto/${id}`}>
                 Proyecto
             </Link>
+
+            <button
+                type='button'
+                className=''
+                onClick= {() => seleccionarProyecto([proyecto.id])}
+            >
+                Eliminar
+            </button>
        
 
         </div>
