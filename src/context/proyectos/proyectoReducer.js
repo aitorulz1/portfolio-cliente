@@ -42,7 +42,7 @@ export default (state, action) => {
             console.log(action.payload.id)
             return {
                 ...state,
-                proyecto: state.proyectos.filter(proyecto => proyecto.id !== action.payload.id)
+                proyectos: state.proyectos.filter(proyecto => proyecto.id !== action.payload.id)
             }
 
             default:

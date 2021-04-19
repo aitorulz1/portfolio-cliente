@@ -40,7 +40,7 @@ export default function CategoryItems({porcategoria}) {
             <button
                 type='button'
                 className=''
-                onClick= {() => seleccionarProyecto([proyecto.id])}
+                onClick= {() => seleccionarProyecto([id])}
             >
                 Eliminar
             </button>
