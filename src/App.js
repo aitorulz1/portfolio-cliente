@@ -21,6 +21,8 @@ import StudyState from './context/studies/studyState';
 import ProyectoSelected from './components/Proyectos/ProyectoSelected';
 import ProyectAll from './components/Proyectos/ProyectAll';
 
+import ProyectoEdicion from './components/Proyectos/ProyectoEdicion';
+
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
 import tokenAuth from './config/token';
@@ -55,6 +57,7 @@ function App() {
 
                                 <Route exact path= "/proyectos" component = { ProyectAll } />
                                 <Route exact path= "/proyecto/:proyecto" component = { ProyectoSelected } />
+                                <Route exact path= "/proyecto/editar/:proyecto" component = { ProyectoEdicion } />
 
 
                             </Switch>

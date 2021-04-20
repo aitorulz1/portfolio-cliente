@@ -78,7 +78,7 @@ export default function Login(props) {
                     <div className="login-wrap">
                         <div className="log-form-group">
                         
-                            <i class="fa fa-envelope-o fa-fw"></i>
+                            <i className="fa fa-envelope-o fa-fw"></i>
                             <input
                                 className="log-form-group"
                                 type= 'text'

@@ -10,7 +10,8 @@ import {
     OBTENER_PROYECTOS,
     PROYECTO_ACTUAL,
     ELIMINAR_PROYECTO,
-    EDITAR_PROYECTO,
+    OBTENER_PROYECTO_EDITAR,
+    EDITAR_EXITO,
     PROYECTO_ERROR,
     OBTENER_CATEGORY
 } from '../../types';
@@ -23,7 +24,8 @@ const ProyectoState = props => {
         proyectos: null,
         formulario: false,
         category: null,
-        proyecto: null
+        proyecto: null,
+        proyectoeditar: null
     }
     
     const [ state, dispatch ] = useReducer(proyectoReducer, initialState);
@@ -136,6 +138,30 @@ const ProyectoState = props => {
     }
 
 
+    const obtenerProyectoEditar = async proyecto => {
+        try {
+            const resultado = await clienteAxios.patch(`/products/${proyecto}`, proyecto)
+            console.log(resultado.data)
+            console.log(proyecto)
+
+            dispatch({
+                type: OBTENER_PROYECTO_EDITAR,
+                payload: resultado.data
+            })
+            
+        } catch (error) {
+            const alerta = {
+                msg: 'No recibo objeto',
+                categoria: 'alerta-error'
+            }
+            dispatch({
+                type: PROYECTO_ERROR,
+                payload: alerta
+            })
+        }
+    }
+
+
 
 
     return (
@@ -145,12 +171,14 @@ const ProyectoState = props => {
                 formulario: state.formulario,
                 category: state.category,
                 proyecto: state.proyecto,
+                proyectoeditar: state.proyectoeditar,
                 mostrarFormulario,
                 obtenerProyectos,
                 agregarProyecto,
                 obtenerCategory,
                 proyectoActual,
-                eliminarProyecto
+                eliminarProyecto,
+                obtenerProyectoEditar
             }}
         >
             {props.children}

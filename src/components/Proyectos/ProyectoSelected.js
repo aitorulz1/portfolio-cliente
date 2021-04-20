@@ -7,9 +7,6 @@ import Sidebar from '../Layout/Sidebar';
 import Topbar from '../Layout/Topbar';
 import Rightbar from '../Layout/Rightbar';
 
-import proyectoContext from '../../context/proyectos/proyectoContext';
-
-
 export default function ProyectoSelected() {
 
     
