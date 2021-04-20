@@ -12,11 +12,7 @@ import proyectoContext from '../../context/proyectos/proyectoContext';
 
 export default function ProyectoSelected() {
 
-    const { eliminarProyecto } = useContext(proyectoContext)
-
-    const obtenerIdEliminar = id => {
-        eliminarProyecto(id)
-    }
+    
 
     // para pasar los parametros
     const { proyecto } = useParams()
@@ -35,10 +31,10 @@ export default function ProyectoSelected() {
         proyectoSeleceted();
     }, [proyecto])
 
-    console.log(proyecto)
 
     const { name, productPicture, category, description, end, begin } = proyect;
   
+    if(proyect === null) return;
 
     return (
 
@@ -57,11 +53,6 @@ export default function ProyectoSelected() {
                             <div className="middle-container">
                     
                                 <div>
-                                    <button
-                                        onClick={() => obtenerIdEliminar([proyecto.id])}
-                                    >
-                                        X
-                                    </button>
                                     <img src={productPicture} />
                                 </div>
 

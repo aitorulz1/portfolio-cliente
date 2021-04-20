@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 import proyectoContext from '../../context/proyectos/proyectoContext';
 import { Link } from 'react-router-dom';
 
@@ -8,17 +8,19 @@ import './css/CategoryItems.css';
 export default function CategoryItems({porcategoria}) {
 
     const proyectosContext = useContext(proyectoContext);
-    const { proyecto, eliminarProyecto } = proyectosContext;
+    const { eliminarProyecto } = proyectosContext;
 
-    const { category, begin, end, description, productPicture, user, id } = porcategoria;    
-   
-    const seleccionarProyecto = id => {
-        eliminarProyecto(id)
-    }
-        
-        
+    const { category, begin, end, description, productPicture, user, id } = porcategoria; 
     
-    console.log(id)
+    
+   
+    const onClickEliminar = id => {
+        eliminarProyecto(id)
+    }   
+    
+    console.log(porcategoria.id)
+
+    if(id === null) return;
 
     return (
         <div className="project-container">
@@ -40,7 +42,7 @@ export default function CategoryItems({porcategoria}) {
             <button
                 type='button'
                 className=''
-                onClick= {() => seleccionarProyecto([id])}
+                onClick= {() => onClickEliminar([porcategoria.id])}
             >
                 Eliminar
             </button>

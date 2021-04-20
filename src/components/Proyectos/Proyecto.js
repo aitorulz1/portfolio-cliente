@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import proyectoContext from '../../context/proyectos/proyectoContext';
 
 export default function Proyecto({proyecto}) {
 
     const { category, name, id } = proyecto;
 
-    const proyectosContext = useContext(proyectoContext);
-    const { proyectoActual, eliminarProyecto } = proyectosContext;
+   
+    const { proyectoActual, eliminarProyecto } = useContext(proyectoContext);
 
     const seleccionarProyecto = id => {
         proyectoActual(id)
@@ -17,21 +17,22 @@ export default function Proyecto({proyecto}) {
         eliminarProyecto(id)
     }
     
-    
+    console.log(proyecto.id)
     
 
 
     return (
         <div>
             {category}{name}
-
-            <button
-                type='button'
-                className='vermas'
-                onClick={() => seleccionarProyecto([proyecto.id])}
-            >
-                Proyecto
-            </button>
+            <Link to={`/proyecto/${id}`}>
+                <button
+                    type='button'
+                    className='vermas'
+                    onClick={() => seleccionarProyecto([proyecto.id])}
+                >
+                    Proyecto
+                </button>
+            </Link>
 
             <button
                 type='button'
