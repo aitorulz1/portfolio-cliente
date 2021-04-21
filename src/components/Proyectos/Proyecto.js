@@ -25,16 +25,16 @@ export default function Proyecto({proyecto}) {
         obtenerProyectoEditar(proyecto)
     }
 
-    console.log(proyecto)
+    // console.log(proyecto)
     
 
     // Redirect
 
-    const history = useHistory();
+    // const history = useHistory();
 
-    const redireccionEditar = () => {
-        history.push(`/proyecto/editar/${id}`)
-    }
+    // const redireccionEditar = () => {
+    //     history.push(`/proyecto/editar/${id}`)
+    // }
     
 
 
@@ -66,7 +66,7 @@ export default function Proyecto({proyecto}) {
                 <button
                     type='button'
                     className=''
-                    onClick={ redireccionEditar, () => seleccionarProyectoEditar([proyecto.id]) }
+                    onClick={ () => seleccionarProyectoEditar([proyecto.id]) }
                 >
                     Editar
                 </button>

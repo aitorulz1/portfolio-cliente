@@ -23,7 +23,7 @@ export default function AllCategories() {
             }
         }
         getData();
-    }, [categories]);
+    }, []);
 
     return (
         <div>

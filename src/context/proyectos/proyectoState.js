@@ -11,6 +11,7 @@ import {
     PROYECTO_ACTUAL,
     ELIMINAR_PROYECTO,
     OBTENER_PROYECTO_EDITAR,
+    EDITAR_PRODUCTO,
     EDITAR_EXITO,
     PROYECTO_ERROR,
     OBTENER_CATEGORY
@@ -140,15 +141,36 @@ const ProyectoState = props => {
 
     const obtenerProyectoEditar = async proyecto => {
         try {
-            const resultado = await clienteAxios.patch(`/products/${proyecto}`, proyecto)
-            console.log(resultado.data)
-            console.log(proyecto)
+            const resultado = await clienteAxios.get(`/product/${proyecto}`, proyecto)
 
             dispatch({
                 type: OBTENER_PROYECTO_EDITAR,
-                payload: resultado.data
+                payload: proyecto
             })
             
+        } catch (error) {
+            const alerta = {
+                msg: 'No recibo objeto',
+                categoria: 'alerta-error'
+            }
+            dispatch({
+                type: PROYECTO_ERROR,
+                payload: alerta
+            })
+        }
+    }
+
+
+    const editarProyecto = async proyecto => {
+        try {
+            const resultado = await clienteAxios.patch(`/products/${proyecto}`, proyecto)
+            // console.log(resultado)
+
+            dispatch({
+                type: EDITAR_PRODUCTO,
+                payload: resultado.data
+            })
+
         } catch (error) {
             const alerta = {
                 msg: 'No recibo objeto',
@@ -178,7 +200,8 @@ const ProyectoState = props => {
                 obtenerCategory,
                 proyectoActual,
                 eliminarProyecto,
-                obtenerProyectoEditar
+                obtenerProyectoEditar,
+                editarProyecto
             }}
         >
             {props.children}
