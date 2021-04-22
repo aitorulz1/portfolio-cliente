@@ -1,4 +1,5 @@
 import React, { useEffect, useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import clienteAxios from '../../service/axios';
 
 
@@ -185,7 +186,7 @@ export default function ProyectoEdicion(props) {
                     
                     </div>
 
-
+                    <Link to={`/proyecto/${id}`}>
                     <div className="">
                         <button
                             className=""
@@ -193,6 +194,7 @@ export default function ProyectoEdicion(props) {
                             value="Subir Proyecto"
                         >Guardar Cambios</button>
                     </div>
+                    </Link>
                     
                 </form>
                  

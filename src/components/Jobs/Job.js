@@ -1,9 +1,45 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import clienteAxios from '../../service/axios';
 
 export default function Job({job}) {
+
+    const { company, title, logo, id } = job;
+
+    console.log(job)
+    
+    const eliminarTrabajo = () => {
+        clienteAxios.delete(`/jobs/delete/${id}`)
+    }
+    
+
+    if(!job) return;
+
     return (
         <div>
-            {job.title}
+            {company}
+            {title}
+        
+            <Link to={`job/${id}`}>
+                <button
+                    
+                >
+                    Ver Etapa
+                </button>
+            </Link>
+
+            <Link to={'/jobs'}>
+                <button
+                    onClick={eliminarTrabajo}
+                >
+                    Eliminar
+                </button>
+            </Link>
+
+
+
         </div>
+
     )
 }
+

@@ -22,22 +22,10 @@ export default function Proyecto({proyecto}) {
     }
 
     const seleccionarProyectoEditar = proyecto => {
-        obtenerProyectoEditar(proyecto)
+        console.log(proyecto)
     }
 
-    // console.log(proyecto)
     
-
-    // Redirect
-
-    // const history = useHistory();
-
-    // const redireccionEditar = () => {
-    //     history.push(`/proyecto/editar/${id}`)
-    // }
-    
-
-
     return (
         <div>
             {category}{name}

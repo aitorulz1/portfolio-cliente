@@ -10,9 +10,6 @@ import {
     OBTENER_PROYECTOS,
     PROYECTO_ACTUAL,
     ELIMINAR_PROYECTO,
-    OBTENER_PROYECTO_EDITAR,
-    EDITAR_PRODUCTO,
-    EDITAR_EXITO,
     PROYECTO_ERROR,
     OBTENER_CATEGORY
 } from '../../types';
@@ -139,51 +136,7 @@ const ProyectoState = props => {
     }
 
 
-    const obtenerProyectoEditar = async proyecto => {
-        try {
-            const resultado = await clienteAxios.get(`/product/${proyecto}`, proyecto)
-
-            dispatch({
-                type: OBTENER_PROYECTO_EDITAR,
-                payload: proyecto
-            })
-            
-        } catch (error) {
-            const alerta = {
-                msg: 'No recibo objeto',
-                categoria: 'alerta-error'
-            }
-            dispatch({
-                type: PROYECTO_ERROR,
-                payload: alerta
-            })
-        }
-    }
-
-
-    const editarProyecto = async proyecto => {
-        try {
-            const resultado = await clienteAxios.patch(`/products/${proyecto}`, proyecto)
-            // console.log(resultado)
-
-            dispatch({
-                type: EDITAR_PRODUCTO,
-                payload: resultado.data
-            })
-
-        } catch (error) {
-            const alerta = {
-                msg: 'No recibo objeto',
-                categoria: 'alerta-error'
-            }
-            dispatch({
-                type: PROYECTO_ERROR,
-                payload: alerta
-            })
-        }
-    }
-
-
+  
 
 
     return (
@@ -193,15 +146,12 @@ const ProyectoState = props => {
                 formulario: state.formulario,
                 category: state.category,
                 proyecto: state.proyecto,
-                proyectoeditar: state.proyectoeditar,
                 mostrarFormulario,
                 obtenerProyectos,
                 agregarProyecto,
                 obtenerCategory,
                 proyectoActual,
                 eliminarProyecto,
-                obtenerProyectoEditar,
-                editarProyecto
             }}
         >
             {props.children}

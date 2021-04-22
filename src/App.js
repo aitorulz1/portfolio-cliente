@@ -20,8 +20,10 @@ import StudyState from './context/studies/studyState';
 
 import ProyectoSelected from './components/Proyectos/ProyectoSelected';
 import ProyectAll from './components/Proyectos/ProyectAll';
-
 import ProyectoEdicion from './components/Proyectos/ProyectoEdicion';
+
+import ListadoJobs from './components/Jobs/JobsAllScreen';
+import JobSelected from './components/Jobs/JobSelected';
 
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
@@ -59,6 +61,8 @@ function App() {
                                 <Route exact path= "/proyecto/:proyecto" component = { ProyectoSelected } />
                                 <Route exact path= "/proyecto/editar/:proyecto" component = { ProyectoEdicion } />
 
+                                <Route exact path="/jobs" component = { ListadoJobs } />
+                                <Route exact path="/job/:job" component = { JobSelected } />
 
                             </Switch>
                         </Router>

@@ -5,9 +5,6 @@ import {
     AGREGAR_PROYECTOS,
     OBTENER_PROYECTOS,
     ELIMINAR_PROYECTO,
-    OBTENER_PROYECTO_EDITAR,
-    EDITAR_PRODUCTO,
-    EDITAR_EXITO,
     PROYECTO_ACTUAL,
     PROYECTO_ERROR
 } from '../../types';
@@ -45,13 +42,6 @@ export default (state, action) => {
             return {
                 ...state,
                 proyectos: state.proyectos.filter(proyecto => proyecto.id !== action.payload.id)
-            }
-
-        case OBTENER_PROYECTO_EDITAR:
-            console.log(action.payload)
-            return {
-                ...state,
-                proyectoeditar: action.payload
             }
 
             default:

@@ -1,18 +1,14 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import Sidebar from '../Layout/Sidebar';
 import Topbar from '../Layout/Topbar';
 import Buttonbar from '../Layout/Buttonbar';
 import Rightbar from '../Layout/Rightbar';
+import ListadoJobs from '../Jobs/ListadoJobs';
 
-import ListadoProyectos from './ListadoProyectos';
 
-import '../Layout/css/Main.css';
-import './css/ProyectoScreen.css';
 
-export default function ProyectosScreen() {
-
-  
+export default function JobsAllScreen() {
     return (
         <div className="main-container">
 
@@ -27,8 +23,9 @@ export default function ProyectosScreen() {
                     <Topbar />
 
                     <div className="middle-container">
-                        <ListadoProyectos />
-                    </div>                    
+                        <ListadoJobs />
+                    </div>
+                                
                     
                 </div>
 
