@@ -5,13 +5,10 @@ import clienteAxios from '../../service/axios';
 export default function Job({job}) {
 
     const { company, title, logo, id } = job;
-
-    console.log(job)
     
     const eliminarTrabajo = () => {
         clienteAxios.delete(`/jobs/delete/${id}`)
     }
-    
 
     if(!job) return;
 
@@ -33,6 +30,12 @@ export default function Job({job}) {
                     onClick={eliminarTrabajo}
                 >
                     Eliminar
+                </button>
+            </Link>
+
+            <Link to={`/job/editar/${id}`}>
+                <button>
+                    Editar
                 </button>
             </Link>
 

@@ -10,7 +10,7 @@ export default function Proyecto({proyecto}) {
     const { category, name, id } = proyecto;
 
    
-    const { proyectoActual, eliminarProyecto, obtenerProyectoEditar } = useContext(proyectoContext);
+    const { proyectoActual, eliminarProyecto } = useContext(proyectoContext);
     const { autenticado } = useContext(authContext)
 
     const seleccionarProyecto = id => {

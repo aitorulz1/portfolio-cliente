@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import clienteAxios from '../../service/axios';
 
 
-import proyectoContext from '../../context/proyectos/proyectoContext';
 
 export default function ProyectoEdicion(props) {
 

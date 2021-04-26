@@ -24,6 +24,7 @@ import ProyectoEdicion from './components/Proyectos/ProyectoEdicion';
 
 import ListadoJobs from './components/Jobs/JobsAllScreen';
 import JobSelected from './components/Jobs/JobSelected';
+import JobEdicion from './components/Jobs/JobEdicion';
 
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
@@ -63,6 +64,7 @@ function App() {
 
                                 <Route exact path="/jobs" component = { ListadoJobs } />
                                 <Route exact path="/job/:job" component = { JobSelected } />
+                                <Route exact path="/job/editar/:job" component= { JobEdicion } />
 
                             </Switch>
                         </Router>

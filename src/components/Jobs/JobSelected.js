@@ -17,13 +17,16 @@ export default function JobSelected(props) {
             }
         }
         theJobSelected();
-    })
+    }, [jobSelected])
     
-    const { title, company } = job;
+    const { title, company, logo } = job;
+
+    console.log(job)
 
     return (
         <div>
             {title}
+            <img src={logo} />
             {company}
         </div>
     )
