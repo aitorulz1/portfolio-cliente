@@ -26,6 +26,10 @@ import ListadoJobs from './components/Jobs/JobsAllScreen';
 import JobSelected from './components/Jobs/JobSelected';
 import JobEdicion from './components/Jobs/JobEdicion';
 
+import ListadoStudies from './components/Studies/ListadoStudies';
+import StudySelected from './components/Studies/StudySelected';
+import StudyEdicion from './components/Studies/StudyEdicion';
+
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
 import tokenAuth from './config/token';
@@ -62,9 +66,13 @@ function App() {
                                 <Route exact path= "/proyecto/:proyecto" component = { ProyectoSelected } />
                                 <Route exact path= "/proyecto/editar/:proyecto" component = { ProyectoEdicion } />
 
-                                <Route exact path="/jobs" component = { ListadoJobs } />
-                                <Route exact path="/job/:job" component = { JobSelected } />
-                                <Route exact path="/job/editar/:job" component= { JobEdicion } />
+                                <Route exact path= "/jobs" component = { ListadoJobs } />
+                                <Route exact path= "/job/:job" component = { JobSelected } />
+                                <Route exact path= "/job/editar/:job" component= { JobEdicion } />
+
+                                <Route exact path= "/studies" component = { ListadoStudies } />
+                                <Route exact path= "/study/:study" component = { StudySelected } />                            
+                                <Route exact path= "/study/editar/:study" component = { StudyEdicion } />                            
 
                             </Switch>
                         </Router>

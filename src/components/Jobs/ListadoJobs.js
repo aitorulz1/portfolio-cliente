@@ -1,29 +1,25 @@
-import React, { useContext, useEffect } from 'react';
-import Job from './Job';
+import React, { useContext, useEffect } from "react";
+import Job from "./Job";
 
-import jobContext from '../../context/jobs/jobsContext';
+import jobContext from "../../context/jobs/jobsContext";
 
 export default function ListadoJobs() {
+  const jobsContext = useContext(jobContext);
+  const { jobs, obtenerJobs } = jobsContext;
 
-    const jobsContext = useContext(jobContext)
-    const { jobs, obtenerJobs } = jobsContext;
+  useEffect(() => {
+    obtenerJobs();
+  }, []);
 
-    useEffect(() => {
-        obtenerJobs();
-    }, [])
+  if (!jobs) return null;
 
-    if(!jobs) return null;
+  console.log(jobs);
 
-    console.log(jobs)
-
-    return (
-        <ul>
-            {jobs.map(job => (
-                <Job
-                    key={job.id}
-                    job={job}
-                />
-            ))}
-        </ul>
-    )
+  return (
+    <ul>
+      {jobs.map((job) => (
+        <Job key={job.id} job={job} />
+      ))}
+    </ul>
+  );
 }

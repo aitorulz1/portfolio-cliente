@@ -1,40 +1,29 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from "react";
 
-import Sidebar from '../Layout/Sidebar';
-import Topbar from '../Layout/Topbar';
-import Buttonbar from '../Layout/Buttonbar';
-import Rightbar from '../Layout/Rightbar';
-import ListadoJobs from '../Jobs/ListadoJobs';
-
-
+import Sidebar from "../Layout/Sidebar";
+import Topbar from "../Layout/Topbar";
+import Buttonbar from "../Layout/Buttonbar";
+import Rightbar from "../Layout/Rightbar";
+import ListadoJobs from "../Jobs/ListadoJobs";
 
 export default function JobsAllScreen() {
-    return (
-        <div className="main-container">
+  return (
+    <div className="main-container">
+      <div className="left-area">
+        <Sidebar />
+      </div>
 
-                <div className="left-area">
+      <div className="middle-area">
+        <Topbar />
 
-                    <Sidebar />
-
-                </div>
-
-                <div className="middle-area">
-
-                    <Topbar />
-
-                    <div className="middle-container">
-                        <ListadoJobs />
-                    </div>
-                                
-                    
-                </div>
-
-                <div className="right-area">
-
-                    <Rightbar />
-                    
-                </div>
-
+        <div className="middle-container">
+          <ListadoJobs />
         </div>
-    )
+      </div>
+
+      <div className="right-area">
+        <Rightbar />
+      </div>
+    </div>
+  );
 }

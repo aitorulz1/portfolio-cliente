@@ -1,71 +1,62 @@
-import React, { useContext } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import proyectoContext from '../../context/proyectos/proyectoContext';
+import React, { useContext } from "react";
+import { Link, useHistory } from "react-router-dom";
+import proyectoContext from "../../context/proyectos/proyectoContext";
 
-import authContext from '../../context/auth/authContext';
+import authContext from "../../context/auth/authContext";
 
+export default function Proyecto({ proyecto }) {
+  const { category, name, id } = proyecto;
 
-export default function Proyecto({proyecto}) {
+  const { proyectoActual, eliminarProyecto } = useContext(proyectoContext);
+  const { autenticado } = useContext(authContext);
 
-    const { category, name, id } = proyecto;
+  const seleccionarProyecto = (id) => {
+    proyectoActual(id);
+  };
 
-   
-    const { proyectoActual, eliminarProyecto } = useContext(proyectoContext);
-    const { autenticado } = useContext(authContext)
+  const seleccionarProyectoEliminar = (id) => {
+    eliminarProyecto(id);
+  };
 
-    const seleccionarProyecto = id => {
-        proyectoActual(id)
-    }
-    
-    const seleccionarProyectoEliminar = id => {
-        eliminarProyecto(id)
-    }
+  const seleccionarProyectoEditar = (proyecto) => {
+    console.log(proyecto);
+  };
 
-    const seleccionarProyectoEditar = proyecto => {
-        console.log(proyecto)
-    }
+  return (
+    <div>
+      {category}
+      {name}
+      <Link to={`/proyecto/${id}`}>
+        <button
+          type="button"
+          className="vermas"
+          onClick={() => seleccionarProyecto([proyecto.id])}
+        >
+          Proyecto
+        </button>
+      </Link>
 
-    
-    return (
+      {autenticado ? (
         <div>
-            {category}{name}
-            <Link to={`/proyecto/${id}`}>
-                <button
-                    type='button'
-                    className='vermas'
-                    onClick={() => seleccionarProyecto([proyecto.id])}
-                >
-                    Proyecto
-                </button>
-            </Link>
+          <button
+            type="button"
+            className=""
+            onClick={() => seleccionarProyectoEliminar([proyecto.id])}
+          >
+            Eliminar
+          </button>
 
-            {autenticado ?
-            
-            <div>
-                <button
-                    type='button'
-                    className=''
-                    onClick={() => seleccionarProyectoEliminar([proyecto.id])}
-                >
-                    Eliminar
-                </button>
-        
-            <Link to={`/proyecto/editar/${id}`}>    
-                <button
-                    type='button'
-                    className=''
-                    onClick={ () => seleccionarProyectoEditar([proyecto.id]) }
-                >
-                    Editar
-                </button>
-            </Link>
-
-            </div>
-
-            : null}
-
-            
-            
+          <Link to={`/proyecto/editar/${id}`}>
+            <button
+              type="button"
+              className=""
+              onClick={() => seleccionarProyectoEditar([proyecto.id])}
+            >
+              Editar
+            </button>
+          </Link>
         </div>
-    )
+      ) : null}
+    </div>
+  );
 }

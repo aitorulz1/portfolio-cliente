@@ -1,42 +1,35 @@
-import React from 'react';
+import React from "react";
 
-import Sidebar from '../Layout/Sidebar';
-import Topbar from '../Layout/Topbar';
-import Buttonbar from '../Layout/Buttonbar';
-import StudyNuevo from './StudyNuevo';
-import Rightbar from '../Layout/Rightbar';
+import Sidebar from "../Layout/Sidebar";
+import Topbar from "../Layout/Topbar";
+import Buttonbar from "../Layout/Buttonbar";
+import StudyNuevo from "./StudyNuevo";
+import Rightbar from "../Layout/Rightbar";
 
-import '../Layout/css/Main.css';
-
+import "../Layout/css/Main.css";
 
 export default function StudiesScreen() {
-    return (
-        <div className="main-container">
+  return (
+    <div className="main-container">
 
-                <div className="left-area">
+      <div className="left-area">
+        <Sidebar />
+      </div>
 
-                    <Sidebar />
+      <div className="middle-area">
+        <Topbar />
 
-                </div>
-
-                <div className="middle-area">
-
-                    <Topbar />
-
-                    <div className="middle-container">
-                        <StudyNuevo />
-                    </div>
-                    
-                    <Buttonbar />
-                    
-                </div>
-
-                <div className="right-area">
-
-                    <Rightbar />
-                    
-                </div>
-
+        <div className="middle-container">
+          <StudyNuevo />
         </div>
-    )
+
+        <Buttonbar />
+      </div>
+
+      <div className="right-area">
+        <Rightbar />
+      </div>
+      
+    </div>
+  );
 }
