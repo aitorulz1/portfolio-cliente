@@ -19,7 +19,7 @@ export default function StudySelected(props) {
   return (
     <div>
       {school}
-      {logo}
+      <img src={logo} />
       {grade}
       {learned}
     </div>

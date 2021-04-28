@@ -6,9 +6,12 @@ import Login from './components/Auth/Login';
 
 import AllCategories from './components/Global/AllCategories';
 import Main from './components/Layout/Main';
+
 import ProyectosScreen from './components/Proyectos/ProyectosScreen';
 import JobsScreen from './components/Jobs/JobsScreen';
 import StudiesScreen from './components/Studies/StudiesScreen';
+import UserScreen from './components/User/UserScreen';
+
 import ByCategory from './components/Category/ByCategory';
 
 import AlertaState from './context/alertas/alertaState';
@@ -29,6 +32,8 @@ import JobEdicion from './components/Jobs/JobEdicion';
 import ListadoStudies from './components/Studies/ListadoStudies';
 import StudySelected from './components/Studies/StudySelected';
 import StudyEdicion from './components/Studies/StudyEdicion';
+
+import ProfileScreen from './components/Profile/ProfileScreen';
 
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
@@ -73,6 +78,9 @@ function App() {
                                 <Route exact path= "/studies" component = { ListadoStudies } />
                                 <Route exact path= "/study/:study" component = { StudySelected } />                            
                                 <Route exact path= "/study/editar/:study" component = { StudyEdicion } />                            
+
+                                <RutaPrivada exact path = "/user/editar" component = { UserScreen } /> 
+                                <RutaPrivada exact path = "/profile/:userId" component = { ProfileScreen } /> 
 
                             </Switch>
                         </Router>
