@@ -12,16 +12,13 @@ export default function PrivateMenu() {
   
   const authContext = useContext(AuthContext);
   const { usuario, autenticado, cerrarSesion } = authContext;
-  
-  
-  useEffect(() => {
-    
-  }, [usuario])
-  
-  
 
-
-
+  // useEffect(() => {
+  //   if(usuario?.user) {
+  //     console.log(usuario, 'hola')
+  //   }
+  // }, [usuario])
+  
   return (
     <div className="private-menu-container">
       {autenticado ? (
@@ -47,10 +44,10 @@ export default function PrivateMenu() {
                 <i className="far fa-arrow-alt-circle-up"></i> Studies
               </Link>
             </li>
-            <li>
-              <Link to={`/profile/`}>
+            <li>              
+              {usuario?.user.id && <Link to={`/profile/${usuario.user.id}`}>
                 <i className="far fa-arrow-alt-circle-up"></i> Me
-              </Link>
+              </Link>}
             </li>
           </ul>
         </nav>

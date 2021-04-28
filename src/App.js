@@ -10,7 +10,6 @@ import Main from './components/Layout/Main';
 import ProyectosScreen from './components/Proyectos/ProyectosScreen';
 import JobsScreen from './components/Jobs/JobsScreen';
 import StudiesScreen from './components/Studies/StudiesScreen';
-import UserScreen from './components/User/UserScreen';
 
 import ByCategory from './components/Category/ByCategory';
 
@@ -79,7 +78,6 @@ function App() {
                                 <Route exact path= "/study/:study" component = { StudySelected } />                            
                                 <Route exact path= "/study/editar/:study" component = { StudyEdicion } />                            
 
-                                <RutaPrivada exact path = "/user/editar" component = { UserScreen } /> 
                                 <RutaPrivada exact path = "/profile/:userId" component = { ProfileScreen } /> 
 
                             </Switch>
