@@ -46,6 +46,12 @@ export default function CategoryItems({porcategoria}) {
             >
                 Eliminar
             </button>
+
+            <Link to={`/proyecto/editar/${id}`}>
+                <button>
+                    Editar
+                </button>
+            </Link>
        
 
         </div>

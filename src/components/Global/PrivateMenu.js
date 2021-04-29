@@ -45,7 +45,7 @@ export default function PrivateMenu() {
               </Link>
             </li>
             <li>              
-              {usuario?.user.id && <Link to={`/profile/${usuario.user.id}`}>
+              {usuario?.user.id && <Link to={`/profile/editar/${usuario.user.id}`}>
                 <i className="far fa-arrow-alt-circle-up"></i> Me
               </Link>}
             </li>

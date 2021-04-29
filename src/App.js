@@ -33,6 +33,7 @@ import StudySelected from './components/Studies/StudySelected';
 import StudyEdicion from './components/Studies/StudyEdicion';
 
 import ProfileScreen from './components/Profile/ProfileScreen';
+import ProfileEdicion from './components/Profile/ProfileEdicion';
 
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
@@ -79,6 +80,7 @@ function App() {
                                 <Route exact path= "/study/editar/:study" component = { StudyEdicion } />                            
 
                                 <RutaPrivada exact path = "/profile/:userId" component = { ProfileScreen } /> 
+                                <RutaPrivada exact path = "/profile/editar/:userId" component = { ProfileEdicion } /> 
 
                             </Switch>
                         </Router>
