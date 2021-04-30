@@ -31,8 +31,7 @@ export default function ProfileEdicion(props) {
     };
     
     const onSubmit = async (e) => {
-        e.preventDefalt();
-        console.log('hola')
+        e.preventDefault();        
 
     // Cloudinary
     const data = new FormData();
