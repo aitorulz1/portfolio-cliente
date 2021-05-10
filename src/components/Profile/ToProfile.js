@@ -14,14 +14,16 @@ export default function ToProfile() {
     useEffect(() => {
         const obtenerUser = async() => {
             const resultado = await clienteAxios.get('/users')
-            guardarAitor(resultado.data[0]);
+            guardarAitor(resultado.data);
         }
         obtenerUser();  
     }, [])
 
+    
+
   return (
     <div className="profile-link-container">
-      <Link to={`/profile/${username}`}>profile</Link>
+      <Link to={`/profile/${username}`}>profile</Link> 
     </div>
   );
 }
