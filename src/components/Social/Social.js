@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 
 import './Social.css';
 
+import github from '../../assets/rrss/icon-github.png';
+import linkedin from '../../assets/rrss/icon-linkedin.png';
+
 
 
 export default function Social() {
@@ -11,23 +14,12 @@ export default function Social() {
 
             <div className="social-item">
                 <Link to="">
-                    github
-                </Link>
-            </div>
-            
-            <div className="social-item">
-                <Link to="">
-                    instagram
+                    <div className="github"></div>
                 </Link>
             </div>
             <div className="social-item">
                 <Link to="">
-                    linkedin
-                </Link>
-            </div>
-            <div className="social-item">
-                <Link to="">
-                    pinterest
+                <div className="linkedin"></div>
                 </Link>
             </div>
             

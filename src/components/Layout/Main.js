@@ -31,8 +31,13 @@ export default function Main() {
                 <div className="middle-area">
 
                     <Topbar />
+
+                    <div className="middle-container">
+                    
+                    </div>
                     
                 </div>
+                
 
                 <div className="right-area">
 

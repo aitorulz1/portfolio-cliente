@@ -1,30 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
+import Logo from '../Global/Logo';
 import AllCategories from '../Global/AllCategories';
+import MenuDos from '../Global/MenuDos';
 import Social from '../Social/Social';
 
 import './css/Sidebar.css'
 
-export default function sidebar() {
+export default function Sidebar() {
+
+    const [ abiertouno, setAbiertoUno ] = useState(false);
+    const [ abiertodos, setAbiertoDos ] = useState(false);
+
     return (
-    
-
         <div className="sidebar-container">
-
-            <div className="logo">
-
-                <Link to={'/'}>
-                    A.A
-                </Link>
-
-            </div>
-
-            <AllCategories />
-
+            <Logo />
+            <AllCategories 
+                setAbiertoUno={setAbiertoUno}
+                abiertouno= {abiertouno}
+                abiertodos= {abiertodos}
+            />
+            <MenuDos 
+                setAbiertoDos={setAbiertoDos}
+                abiertouno= {abiertouno}
+                abiertodos= {abiertodos}
+            />
             <Social />
-
        </div>
-
     )
 }

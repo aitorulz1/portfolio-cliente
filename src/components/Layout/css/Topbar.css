@@ -2,7 +2,8 @@
     position: relative;
     height: 10vh;
     width: 75%;
-    border-bottom: 1px solid #f9f9f9;
+    border-bottom: 1px solid #404948;
     text-align: center;
     margin: 0 auto;
+    display: table;
 }

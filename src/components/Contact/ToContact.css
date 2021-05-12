@@ -2,3 +2,10 @@
     margin-top: calc(5vh - 1.5%);
     text-align: center;
 }
+
+.contact-link-container a{
+    color: #fdf39d;
+    text-decoration: none;
+}
+
+

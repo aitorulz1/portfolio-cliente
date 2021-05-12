@@ -10,20 +10,21 @@ export default function ToProfile() {
     const [ aitor, guardarAitor ] = useState({})
 
     const { name, email, username, id } = aitor;
-    
-    useEffect(() => {
-        const obtenerUser = async() => {
-            const resultado = await clienteAxios.get('/users')
-            guardarAitor(resultado.data);
-        }
-        obtenerUser();  
-    }, [])
 
     
+    useEffect(() => {
+      const obtenerUser = async() => {
+        const resultado = await clienteAxios.get('/users')
+        guardarAitor(resultado.data);
+      }
+      obtenerUser();  
+    }, [])
+   
+    if(!aitor) return 'hola';
 
   return (
     <div className="profile-link-container">
-      <Link to={`/profile/${username}`}>profile</Link> 
+      {aitor ? <Link to={`/profile/${username}`}>profile</Link> : null}
     </div>
   );
 }

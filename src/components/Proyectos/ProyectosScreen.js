@@ -29,7 +29,7 @@ export default function ProyectosScreen() {
                         <ProyectoNuevo />
                     </div>
                     
-                    <Buttonbar />
+ 
                     
                 </div>
 

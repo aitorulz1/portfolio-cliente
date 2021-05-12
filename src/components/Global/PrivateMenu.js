@@ -13,41 +13,56 @@ export default function PrivateMenu() {
   const authContext = useContext(AuthContext);
   const { usuario, autenticado, cerrarSesion } = authContext;
 
-  // useEffect(() => {
-  //   if(usuario?.user) {
-  //     console.log(usuario, 'hola')
-  //   }
-  // }, [usuario])
   
   return (
     <div className="private-menu-container">
       {autenticado ? (
         <nav>
           <ul>
+
             <li>
-              <Link to={"/proyecto/nuevo"}>
-                <i className="far fa-arrow-alt-circle-up"></i> Project
-              </Link>
+              <div className="vl"></div>
+                <div className="lp">
+                  <Link to={"/proyecto/nuevo"}>
+                    Project
+                  </Link>
+                </div>
             </li>
+          
             <li>
-              <Link to={"/job/nuevo"}>
-                <i className="far fa-arrow-alt-circle-up"></i> Job
-              </Link>
+              <div className="vl"></div>
+                <div className="lp">
+                  <Link to={"/job/nuevo"}>
+                    Job
+                  </Link>
+              </div>
             </li>
+          
             <li>
-              <button className="logout-botton" onClick={() => cerrarSesion()}>
-                <span className="fa fa-sign-out-alt">logout</span>{" "}
-              </button>
+            <div className="vl"></div>
+            <div className="lp">
+              <div className="logout-botton" onClick={() => cerrarSesion()}>
+              <i class="fa fa-power-off"></i>
+              </div>
+              </div>
             </li>
+          
             <li>
-              <Link to={"/study/nuevo"}>
-                <i className="far fa-arrow-alt-circle-up"></i> Studies
-              </Link>
+            <div className="vl"></div>
+              <div className="lp">
+                <Link to={"/study/nuevo"}>
+                  Studies
+                </Link>
+              </div>
             </li>
-            <li>              
-              {usuario?.user.id && <Link to={`/profile/editar/${usuario.user.id}`}>
-                <i className="far fa-arrow-alt-circle-up"></i> Me
-              </Link>}
+          
+            <li> 
+            <div className="vl"></div>
+              <div className="lp">        
+                {usuario?.user.id && <Link to={`/profile/editar/${usuario.user.id}`}>
+                  Me
+                </Link>}
+              </div>
             </li>
           </ul>
         </nav>

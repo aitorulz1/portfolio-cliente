@@ -1,4 +1,10 @@
 .profile-link-container {
     margin-top: calc(85vh - 1.5%);
     text-align: center;
+    transform: rotate(90deg);
+}
+
+.profile-link-container a{
+    color: #fdf39d;
+    text-decoration: none;
 }

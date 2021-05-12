@@ -1,4 +1,4 @@
 .middle-container{
-    min-height: 80vh;
-    overflow: scroll;
+    min-height: 90vh;
+    overflow: auto;
 }

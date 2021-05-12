@@ -1,5 +1,6 @@
 .logo {
-    margin-top: calc(5vh - 1.5%);
+    margin-top: calc(4vh - 0.5%);
+    margin-bottom: 4vh;
 }
 
 .menu-items:first-child{
@@ -11,3 +12,9 @@
     font-size: 14px;
     padding: 5px 5px;
 }
+
+.menu-items a{
+    color: #fff27c;
+    text-decoration: none;
+}
+
