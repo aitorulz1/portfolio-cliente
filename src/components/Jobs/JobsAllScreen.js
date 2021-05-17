@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 
 import Sidebar from "../Layout/Sidebar";
 import Topbar from "../Layout/Topbar";
-import Buttonbar from "../Layout/Buttonbar";
 import Rightbar from "../Layout/Rightbar";
 import ListadoJobs from "../Jobs/ListadoJobs";
 

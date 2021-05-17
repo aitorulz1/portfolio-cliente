@@ -29,7 +29,6 @@ export default function ProyectosScreen() {
                         <JobNuevo />
                     </div>
                     
-                    <Buttonbar />
                     
                 </div>
 

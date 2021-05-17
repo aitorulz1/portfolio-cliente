@@ -28,7 +28,8 @@ import ListadoJobs from './components/Jobs/JobsAllScreen';
 import JobSelected from './components/Jobs/JobSelected';
 import JobEdicion from './components/Jobs/JobEdicion';
 
-import ListadoStudies from './components/Studies/ListadoStudies';
+// import ListadoStudies from './components/Studies/ListadoStudies';
+import StudiesAllScreen from './components/Studies/StudiesAllScreen';
 import StudySelected from './components/Studies/StudySelected';
 import StudyEdicion from './components/Studies/StudyEdicion';
 
@@ -38,6 +39,7 @@ import ProfileEdicion from './components/Profile/ProfileEdicion';
 import RutaPrivada from './components/Rutas/RutaPrivada';
 
 import tokenAuth from './config/token';
+
 
 const token = localStorage.getItem('token');
 if (token) {
@@ -75,11 +77,12 @@ function App() {
                                 <Route exact path= "/job/:job" component = { JobSelected } />
                                 <Route exact path= "/job/editar/:job" component= { JobEdicion } />
 
-                                <Route exact path= "/studies" component = { ListadoStudies } />
+                                {/* <Route exact path= "/studies" component = { ListadoStudies } /> */}
+                                <Route exact path= "/studies" component = { StudiesAllScreen } />
                                 <Route exact path= "/study/:study" component = { StudySelected } />                            
                                 <Route exact path= "/study/editar/:study" component = { StudyEdicion } />                            
 
-                                <RutaPrivada exact path = "/profile/:userId" component = { ProfileScreen } /> 
+                                <Route exact path = "/profile/:userId" component = { ProfileScreen } /> 
                                 <RutaPrivada exact path = "/profile/editar/:userId" component = { ProfileEdicion } /> 
 
                             </Switch>

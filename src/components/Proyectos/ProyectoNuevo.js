@@ -7,18 +7,22 @@ import "./css/ProyectoNuevo.css";
 
 export default function ProyectoNuevo() {
   const proyectosContext = useContext(proyectoContext);
-  const { formulario, mostrarFormulario, agregarProyecto } = proyectosContext;
+  const { formulario, agregarProyecto } = proyectosContext;
 
   const [proyecto, guardarProyecto] = useState({
     name: "",
     productPicture: "",
     category: "",
     description: "",
+    linkto:"",
+    github:"",
+    video: "",
+    tags: [],
     begin: "",
     end: "",
   });
 
-  const { name, productPicture, category, description, begin, end } = proyecto;
+  const { name, productPicture, category, description, linkto, github, video, tags, begin, end } = proyecto;
 
   const [error, guardarError] = useState(false);
 
@@ -36,9 +40,6 @@ export default function ProyectoNuevo() {
     getData();
   }, []);
 
-  const onClickFormulario = () => {
-    mostrarFormulario();
-  };
 
   const onChange = (e) => {
     const { name, value, files, file } = e.target;
@@ -61,6 +62,10 @@ export default function ProyectoNuevo() {
       end.trim() === ""
     ) {
       guardarError(true);
+
+      setTimeout(() => {
+        guardarError(false)
+      }, 3000)
       return;
     }
 
@@ -86,6 +91,9 @@ export default function ProyectoNuevo() {
           productPicture: file.secure_url,
           category,
           description,
+          linkto,
+          github,
+          video,
           begin,
           end,
         });
@@ -100,6 +108,9 @@ export default function ProyectoNuevo() {
       category: "",
       description: "",
       begin: "",
+      linto: "",
+      github: "",
+      video: "",
       end: "",
     });
 
@@ -108,12 +119,15 @@ export default function ProyectoNuevo() {
 
   return (
     <div className="proyect-form-container">
-      <div className="proyect-form">
-        <button onClick={onClickFormulario}>Ver Fomulario</button>
 
-        {formulario ? (
+      <div className="proyect-form">
+        
+          <div className="title-container">
+            New Project<i class="fas fa-project-diagram"></i>
+          </div>
+      
           <form onSubmit={onSubmit} encType="multipart/form-data">
-            {error ? "Completa todos los campos" : null}
+            {error ? <div className="error-red">Completa todos los campos</div> : null}
 
             <div className="cajetin-form">
               <input
@@ -127,19 +141,22 @@ export default function ProyectoNuevo() {
             </div>
 
             <div className="cajetin-form">
-              <input
-                className="line-form"
-                type="file"
-                name="productPicture"
-                id="productPicture"
-                placeholder="imagen"
-                onChange={onChange}
-              />
+              <label class="custom-file-upload">
+              Select File <i class="far fa-file"></i>
+                <input
+                  className="line-form"
+                  type="file"
+                  name="productPicture"
+                  id="productPicture"
+                  placeholder="imagen"
+                  onChange={onChange}
+                />
+              </label>
             </div>
 
             <div className="cajetin-form">
               <select className="line-form" name="category" onChange={onChange}>
-                <option>-- Select --</option>
+                <option value="select">-- Select --</option>
                 {categorias.map((categorySelect) => (
                   <option
                     key={categorySelect.id}
@@ -158,6 +175,39 @@ export default function ProyectoNuevo() {
                 name="description"
                 placeholder="descripción"
                 value={description}
+                onChange={onChange}
+              />
+            </div>
+
+            <div className="cajetin-form">
+              <input
+                className="line-form"
+                type="text"
+                name="linkto"
+                placeholder="linkto"
+                value={linkto}
+                onChange={onChange}
+              />
+            </div>
+
+            <div className="cajetin-form">
+              <input
+                className="line-form"
+                type="text"
+                name="github"
+                placeholder="github"
+                value={github}
+                onChange={onChange}
+              />
+            </div>
+
+            <div className="cajetin-form">
+              <input
+                className="line-form"
+                type="text"
+                name="video"
+                placeholder="video"
+                value={video}
                 onChange={onChange}
               />
             </div>
@@ -184,13 +234,13 @@ export default function ProyectoNuevo() {
               />
             </div>
 
-            <div className="">
-              <button className="" type="submit" value="Subir Proyecto">
-                Subir Proyecto
+     
+              <button className="form-button" type="submit" value="Subir Proyecto">
+                <i class="fas fa-arrow-circle-up" alt="upload project"></i>
               </button>
-            </div>
+   
           </form>
-        ) : null}
+       
       </div>
     </div>
   );

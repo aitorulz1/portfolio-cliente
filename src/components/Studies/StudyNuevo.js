@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 
 import studyContext from "../../context/studies/studyContext";
 
+import './css/StudyNuevo.css';
+
 export default function StudyNuevo() {
   const studiesContext = useContext(studyContext);
   const { agregarStudy } = studiesContext;
@@ -86,10 +88,14 @@ export default function StudyNuevo() {
   return (
     <div className="proyect-form-container">
       <div className="proyect-form">
-        <form onSubmit={onSubmit} encType="multipart/form-data">
-          {/* {error ? 'Completa todos los campos' : null} */}
 
-          <div className="cajetin-form">
+          <div className="title-container">
+            New Project<i class="fas fa-graduation-cap"></i>
+          </div>
+      
+        <form onSubmit={onSubmit} encType="multipart/form-data">
+
+                <div className="cajetin-form">
             <input
               className="line-form"
               type="text"
@@ -112,14 +118,17 @@ export default function StudyNuevo() {
           </div>
 
           <div className="cajetin-form">
-            <input
-              className="line-form"
-              type="file"
-              name="logo"
-              id="logo"
-              placeholder="imagen"
-              onChange={onChange}
-            />
+            <label class="custom-file-upload">
+                Select File <i class="far fa-file"></i>
+              <input
+                className="line-form"
+                type="file"
+                name="logo"
+                id="logo"
+                placeholder="imagen"
+                onChange={onChange}
+              />
+            </label>
           </div>
 
           <div className="cajetin-form">
@@ -155,11 +164,11 @@ export default function StudyNuevo() {
             />
           </div>
 
-          <div className="">
-            <button className="" type="submit" value="Subir Proyecto">
-              Subir Proyecto
+            <button className="form-button" type="submit" value="Subir Proyecto">
+              <i class="fas fa-arrow-circle-up" alt="upload project"></i>
             </button>
-          </div>
+
+
         </form>
       </div>
     </div>

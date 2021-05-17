@@ -23,4 +23,5 @@
     width: Calc(14.99% - 2px);
     height: 100vh;
     border-left: 1px solid  #404948;
+    overflow: hidden;
 }

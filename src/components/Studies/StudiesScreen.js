@@ -2,7 +2,6 @@ import React from "react";
 
 import Sidebar from "../Layout/Sidebar";
 import Topbar from "../Layout/Topbar";
-import Buttonbar from "../Layout/Buttonbar";
 import StudyNuevo from "./StudyNuevo";
 import Rightbar from "../Layout/Rightbar";
 
@@ -23,13 +22,12 @@ export default function StudiesScreen() {
           <StudyNuevo />
         </div>
 
-        <Buttonbar />
       </div>
 
       <div className="right-area">
         <Rightbar />
       </div>
-      
+
     </div>
   );
 }

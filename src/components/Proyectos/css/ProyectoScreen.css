@@ -1,4 +1,6 @@
 .middle-container{
+    position: relative;
     min-height: 90vh;
-    overflow: auto;
+    display: table;
+    width: 100%;
 }

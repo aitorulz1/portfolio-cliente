@@ -8,41 +8,41 @@ import Rightbar from "../Layout/Rightbar";
 
 export default function ProfileScreen(props) {
 
-    const [ aitor, guardarAitor ] = useState({});
+  const [aitor, guardarAitor] = useState({});
 
-    console.log(aitor)
+  console.log(aitor)
 
-    useEffect(() => {
-        const obtenerUser = async() => {
-            const resultado = await clienteAxios.get('/users')
-            guardarAitor(resultado.data[0]);
-        }
-        obtenerUser();  
-    }, []);
+  useEffect(() => {
+    const obtenerUser = async () => {
+      const resultado = await clienteAxios.get('/users')
+      guardarAitor(resultado.data[0]);
+    }
+    obtenerUser();
+  }, []);
 
 
-    
-    return (
-        <div className="main-container">
-        <div className="left-area">
-          <Sidebar />
-        </div>
-  
-        <div className="middle-area">
-          <Topbar />
-  
-          <div className="middle-container">
-            <Profile 
-              aitor={aitor}
-            />
-          </div>
-  
-    
-        </div>
-  
-        <div className="right-area">
-          <Rightbar />
-        </div>
+
+  return (
+    <div className="main-container">
+      <div className="left-area">
+        <Sidebar />
       </div>
-    )
+
+      <div className="middle-area">
+        <Topbar />
+
+        <div className="middle-container">
+          <Profile
+            aitor={aitor}
+          />
+        </div>
+
+
+      </div>
+
+      <div className="right-area">
+        <Rightbar />
+      </div>
+    </div>
+  )
 }

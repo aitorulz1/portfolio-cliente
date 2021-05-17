@@ -1,12 +1,33 @@
 .proyect-form-container{
     position: relative;
     width: 100%;
-    padding: 0% 0%;
+    display: table;
+    padding-top: 7.5%;
+    padding-bottom: 10%;
 }
 
 .proyect-form {
     margin: 0 auto;
     max-width: 400px;
+}
+
+.error-red {
+    text-align: center;
+    background-color: #a20000;
+    color: #fff;
+    padding: 10px 0px;
+}
+
+.title-container {
+    color: #fffee7;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 10%;
+}
+
+i.fas.fa-project-diagram{
+    padding-left: 10px;
+    font-size: 26px;
 }
 
 .cajetin-form {
@@ -16,18 +37,55 @@
 
 .line-form {
     width: 100%;
-    margin:  0 auto;
+    margin: 0 auto;
     border: none;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #fff7a5;
     outline: none;
 }
+
+input {
+    background: none;
+    color: #fff7a5;
+}
+
+input::placeholder {
+    color: #fff7a5;
+}
+
+
+select::placeholder {
+    color: #fff7a5;
+}
+
+select{
+    background: none;
+    color: #fff7a5;
+    font-size: 14px;
+}
+
+ select option[value="select"] {
+  background: #636262;
+  }
+
+ select option[value="web"] {
+    background: #464545;
+  }
+  
+  select option[value="mern"] {
+    background: #383838;
+  }
+  
+  select option[value="react"] {
+    background: #011E1B;
+  }
+  
 
 input[type="file" i] {
     font-size: 12px;
     font-weight: 600;
     color: #000;
-    background-color: #ffffff;
-    display: inline-block;
+    background-color: none;
+    display: none;
     transition: all .5s;
     cursor: pointer;
     padding: 15px 0px !important;
@@ -35,4 +93,45 @@ input[type="file" i] {
     width: 100;
     text-align: center;
     outline: none;
+}
+
+
+input::-webkit-calendar-picker-indicator {
+    color: #fff;
+    opacity: 1
+  }
+
+.custom-file-upload {
+    display: inline-block;
+    border:  1px solid #fff7a5; 
+    width: 100%;
+    margin: 1.5% 0%;
+    text-align: center;
+    color: #011E1B;
+    font-size: 14px;
+    background: #fff174;  /* Fondo, debe ser más claro que el borde */
+	border: 3px outset #fff7a5;  /* Grosor del Borde */  /* Color del Borde */
+	text-align: center;  /* Alineación del texto */
+	text-shadow: -1px -1px rgba(0,0,0,.2);
+}
+
+i.far.fa-file{
+    padding-left: 5px;
+}
+
+
+button.form-button {
+    width: 100%;
+    margin: 4.5% 0%;
+    padding: 10px;
+    color: #fff7a5;
+    font-size: 12px;
+    background: #04201d;
+    border: 3px outset #192f2d;
+    text-align: center;
+    text-shadow: -1px -1px rgb(0 0 0 / 20%);
+}
+
+i.fas.fa-arrow-circle-up {
+    font-size: 18px;
 }

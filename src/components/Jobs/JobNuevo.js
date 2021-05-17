@@ -87,9 +87,13 @@ export default function JobNuevo() {
 
     return (
 
-        <div className="proyecto-form-container">
+        <div className="proyect-form-container">
             
             <div className="proyect-form">
+
+            <div className="title-container">
+                New Job<i class="fas fa-user-tie"></i>
+            </div>
 
                 <form
                     onSubmit={onSubmit}
@@ -120,15 +124,16 @@ export default function JobNuevo() {
                         </div>
 
                         <div className="cajetin-form">
-
-                            <input 
-                                className="line-form"
-                                type='file'
-                                name='logo'
-                                placeholder='imagen empresa'
-                                onChange={onChange}
-                            />
-
+                            <label class="custom-file-upload">
+                            Select File <i class="far fa-file"></i>
+                                <input 
+                                    className="line-form"
+                                    type='file'
+                                    name='logo'
+                                    placeholder='imagen empresa'
+                                    onChange={onChange}
+                                />
+                            </label>
                         </div>
             
                         <div className="cajetin-form">
@@ -167,14 +172,9 @@ export default function JobNuevo() {
                         
                         </div>
 
-                        <div className="">
-                                <button
-                                    className=""
-                                    type="submit"
-                                    value="Subir Proyecto"
-                                >Subir Proyecto</button>
-                        </div>
-
+                        <button className="form-button" type="submit" value="Subir Proyecto">
+                            <i class="fas fa-arrow-circle-up" alt="upload project"></i>
+                        </button>
 
                 </form>
 

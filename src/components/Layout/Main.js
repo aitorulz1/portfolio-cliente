@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from 'react';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
 import Rightbar from './Rightbar';
+import Home from '../Home/Home';
 
 import './css/Main.css';
 
@@ -33,6 +34,8 @@ export default function Main() {
                     <Topbar />
 
                     <div className="middle-container">
+
+                        <Home />
                     
                     </div>
                     

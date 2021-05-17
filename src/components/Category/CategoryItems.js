@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import proyectoContext from '../../context/proyectos/proyectoContext';
 import { Link } from 'react-router-dom';
-
+import {Carousel} from '3d-react-carousal';
 
 import './css/CategoryItems.css';
 
@@ -11,8 +11,6 @@ export default function CategoryItems({porcategoria}) {
     const { eliminarProyecto } = proyectosContext;
 
     const { category, begin, end, description, productPicture, user, id } = porcategoria; 
-    
-    
    
     const onClickEliminar = id => {
         eliminarProyecto(id)
@@ -33,7 +31,7 @@ export default function CategoryItems({porcategoria}) {
             {user}<br />
             {begin}<br />
             {end}<br />
-            {id}
+            
 
             <Link to={`/proyecto/${id}`}>
                 Proyecto

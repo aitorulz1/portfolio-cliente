@@ -1,5 +1,9 @@
+.contact-container {
+    height: 50vh;
+}
+
 .contact-link-container {
-    margin-top: calc(5vh - 1.5%);
+    padding-top: calc(5vh - 1.5%);
     text-align: center;
 }
 
