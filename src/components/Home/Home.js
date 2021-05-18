@@ -48,7 +48,9 @@ export default function Home() {
                     </div>
 
                     <button className="cover-button">
+                        <a href="mailto:aitorulz1@gmail.com" target="_blank">
                            GET IN TOUCH 
+                        </a>
                     </button>
             
                 </div>

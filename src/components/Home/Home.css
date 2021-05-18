@@ -74,3 +74,11 @@ button.cover-button:hover{
     color: #04201d;
     cursor: pointer;
 }
+
+button.cover-button a{
+    color: #fff070;
+    text-decoration: none;
+}
+button.cover-button a:hover{
+    color: #04201d;
+}

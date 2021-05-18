@@ -1,14 +1,72 @@
 .project-container {
-    width: 33.3%;
+    width: 100%;
     float: left;
     text-align: center;
 }
 
+.main-title {
+    padding: 0% 0% 15% 0%;
+    color: #fef7a6;
+    text-transform: lowercase;
+}
+
+.button-container-mern {
+    position: relative;
+    display: table;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: -7%;
+    z-index: 1;
+}
+
+.button-edit {
+    width: 50%;
+    float: left;
+    color: #253734;
+    text-align: left;
+    font-size: 14px;
+}
+
+.button-delete {
+    width: 50%;
+    float: left;
+    color: #04201c;
+    text-align: right;
+}
+
+
+
 .image-container {
     width: 100%;
+    display: table;
+    -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 7.5%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0));
+    overflow: hidden;
+    margin: 0% 0% 10% 0%;
 }
 
 .image-container img{
     width: 100%;
 }
 
+
+
+.slider-container-button {
+    display: table;
+    width: 100%;
+    padding: 10% 0% 0% 0%;
+}
+
+
+.button-container-ver{
+    width: 60%;
+    min-width: 200px;
+    background: #102826;
+    padding: 3px;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+
+.button-container-ver a {
+    color: #fff7a5;
+    font-size: 15px;
+}

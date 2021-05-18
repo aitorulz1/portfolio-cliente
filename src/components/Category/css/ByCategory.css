@@ -1,0 +1,100 @@
+
+
+/* ------------------------ Carousel ------------------------ */
+
+
+.coverflow__coverflow__53z9A {
+    position: relative;
+    width: 85% !important;
+    height: 100% !important;
+    margin: auto !important;
+    overflow: hidden;
+}
+
+.coverflow__container__1P-xE {
+    /* width: 100% !important; */
+    min-height: 90vh !important;
+}
+
+.coverflow__container__1P-xE {
+    position: relative;
+    background: none !important;    
+}
+
+.coverflow__text__39hqd {    
+    display: none !important;
+}
+
+.coverflow__stage__14oqC {
+    height: 100%;
+    width: 140%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    margin-left: -20%;
+}
+
+.coverflow__figure__3bk_C {
+    width: 33.3% !important;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: transform 600ms ease;
+    backface-visibility: hidden;
+    z-index: 9;
+    align-self: center;
+    box-shadow: none !important;
+    -webkit-box-reflect: none !important;
+    box-shadow: none;
+    -webkit-box-reflect: none !important;
+
+    transform: translateX(0px) rotateY(
+        60deg
+        ) scale(0.8);
+}
+
+.coverflow__arrowWrapper__3qbYP {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v {
+    z-index: 999;
+    opacity: 1 !important;
+    cursor: pointer;
+    display: block;
+    width: 35.36068px;
+    height: 70.72136px;
+    position: absolute !important;
+}
+
+#coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v:before, #coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v:after {
+    background: #fef7a6 !important;
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 50%);
+    content: '';
+    display: block;
+    width: 50% !important;
+    height: 2px;
+    position: absolute;
+    top: calc(50% - (2px / 2));
+}
+
+#coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v span {
+    background: #fef7a6 !important;
+}
+
+#coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v.coverflow__right__1tzAF {
+    right: 50px;
+    bottom: 50px;
+}
+
+#coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v.coverflow__left__PhMc6 {
+    left: 50px;
+    bottom: 50px;
+}
