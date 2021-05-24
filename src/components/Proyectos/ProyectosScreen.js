@@ -11,33 +11,31 @@ import './css/ProyectoScreen.css';
 
 export default function ProyectosScreen() {
 
-  
+
     return (
         <div className="main-container">
 
-                <div className="left-area">
+            <div className="left-area">
 
-                    <Sidebar />
+                <Sidebar />
 
+            </div>
+
+            <div className="middle-area">
+
+                <Topbar />
+
+                <div className="middle-container">
+                    <ProyectoNuevo />
                 </div>
 
-                <div className="middle-area">
+            </div>
 
-                    <Topbar />
+            <div className="right-area">
 
-                    <div className="middle-container">
-                        <ProyectoNuevo />
-                    </div>
-                    
- 
-                    
-                </div>
+                <Rightbar />
 
-                <div className="right-area">
-
-                    <Rightbar />
-                    
-                </div>
+            </div>
 
         </div>
     )

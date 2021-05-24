@@ -1,0 +1,151 @@
+.single-container {
+    width: 75%;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title-single-container {
+    text-align: center;
+    text-transform: lowercase;
+    padding-bottom: 7.5%;
+    color: rgb(254, 255, 220);
+    font-size: 20px;
+}
+
+
+
+/*------------------ back ------------------*/
+
+.back-to{
+    margin-top: 2.5%;
+    left: 5%;
+    position: absolute;
+    cursor: pointer;
+    width: fit-content;
+    color: #fdf283;
+}
+
+.back-to:hover{
+    color: #0f2825;
+    transition: 1s;
+}
+
+i.fa.fa-arrow-circle-left, i.fa.fa-arrow-left {
+    font-size: 24px;
+}
+
+i.fa.fa-arrow-circle-left:hover, i.fa.fa-arrow-left:hover {
+    color: #0f2825;
+    font-size: 22px;
+    transition: 1s;
+}
+
+.fa-arrow-left,
+:hover > .fa-arrow-circle-left,
+:focus > .fa-arrow-circle-left {
+  display: none;
+}
+:focus > .fa-arrow-left,
+:hover > .fa-arrow-left {
+  display: inline-block;
+  transition: 1s;
+}
+
+.arrow {
+    float: left;
+}
+
+.back-txt {
+    color: transparent;
+    float: left;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.back-txt:hover {
+    color: #0f2825;
+    transition: 1s;
+}
+
+/*------------------ fin back ------------------*/
+
+
+span.category {
+    font-size: 16px;
+    color: #fdf283;
+}
+
+.title-single-container a {
+    text-decoration: none;
+}
+
+span.category:hover {
+    color: #ffec3a;
+    font-size: 17px;
+    transition: 1s;
+}
+
+.image-single-container {
+    width: 80%;
+    display: table;
+    -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 7.5%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0));
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 7.5%;
+}
+
+.image-single-container img {
+    width: 100%;
+}
+
+.links-container {
+    position: absolute;
+    right: 2.5%;
+    top: 20%;
+}
+
+.image-single-container a {
+    position: absolute;
+    right: 6%;
+    color: #fcec3a;
+}
+
+.image-single-container a:hover {
+    color: #fbf7cb;
+    transition: 1s;
+}
+
+.description-single-container {
+    text-align: center;
+    color: #fbf7cb;
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.5;
+    margin: 0 auto;
+    margin-top: 20%;
+}
+
+.date-container {
+    position: relative;
+    display: table;
+    text-align: center;
+    /* padding: 2.5% 0%; */
+    transform: rotate(270deg);
+    color: #fdf39d;
+    font-size: 12px;
+    width: 25%;
+    margin-left: -7.5%;
+    margin-top: -20%;
+}
+
+
+.date-begin {
+    display: inline-flex;
+}
+
+.date-end {
+    display: inline-flex;
+    padding-left: 10px;
+}

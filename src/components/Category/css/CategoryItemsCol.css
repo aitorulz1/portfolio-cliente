@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'elephant';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../../assets/fonts/elephant.TTF') format('TTF');
+  }
+
+
+.project-container-regular {
+    position: relative;
+    display: table;
+    width: 29.3%;
+    float: left;
+    padding: 2%;
+}
+
+.button-edit-regular {
+    width: 47%;
+    padding-top: 1%;
+    padding-left: 3%;
+    float: left;
+    color: #253734;
+    text-align: left;
+    font-size: 14px;
+    filter: drop-shadow(2px 4px 3px #b9b9b9);
+    cursor: pointer;
+}
+
+.button-delete-regular {
+    width: 50%;
+    padding-top: 1%;
+    float: left;
+    color: #04201c;
+    text-align: right;
+    filter: drop-shadow(2px 4px 3px #b9b9b9);
+    cursor: pointer;
+}
+
+.main-title-regular {
+    padding: 0% 0% 10% 0%;
+    color: #fef7a6;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.edit-del-cont{
+    margin-bottom: -2px;
+    position: absolute;
+    z-index: 1;
+    width: 87%;
+    margin: 0 auto;
+}
+
+.main-descr-regular {
+    padding: 10% 0% 0% 0%;
+    font-size: 12px;
+    min-height: 55px;
+    color: #fef7a6;
+    text-transform: lowercase;
+    text-align: center;
+}
+
+.end-date {
+    text-align: center;
+    font-family: elephant;
+    font-size: 14px;
+    color: #fef7a6;
+    padding: 10% 0% 0% 0%;
+}

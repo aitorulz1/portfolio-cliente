@@ -1,23 +1,27 @@
 import React, { useEffect, useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import clienteAxios from "../../service/axios";
+
+import Sidebar from '../Layout/Sidebar';
+import Topbar from '../Layout/Topbar';
+import Rightbar from '../Layout/Rightbar';
 
 export default function ProyectoEdicion(props) {
   const [proyecto, guardarProyecto] = useState({});
 
-  const [error, guardarError] = useState(false);
-
-  const { name, productPicture, category, description, end, begin } = proyecto;
+  const { name, productPicture, category, description, linkto, github, video, tags, end, begin } = proyecto;
 
   const [categories, guardarCategories] = useState([]);
 
   const id = props.match.params.proyecto;
 
+  let history = useHistory();
+
   useEffect(() => {
     const getCategories = async () => {
       try {
-        const respuesta = await clienteAxios.get("/categories");
-        guardarCategories(respuesta.data);
+        const respuestaCat = await clienteAxios.get("/categories");
+        guardarCategories(respuestaCat.data);
       } catch (error) {
         console.log(error);
       }
@@ -47,19 +51,7 @@ export default function ProyectoEdicion(props) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-
-    if (
-      name.trim() === "" ||
-      category.trim() === "" ||
-      description.trim() === "" ||
-      begin.trim() === "" ||
-      end.trim() === ""
-    ) {
-      guardarError(true);
-      return;
-    }
-
-    guardarError(false);
+    
 
     // Cloudinary
     const data = new FormData();
@@ -82,87 +74,161 @@ export default function ProyectoEdicion(props) {
       ...proyecto,
       productPicture: file.secure_url,
     });
+    history.push(`/category/${category}`);
   };
 
   return (
-    <div className="proyect-form-container">
-      <div className="proyect-form">
-        <form onSubmit={onSubmit} encType="multipart/form-data">
-          <div className="cajetin-form">
-            <input
-              className="line-form"
-              type="text"
-              name="name"
-              placeholder="nombre"
-              value={name}
-              onChange={onChange}
-            />
-          </div>
 
-          <div className="cajetin-form">
-            <input
-              className="line-form"
-              type="file"
-              name="productPicture"
-              id="productPicture"
-              placeholder="imagen"
-              onChange={onChange}
-            />
-          </div>
+    <div className="main-container">
 
-          <div className="cajetin-form">
-            <select className="line-form" name="category" onChange={onChange}>
-              <option>-- Select --</option>
-              {categories.map((categorySelect) => (
-                <option key={categorySelect.id} value={categorySelect.category}>
-                  {categorySelect.category}
-                </option>
-              ))}
-            </select>
-          </div>
+      <div className="left-area">
 
-          <div className="cajetin-form">
-            <input
-              className="line-form"
-              type="text"
-              name="description"
-              placeholder="descripción"
-              value={description}
-              onChange={onChange}
-            />
-          </div>
+        <Sidebar />
 
-          <div className="cajetin-form">
-            <input
-              className="line-form"
-              type="date"
-              name="begin"
-              placeholder="incicio"
-              value={begin}
-              onChange={onChange}
-            />
-          </div>
-
-          <div className="cajetin-form">
-            <input
-              className="line-form"
-              type="date"
-              name="end"
-              placeholder="finalizado"
-              value={end}
-              onChange={onChange}
-            />
-          </div>
-
-          <Link to={`/proyecto/${id}`}>
-            <div className="">
-              <button className="" type="submit" value="Subir Proyecto">
-                Guardar Cambios
-              </button>
-            </div>
-          </Link>
-        </form>
       </div>
+
+      <div className="middle-area">
+
+        <Topbar />
+
+        <div className="middle-container">
+
+          
+          <div className="proyect-form-container">
+            <div className="proyect-form">
+
+              <div className="title-container">
+                Edit Project<i class="fas fa-project-diagram"></i>
+              </div>
+
+              <form onSubmit={onSubmit} encType="multipart/form-data" >
+                <div className="cajetin-form">
+                  <input
+                    className="line-form"
+                    type="text"
+                    name="name"
+                    placeholder="nombre"
+                    value={name}
+                    onChange={onChange}
+                  />
+                </div>
+
+                <div className="cajetin-form">
+                  <label class="custom-file-upload">
+                    Select File <i class="far fa-file"></i>
+                    <input
+                      className="line-form"
+                      type="file"
+                      name="productPicture"
+                      id="productPicture"
+                      placeholder="imagen"
+                      onChange={onChange}
+                    />
+                  </label>
+                </div>
+
+                <div className="cajetin-form">
+                  <select className="line-form" name="category" onChange={onChange}>
+                    <option>-- Select --</option>
+                    {categories.map((categorySelect) => (
+                      <option key={categorySelect.id} value={categorySelect.category}>
+                        {categorySelect.category}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="cajetin-form">
+                  <input
+                    className="line-form"
+                    type="text"
+                    name="description"
+                    placeholder="descripción"
+                    value={description}
+                    onChange={onChange}
+                  />
+                </div>
+
+                <div className="cajetin-form">
+                  <input
+                    className="line-form"
+                    type="text"
+                    name="linkto"
+                    placeholder="link to"
+                    value={linkto}
+                    onChange={onChange}
+                  />
+                </div>
+
+                <div className="cajetin-form">
+                  <input
+                    className="line-form"
+                    type="text"
+                    name="github"
+                    placeholder="GitHub"
+                    value={github}
+                    onChange={onChange}
+                  />
+                </div>
+
+                <div className="cajetin-form">
+                  <input
+                    className="line-form"
+                    type="text"
+                    name="video"
+                    placeholder="video link"
+                    value={video}
+                    onChange={onChange}
+                  />
+                </div>
+
+                <div className="cajetin-form">
+                  <input
+                    className="line-form"
+                    type="date"
+                    name="begin"
+                    placeholder="incicio"
+                    value={begin}
+                    onChange={onChange}
+                  />
+                </div>
+
+                <div className="cajetin-form">
+                  <input
+                    className="line-form"
+                    type="date"
+                    name="end"
+                    placeholder="finalizado"
+                    value={end}
+                    onChange={onChange}
+                  />
+                </div>
+
+
+
+                  <button className="form-button" type="submit" value="Subir Proyecto">
+           
+                        Guardar Cambios
+           
+                  </button>
+
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+      <div className="right-area">
+
+        <Rightbar />
+
+      </div>
+
     </div>
   );
 }

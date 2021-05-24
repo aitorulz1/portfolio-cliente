@@ -5,7 +5,7 @@
 }
 
 .main-title {
-    padding: 0% 0% 15% 0%;
+    padding: 0% 0% 10% 0%;
     color: #fef7a6;
     text-transform: lowercase;
 }
@@ -25,6 +25,8 @@
     color: #253734;
     text-align: left;
     font-size: 14px;
+    -webkit-filter: drop-shadow(2px 4px 3px #b9b9b9);
+    filter: drop-shadow(2px 4px 3px #b9b9b9);
 }
 
 .button-delete {
@@ -32,6 +34,29 @@
     float: left;
     color: #04201c;
     text-align: right;
+    -webkit-filter: drop-shadow(2px 4px 3px #b9b9b9);
+    filter: drop-shadow(2px 4px 3px #b9b9b9);
+}
+
+.button-edit:hover {
+    width: 50%;
+    float: left;
+    color: #333333;
+    text-align: left;
+    font-size: 14px;
+    -webkit-filter: drop-shadow(1px 3px 4px #fff);
+    filter: drop-shadow(1px 3px 4px #fff);
+    transition: 1.5s;
+}
+
+.button-delete:hover {
+    width: 50%;
+    float: left;
+    color: #ff0000;
+    text-align: right;
+    -webkit-filter: drop-shadow(1px 3px 4px #ff9999);
+    filter: drop-shadow(1px 3px 4px #ff9999);
+    transition: 1.5s;
 }
 
 
@@ -53,17 +78,43 @@
 .slider-container-button {
     display: table;
     width: 100%;
-    padding: 10% 0% 0% 0%;
+    padding: 5% 0% 10% 0%;
 }
 
 
-.button-container-ver{
-    width: 60%;
-    min-width: 200px;
+/*.button-container-ver{
+    width: 50%;
+    min-width: 20px;
     background: #102826;
     padding: 3px;
     margin: 0 auto;
-    margin-bottom: 10%;
+    margin-bottom: 0%;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #192c2a, #1e3432);
+    box-shadow: 0px 7px 10px #182a28, 0px -5px 15px #203836;
+    cursor: pointer;
+}*/
+
+.button-container-ver{
+    width: 33%;
+    min-width: 20px;
+    padding: 3px;
+    margin: 0 auto;
+    margin-bottom: 0%;
+    border-radius: 50px;
+    cursor: pointer;
+    background: #183331;
+    border: 2px outset #192f2d;
+    text-align: center;
+    text-shadow: -1px -1px rgb(0 0 0 / 20%);
+}
+
+.button-container-ver:hover {
+    border-radius: 50px;
+    background: #1c312f;
+    box-shadow: inset 05px 10px 20px #182a28,
+                inset -10px -10px 20px #203836;
+    transition: 1s;
 }
 
 .button-container-ver a {

@@ -1,3 +1,55 @@
+.button {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: 2.5% 0% 25% 0%;
+    padding: 1% 0% 1% 0%;
+    z-index: 10;
+    border-radius: 50px;
+    background: #404a49;
+    box-shadow: -3px 12px 30px #363f3e, -7px -7px 30px #4a5554;
+}
+
+.container-regular-view{
+    display: table-row;
+}
+
+.cover-flow {
+    background-image: url(../../../assets/icons/slider.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 36px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cover-flow:hover {
+    background-image: url(../../../assets/icons/slider-onhover.png);
+    -webkit-box-shadow: 0 6px 6px -6px black;
+    -moz-box-shadow: 0 6px 6px -6px black;
+         box-shadow: 0 6px 6px -6px black;
+}
+
+.regular {
+    background-image: url(../../../assets/icons/regular.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 36px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.regular:hover {
+    background-image: url(../../../assets/icons/regular-onhover.png);
+    -webkit-box-shadow: 0 6px 6px -6px black;
+    -moz-box-shadow: 0 6px 6px -6px black;
+         box-shadow: 0 6px 6px -6px black;
+}
+
 
 
 /* ------------------------ Carousel ------------------------ */
@@ -5,20 +57,17 @@
 
 .coverflow__coverflow__53z9A {
     position: relative;
-    width: 85% !important;
+    width: 90% !important;
     height: 100% !important;
     margin: auto !important;
     overflow: hidden;
 }
 
-.coverflow__container__1P-xE {
-    /* width: 100% !important; */
-    min-height: 90vh !important;
-}
 
 .coverflow__container__1P-xE {
     position: relative;
-    background: none !important;    
+    background: none !important;
+    min-height: 90vh !important;    
 }
 
 .coverflow__text__39hqd {    
@@ -27,13 +76,15 @@
 
 .coverflow__stage__14oqC {
     height: 100%;
-    width: 140%;
+    /*width: 110% !important;*/
+    width: 100% !important;
+    /*margin-left: -5% !important;*/
+    margin-left: 0% !important;
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 0 auto;
     transform-style: preserve-3d;
-    perspective: 2000px;
-    margin-left: -20%;
+    perspective: 500px;
 }
 
 .coverflow__figure__3bk_C {
@@ -51,8 +102,7 @@
     box-shadow: none !important;
     -webkit-box-reflect: none !important;
     box-shadow: none;
-    -webkit-box-reflect: none !important;
-
+    -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0)) !important;
     transform: translateX(0px) rotateY(
         60deg
         ) scale(0.8);
@@ -90,11 +140,11 @@
 }
 
 #coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v.coverflow__right__1tzAF {
-    right: 50px;
-    bottom: 50px;
+    right: 40% !important;
+    bottom: 5%;
 }
 
 #coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v.coverflow__left__PhMc6 {
-    left: 50px;
-    bottom: 50px;
+    left: 40% !important;
+    bottom: 5%;
 }

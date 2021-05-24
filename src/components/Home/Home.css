@@ -1,6 +1,9 @@
 .home-container {
-    position: relative;
+    position: absolute;
     width: 100%;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .home-content-container {

@@ -132,6 +132,18 @@ button.form-button {
     text-shadow: -1px -1px rgb(0 0 0 / 20%);
 }
 
+button.form-button:hover {
+        width: 100%;
+        margin: 4.5% 0%;
+        padding: 10px;
+        color: #fff7a5;
+        font-size: 12px;
+        background: #04201d;
+        border: -3px outset #192f2d;
+        text-align: center;
+        text-shadow: -1px -1px rgb(0 0 0 / 20%);
+}
+
 i.fas.fa-arrow-circle-up {
     font-size: 18px;
 }

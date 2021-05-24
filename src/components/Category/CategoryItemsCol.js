@@ -2,9 +2,7 @@ import React, { useContext } from 'react';
 import proyectoContext from '../../context/proyectos/proyectoContext';
 import { Link } from 'react-router-dom';
 
-import './css/ByCategory.css'
-
-import './css/CategoryItems.css';
+import './css/CategoryItemsCol.css';
 
 export default function CategoryItems({ porcategoria }) {
 
@@ -15,34 +13,47 @@ export default function CategoryItems({ porcategoria }) {
 
     const onClickEliminar = id => {
         eliminarProyecto(id)
-        console.log(id)
     }
+
+    
+    const shortDescr = description.slice(0, 70)+'...'
+
+    const year = end.slice(0, 4);
+    const month = end.slice(5, 7);
+    const day = end.slice(8, 10);
+
+    const date = `${day} · ${month} · ${year}`;
+
+    
+    
+
 
     console.log(porcategoria.id)
 
     if (id === null) return;
 
     return (
-        <div className="project-container">
+        <div className="project-container-regular">
 
-            <div className="main-title">
+            <div className="main-title-regular">
                 {name}
             </div>
+            
 
-            <div className="button-container-mern">
+            <div className="edit-del-cont">
             
                 <Link to={`/proyecto/editar/${id}`}>
-                    <div className='button-edit'>
-                        <i className="fas fa-pen"></i>
+                    <div className='button-edit-regular'>
+                        <i class="fas fa-pen"></i>
                     </div>
                 </Link>
                 
                 <div
                     type='button'
-                    className='button-delete'
+                    className='button-delete-regular'
                     onClick={() => onClickEliminar([porcategoria.id])}
                 >
-                    <i className="far fa-times-circle"></i>
+                    <i class="far fa-times-circle"></i>
                 </div>
 
 
@@ -51,7 +62,16 @@ export default function CategoryItems({ porcategoria }) {
             <div className="image-container">
                 <img src={productPicture} />
             </div>            
+
+            <div className="end-date">
+                {date}
+            </div>
+
+            <div className="main-descr-regular">
+                {shortDescr}
+            </div>
             
+      
 
         <div className="slider-container-button">
 

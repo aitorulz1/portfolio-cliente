@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import clienteAxios from '../../service/axios';
 import CategoryItems from './CategoryItems';
+import CategoryItemsCol from './CategoryItemsCol';
 
 import { useParams } from 'react-router-dom';
 
@@ -8,7 +9,6 @@ import Sidebar from '../Layout/Sidebar';
 import Topbar from '../Layout/Topbar';
 import Rightbar from '../Layout/Rightbar';
 
-import { Carousel } from '3d-react-carousal';
 
 import Coverflow from 'react-coverflow';
 import { StyleRoot } from 'radium';
@@ -23,9 +23,16 @@ export default function ByCategory() {
 
     const [slider, guardarImagenSlides] = useState([]);
 
-    const slides = (slider.map(el => el.productPicture))
+    const [sliderview, setSliderView] = useState(true);
+    
+    const aNormal = () => {
+            setSliderView(false)
+    }
+    
+    const aSlider = () => {
+            setSliderView(true)
+    }
 
-    console.log(slides)
 
     // para pasar los parametros
     const { category } = useParams()
@@ -66,7 +73,6 @@ export default function ByCategory() {
 
 
 
-
     return (
 
 
@@ -85,24 +91,51 @@ export default function ByCategory() {
 
                 <div className="middle-container">
 
-                    <StyleRoot>
-                        <Coverflow
-                            displayQuantityOfSide={3}
-                            navigation
-                            infiniteScroll
-                            enableHeading        
-                        >
-                            
+                    {sliderview ? 
+                        <div className="button">
+                            <button onClick={aNormal} className="regular"></button>
+                        </div>
+                            :
+                        <div className="button">
+                            <button onClick={aSlider} className="cover-flow"></button>
+                        </div>
+                    }
 
-                            {porcategorias.map(porcategoria => (
-                                <CategoryItems
-                                    key={porcategoria.id}
-                                    porcategoria={porcategoria}
-                                />
-                            ))}
+                    {
+                        sliderview ?
+                        (
+                            <StyleRoot>
+                                <Coverflow
+                                    displayQuantityOfSide={3}
+                                    navigation
+                                    infiniteScroll
+                                    enableHeading        
+                                >
+                                    
 
-                        </Coverflow>
-                    </StyleRoot>
+                                    {porcategorias.map(porcategoria => (
+                                        <CategoryItems
+                                            key={porcategoria.id}
+                                            porcategoria={porcategoria}
+                                        />
+                                    ))}
+
+                                </Coverflow>
+                            </StyleRoot>
+                        ) 
+                        : 
+                        (
+                            <div className="container-regular-view">
+                                {porcategorias.map(porcategoria => (
+                                    <CategoryItemsCol
+                                        key={porcategoria.id}
+                                        porcategoria={porcategoria}
+                                    />
+                                ))}
+                            </div>
+                        )
+                    }
+
 
 
 
