@@ -77,7 +77,7 @@ input.log-form-group {
 }
 
 input.button {
-    width: calc(100% - 10px);
+    width: calc(77% - 25px);
     outline: none;
     border-radius: 35px;
     border-style: none;

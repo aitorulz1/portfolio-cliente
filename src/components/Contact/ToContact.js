@@ -9,7 +9,7 @@ export default function ToContact() {
     <div className="contact-container">
         <div className="contact-link-container">
             
-            <Link to=''>contact</Link>
+            <Link to='/contact/aitor-arina'>contact</Link>
 
         </div>
     </div>

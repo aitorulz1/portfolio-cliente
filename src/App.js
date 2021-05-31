@@ -7,6 +7,8 @@ import Login from './components/Auth/Login';
 import AllCategories from './components/Global/AllCategories';
 import Main from './components/Layout/Main';
 
+import Contact from './components/Contact/Contact';
+
 import ProyectosScreen from './components/Proyectos/ProyectosScreen';
 import JobsScreen from './components/Jobs/JobsScreen';
 import StudiesScreen from './components/Studies/StudiesScreen';
@@ -80,7 +82,9 @@ function App() {
                                 {/* <Route exact path= "/studies" component = { ListadoStudies } /> */}
                                 <Route exact path= "/studies" component = { StudiesAllScreen } />
                                 <Route exact path= "/study/:study" component = { StudySelected } />                            
-                                <Route exact path= "/study/editar/:study" component = { StudyEdicion } />                            
+                                <Route exact path= "/study/editar/:study" component = { StudyEdicion } />  
+
+                                <Route exact path= "/contact/aitor-arina" component = { Contact } />                                                      
 
                                 <Route exact path = "/profile/:userId" component = { ProfileScreen } /> 
                                 <RutaPrivada exact path = "/profile/editar/:userId" component = { ProfileEdicion } /> 

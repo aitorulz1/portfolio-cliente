@@ -9,7 +9,7 @@
 .title-single-container {
     text-align: center;
     text-transform: lowercase;
-    padding-bottom: 7.5%;
+    padding-bottom: 5.5%;
     color: rgb(254, 255, 220);
     font-size: 20px;
 }
@@ -113,22 +113,25 @@ span.category:hover {
 }
 
 .image-single-container a:hover {
-    color: #fbf7cb;
+    font-size: 20px;
+    color: #0f2825;
     transition: 1s;
 }
 
 .description-single-container {
     text-align: center;
     color: #fbf7cb;
-    font-size: 14px;
+    font-size: 11.5px;
     max-width: 400px;
-    line-height: 1.5;
+    line-height: 2;
     margin: 0 auto;
-    margin-top: 20%;
+    margin-top: 7.5%;
+    letter-spacing: 1.5px;
+
 }
 
 .date-container {
-    position: relative;
+    position: absolute;
     display: table;
     text-align: center;
     /* padding: 2.5% 0%; */

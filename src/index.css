@@ -6,10 +6,15 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  background: #636262;
+  /* background: #636262;
   background: -webkit-linear-gradient(top left, #636262, #011E1B);
   background: -moz-linear-gradient(top left, #636262, #011E1B);
-  background: linear-gradient(to bottom right, #636262, #011E1B);
+  background: linear-gradient(to bottom right, #636262, #011E1B); */
+
+  background: #626263;
+background: -webkit-linear-gradient(top left, #626263, #111F1C);
+background: -moz-linear-gradient(top left, #626263, #111F1C);
+background: linear-gradient(to bottom right, #626263, #111F1C);
 
   background-attachment: fixed;
   background-repeat: no-repeat;

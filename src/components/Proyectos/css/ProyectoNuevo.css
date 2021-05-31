@@ -41,6 +41,7 @@ i.fas.fa-project-diagram{
     border: none;
     border-bottom: 1px solid #fff7a5;
     outline: none;
+    padding-bottom: 10px;
 }
 
 input {

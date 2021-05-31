@@ -57,7 +57,7 @@ const ProyectoState = props => {
     const agregarProyecto = async proyecto => {
         try {
             const resultado = await clienteAxios.post('/products', proyecto);
-            // console.log(resultado.data);
+            console.log(resultado.data);
 
             dispatch({
                 type: AGREGAR_PROYECTOS,
