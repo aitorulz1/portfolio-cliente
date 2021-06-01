@@ -97,7 +97,13 @@ export default function ByCategory() {
                         </div>
                             :
                         <div className="button">
-                            <button onClick={aSlider} className="cover-flow"></button>
+
+                            <div className="upper-buttons-container"><button onClick={aSlider} className="alphabet"></button></div>
+                            
+                            <div className="upper-buttons-container"><button onClick={aSlider} className="cover-flow"></button></div>
+                            
+                            <div className="upper-buttons-container"><button onClick={aSlider} className="time-order"></button></div>
+
                         </div>
                     }
 

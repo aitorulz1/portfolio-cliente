@@ -12,9 +12,9 @@ body {
   background: linear-gradient(to bottom right, #636262, #011E1B); */
 
   background: #626263;
-background: -webkit-linear-gradient(top left, #626263, #111F1C);
-background: -moz-linear-gradient(top left, #626263, #111F1C);
-background: linear-gradient(to bottom right, #626263, #111F1C);
+  background: -webkit-linear-gradient(top left, #626263, #111F1C);
+  background: -moz-linear-gradient(top left, #626263, #111F1C);
+  background: linear-gradient(to bottom right, #626263, #111F1C);
 
   background-attachment: fixed;
   background-repeat: no-repeat;

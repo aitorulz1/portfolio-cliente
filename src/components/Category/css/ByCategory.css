@@ -1,53 +1,92 @@
 .button {
-    position: absolute;
+    position: relative;
     width: 100%;
     text-align: center;
-    margin: 2.5% 0% 25% 0%;
+    margin: 2.5% 0% 5% 0%;
     padding: 1% 0% 1% 0%;
     z-index: 10;
     border-radius: 50px;
     background: #404a49;
     box-shadow: -3px 12px 30px #363f3e, -7px -7px 30px #4a5554;
+    display: table;
 }
 
 .container-regular-view{
     display: table-row;
 }
 
-.cover-flow {
-    background-image: url(../../../assets/icons/slider.png);
+.upper-buttons-container {
+    width: 33%;
+    text-align: center;
+    float: left;
+}
+
+
+/* Buttons*/
+
+.alphabet {
+    background-image: url(../../../assets/icons/alphabet-on.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 36px;
-    height: 25px;
+    margin-top: 7.5px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.alphabet:hover{
+    background-image: url(../../../assets/icons/alphabet-off.png);
+}
+
+.cover-flow {
+    background-image: url(../../../assets/icons/slider-on.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 5px;
+    width: 28px;
+    height: 28px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
 .cover-flow:hover {
-    background-image: url(../../../assets/icons/slider-onhover.png);
-    -webkit-box-shadow: 0 6px 6px -6px black;
-    -moz-box-shadow: 0 6px 6px -6px black;
-         box-shadow: 0 6px 6px -6px black;
+    background-image: url(../../../assets/icons/slider-off.png);
+}
+
+.time-order {
+    background-image: url(../../../assets/icons/arrows-on.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 6.5px;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.time-order:hover {
+    background-image: url(../../../assets/icons/arrows-off.png);
 }
 
 .regular {
-    background-image: url(../../../assets/icons/regular.png);
+    background-image: url(../../../assets/icons/regular-on.png);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 36px;
-    height: 25px;
+    margin-top: 6.5px;
+    width: 30px;
+    height: 30px;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
 .regular:hover {
-    background-image: url(../../../assets/icons/regular-onhover.png);
-    -webkit-box-shadow: 0 6px 6px -6px black;
-    -moz-box-shadow: 0 6px 6px -6px black;
-         box-shadow: 0 6px 6px -6px black;
+    background-image: url(../../../assets/icons/regular-off.png);
+
 }
 
 

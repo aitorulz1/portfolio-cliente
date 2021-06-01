@@ -11,7 +11,7 @@ export default function CategoryItems({ porcategoria }) {
     const proyectosContext = useContext(proyectoContext);
     const { eliminarProyecto } = proyectosContext;
 
-    const { name, category, begin, end, description, productPicture, user, id } = porcategoria;
+    const { name, category, begin, end, description, productPicture, user, id, skills } = porcategoria;
 
     const onClickEliminar = id => {
         eliminarProyecto(id)
