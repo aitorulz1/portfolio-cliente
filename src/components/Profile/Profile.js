@@ -5,7 +5,6 @@ import './css/Profile.css';
 
 import clienteAxios from '../../service/axios';
 import Skills from './Skills';
-import { useParams } from 'react-router-dom';
 
 import MyResume from '../../assets/pdf/Resume-AitorArina.pdf';
 
@@ -22,13 +21,14 @@ export default function Profile({ aitor }) {
             try {
                 const respuesta = await clienteAxios.get('/skills');
                 getSkills(respuesta.data);
-
+                
             } catch (error) {
                 console.error(error);
             }
         }
         getData();
     }, []);
+    
 
     return (
         <div className="profile-conatiner">
@@ -46,30 +46,14 @@ export default function Profile({ aitor }) {
 
                 <div className="profile-features-container">
                     <ul className="list-block">
-                        {/* <li>mongoose</li>
-                        <li>express</li>
-                        <li>react | hooks</li>
-                    </ul>
-                    <ul className="list-block">
-                        <li>node</li>
-                        <li>redux | context</li>
-                        <li>NPM</li>
-                    </ul>
-                    <ul className="list-block">
-                        <li>github</li>
-                        <li>HTML 5</li>
-                        <li>CSS 3</li>
-                    </ul>
-                    <ul className="list-block">
-                        <li>wordpress</li>
-                        <li>PSD</li>
-                        <li>UX / UI</li> */}
-                        {skills.map((skill) => {
+                        
+                        {skills.map((skill) => (
                             <Skills
                                 key={skill.id}
                                 skill={skill}
                             />
-                        })}
+                        ))}
+                        
                     </ul>
                 </div>
 

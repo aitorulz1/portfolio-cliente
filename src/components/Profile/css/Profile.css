@@ -43,17 +43,18 @@ span.mail, span.mail a{
 }
 
 .profile-features-container ul {
-    width: 16%;
-    float: left;
-    padding-left: 9%;
+    width: 100%;
+    padding-left: 5%;
+    columns: 4;
 }
 
-.profile-features-container ul li {
+.profile-features-container ul li a{
     color: #fff;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     font-weight: 500;
     line-height: 2;
+    text-decoration: none;
 }
 
 li::marker {
