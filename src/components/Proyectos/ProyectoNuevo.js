@@ -17,12 +17,12 @@ export default function ProyectoNuevo() {
     linkto:"",
     github:"",
     video: "",
-    tags: [],
+    skill: "",
     begin: "",
     end: "",
   });
 
-  const { name, productPicture, category, description, linkto, github, video, tags, begin, end } = proyecto;
+  const { name, productPicture, category, description, linkto, github, video, skill, begin, end } = proyecto;
 
   const [error, guardarError] = useState(false);
 
@@ -93,6 +93,7 @@ export default function ProyectoNuevo() {
           description,
           linkto,
           github,
+          skill,
           video,
           begin,
           end,
@@ -110,6 +111,7 @@ export default function ProyectoNuevo() {
       begin: "",
       linto: "",
       github: "",
+      skill: "",
       video: "",
       end: "",
     });

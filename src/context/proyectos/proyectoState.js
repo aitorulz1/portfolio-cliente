@@ -10,8 +10,7 @@ import {
     OBTENER_PROYECTOS,
     PROYECTO_ACTUAL,
     ELIMINAR_PROYECTO,
-    PROYECTO_ERROR,
-    OBTENER_CATEGORY
+    PROYECTO_ERROR
 } from '../../types';
 
 
@@ -19,7 +18,7 @@ import {
 const ProyectoState = props => {
 
     const initialState = {
-        proyectos: null,
+        proyectos: [],
         formulario: false,
         category: null,
         proyecto: null,
@@ -37,6 +36,7 @@ const ProyectoState = props => {
     const obtenerProyectos = async proyectos => {
         try {
             const resultado = await clienteAxios.get('/products', proyectos)
+            console.log(resultado.data);
 
             dispatch({
                 type: OBTENER_PROYECTOS,

@@ -3,6 +3,7 @@ import React, { useEffect, useContext } from 'react';
 import studyContext from '../../context/studies/studyContext';
 
 import Study from './Study';
+import './css/ListadoStudies.css';
 
 export default function ListadoStudies() {
         
@@ -17,13 +18,17 @@ export default function ListadoStudies() {
 
 
     return (
-        <ul>
-            {studies.map(study => (
-                <Study
-                    key={study.id}
-                    study={study}
-                />
-            ))}
-        </ul>
+        <div className="studies-container">
+            <div className="studies-sec-container">
+                <ul>
+                    {studies.map(study => (
+                        <Study
+                            key={study.id}
+                            study={study}
+                        />
+                    ))}
+                </ul>
+            </div>
+        </div>
     )
 }

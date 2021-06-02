@@ -7,10 +7,7 @@ import studyReducer from './studyReducer';
 import {
     AGREGAR_STUDIES,
     OBTENER_STUDIES,
-    ELIMINAR_STUDIES,
-    EDITAR_STUDY,
-    STUDY_ACTUAL,
-    STUDY_ERROR,
+    STUDY_ERROR
 } from '../../types';
 
 const StudyState = props => {

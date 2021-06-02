@@ -24,5 +24,8 @@ export default (state, action) => {
                 studies: action.payload
             }
 
+            default:
+                return state;
+
     }
 }

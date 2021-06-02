@@ -32,7 +32,7 @@ i.fas.fa-project-diagram{
 
 .cajetin-form {
     width: 100%;
-    padding: 20px 0px;
+    padding: 15px 0px;
 }
 
 .line-form {
@@ -41,7 +41,7 @@ i.fas.fa-project-diagram{
     border: none;
     border-bottom: 1px solid #fff7a5;
     outline: none;
-    padding-bottom: 10px;
+    padding: 10px;
 }
 
 input {

@@ -42,11 +42,11 @@ export default function MenuDos({setAbiertoDos, abiertouno, abiertodos}) {
                         <div className="menu-container">
 
                             <div className="menu-items">
-                                <Link to={'/jobs'}>formación</Link>
+                                <Link to={'/studies'}>studies</Link>
                             </div>
                            
                             <div className="menu-items">
-                                <Link to={'/studies'}>experiencia</Link>
+                                <Link to={'/jobs'}>jobs</Link>
                             </div>
 
                         </div>

@@ -14,6 +14,7 @@ export default function ListadoProyectos() {
 
     if(!proyectos) return null;
 
+    console.log('hola', proyectos)
 
     return (
         <ul>

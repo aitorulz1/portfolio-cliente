@@ -2,39 +2,79 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import clienteAxios from "../../service/axios";
 
+import './css/Study.css';
+
 export default function Study({ study }) {
-  const { school, grade, leraned, logo, begin, end, id } = study;
+  const { school, grade, description, learned, logo, begin, end, id } = study;
 
   const eliminarJobPorId = () => {
     clienteAxios.delete(`/studies/delete/${id}`)
   }
 
-  console.log(id)
+
+  const yearb = begin.slice(0, 4);
+  const monthb = begin.slice(5, 7);
+  const dayb = begin.slice(8, 10);
+
+  const dateBegin = `${dayb} · ${monthb} · ${yearb}`;
+
+
+  const year = end.slice(0, 4);
+  const month = end.slice(5, 7);
+  const day = end.slice(8, 10);
+
+  const dateEnd = `${day} · ${month} · ${year}`;
+
+
 
   return (
-    <div>
+    <div className="studies-container-single">
 
-      {/* <img src={logo} /> */}
-      {school}
-      {grade}
+      <div className="studies-logo-container">
+          <img src={logo} />
+      </div>
+      
+      <div className="studies-content-container">
+          <div className="study-first">
+              <span className="grade">{grade}</span>  <span className="school">@ {school}</span>
+          </div>
 
-      <Link to={`/study/${id}`}>
-        <button>Ver Formación</button>
-      </Link>
+          <div className="study-first">
+            <span className="begin">{dateBegin}</span> <span className="end">| {dateEnd}</span>
+          </div>        
 
-      <Link to={'/studies'}>
-        <button
-            onClick={eliminarJobPorId}
-        >
-            Eliminar
-        </button>
-      </Link>
+          <div className="study-first">
+            <span className="description">{description}</span> 
+          </div>        
 
-      <Link to={`/study/editar/${id}`}>
-          <button>
-              Editar
+          <div className="study-first">
+            <span className="learned">{learned}</span> 
+          </div>        
+      </div>
+      
+
+
+      
+      <div className="private-buttons-container">
+
+        <Link to={`/study/editar/${id}`}>
+            <button
+              className="private-button-edit"
+            >
+                <i class="fas fa-edit"></i>
+            </button>
+        </Link>
+
+        <Link to={'/studies'}>
+          <button
+          className="private-button-delete"
+              onClick={eliminarJobPorId}
+          >
+              <i class="fa fa-trash" aria-hidden="true"></i>
           </button>
-      </Link>
+        </Link>
+
+      </div>
 
     </div>
   );

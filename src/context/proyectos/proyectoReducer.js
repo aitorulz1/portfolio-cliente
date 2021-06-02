@@ -17,18 +17,21 @@ export default (state, action) => {
                 ...state,
                 formulario: true
             }
+            
+        case AGREGAR_PROYECTOS:            
+            console.log('Agregar Proyectos')
+            return{
+                ...state,
+                proyectos: [...state.proyectos, action.payload]
+            }
 
         case OBTENER_PROYECTOS:
+            console.log('Obtener Proyectos')
             return {
                 ...state,
                 proyectos: action.payload
             }
             
-            case AGREGAR_PROYECTOS:
-                return{
-                    ...state,
-                    proyectos: [...state.proyectos, action.payload]
-                }
 
         case PROYECTO_ACTUAL:
             console.log(action.payload)
@@ -38,7 +41,7 @@ export default (state, action) => {
             }
 
         case ELIMINAR_PROYECTO:
-            console.log(action.payload.id)
+            console.log('Eliminar Proyecto')
             return {
                 ...state,
                 proyectos: state.proyectos.filter(proyecto => proyecto.id !== action.payload.id)

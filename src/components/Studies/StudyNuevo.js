@@ -12,12 +12,13 @@ export default function StudyNuevo() {
     school: "",
     grade: "",
     logo: "",
+    description: "",
     learned: "",
     begin: "",
     end: "",
   });
 
-  const { school, grade, logo, learned, begin, end } = study;
+  const { school, grade, logo, description, learned, begin, end } = study;
 
   const [error, guardarError] = useState(false);
 
@@ -37,6 +38,7 @@ export default function StudyNuevo() {
     if (
       (school.trim() === "") |
       (grade.trim() === "") |
+      (description.trim() === "") |
       (learned.trim() === "") |
       (begin.trim() === "") |
       (end.trim() === "")
@@ -66,6 +68,7 @@ export default function StudyNuevo() {
           school,
           grade,
           logo: file.secure_url,
+          description,
           learned,
           begin,
           end,
@@ -79,6 +82,7 @@ export default function StudyNuevo() {
       school: "",
       grade: "",
       logo: "",
+      description: "",
       learned: "",
       begin: "",
       end: "",
@@ -90,7 +94,7 @@ export default function StudyNuevo() {
       <div className="proyect-form">
 
           <div className="title-container">
-            New Project<i class="fas fa-graduation-cap"></i>
+            New Study<i class="fas fa-graduation-cap"></i>
           </div>
       
         <form onSubmit={onSubmit} encType="multipart/form-data">
@@ -129,6 +133,17 @@ export default function StudyNuevo() {
                 onChange={onChange}
               />
             </label>
+          </div>
+
+          <div className="cajetin-form">
+            <input
+              className="line-form"
+              type="text"
+              name="description"
+              placeholder="description"
+              value={description}
+              onChange={onChange}
+            />
           </div>
 
           <div className="cajetin-form">
