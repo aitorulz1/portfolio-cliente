@@ -42,7 +42,7 @@ export default function PrivateMenu() {
             <div className="vl"></div>
             <div className="lp">
               <div className="logout-botton" onClick={() => cerrarSesion()}>
-              <i class="fa fa-power-off"></i>
+              <i className="fa fa-power-off"></i>
               </div>
               </div>
             </li>

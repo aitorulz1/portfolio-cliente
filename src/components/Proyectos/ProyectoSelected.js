@@ -30,11 +30,7 @@ export default function ProyectoSelected() {
 
   const { name, productPicture, category, linkto, description, end, begin } = proyect;
 
-  console.log(proyect)
-
   if (proyect === null) return;
-
-
 
   return (
     <div className="main-container">
@@ -49,7 +45,7 @@ export default function ProyectoSelected() {
 
           <Link to={`/category/${category}`} className="back-to">
             <div className="arrow">
-              <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>              
+              <i className="fa fa-arrow-circle-left" aria-hidden="true"></i>              
             </div>
             <div className="back-txt">go back</div>
           </Link>

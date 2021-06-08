@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import clienteAxios from "../../service/axios";
 
+
 import proyectoContext from "../../context/proyectos/proyectoContext";
 
 import "./css/ProyectoNuevo.css";
 
 export default function ProyectoNuevo() {
   const proyectosContext = useContext(proyectoContext);
-  const { formulario, agregarProyecto } = proyectosContext;
+  const { agregarProyecto } = proyectosContext;
 
   const [proyecto, guardarProyecto] = useState({
     name: "",
@@ -17,7 +18,7 @@ export default function ProyectoNuevo() {
     linkto:"",
     github:"",
     video: "",
-    skill: "",
+    skill: [],
     begin: "",
     end: "",
   });
@@ -27,6 +28,11 @@ export default function ProyectoNuevo() {
   const [error, guardarError] = useState(false);
 
   const [categorias, guardarCategorias] = useState([]);
+
+  const [ skills, guardarSkills ] = useState([])
+
+
+  
 
   useEffect(() => {
     const getData = async () => {
@@ -38,6 +44,16 @@ export default function ProyectoNuevo() {
       }
     };
     getData();
+
+    const getSkills = async () => {
+      try {
+        const resultado = await clienteAxios.get("/skills");
+        guardarSkills(resultado.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    getSkills();  
   }, []);
 
 
@@ -50,6 +66,7 @@ export default function ProyectoNuevo() {
     console.log(files && files[0]);
     console.log(file);
   };
+
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -86,6 +103,8 @@ export default function ProyectoNuevo() {
         console.log(file);
 
         // Agrego el producto
+
+
         agregarProyecto({
           name,
           productPicture: file.secure_url,
@@ -111,7 +130,7 @@ export default function ProyectoNuevo() {
       begin: "",
       linto: "",
       github: "",
-      skill: "",
+      skill: [],
       video: "",
       end: "",
     });
@@ -125,7 +144,7 @@ export default function ProyectoNuevo() {
       <div className="proyect-form">
         
           <div className="title-container">
-            New Project<i class="fas fa-project-diagram"></i>
+            New Project<i className="fas fa-project-diagram"></i>
           </div>
       
           <form onSubmit={onSubmit} encType="multipart/form-data">
@@ -143,8 +162,8 @@ export default function ProyectoNuevo() {
             </div>
 
             <div className="cajetin-form">
-              <label class="custom-file-upload">
-              Select File <i class="far fa-file"></i>
+              <label className="custom-file-upload">
+              Select File <i className="far fa-file"></i>
                 <input
                   className="line-form"
                   type="file"
@@ -179,6 +198,20 @@ export default function ProyectoNuevo() {
                 value={description}
                 onChange={onChange}
               />
+            </div>
+
+            <div className="cajetin-form">
+              <select className="line-form" name="skill"  multiple="true" onChange={onChange}>
+                <option value="select">-- Select --</option>
+                {skills.map((skilltech) => (
+                  <option
+                    key={skilltech.code}
+                    value={skilltech.skills}
+                  >
+                    {skilltech.skills}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div className="cajetin-form">
@@ -238,7 +271,7 @@ export default function ProyectoNuevo() {
 
      
               <button className="form-button" type="submit" value="Subir Proyecto">
-                <i class="fas fa-arrow-circle-up" alt="upload project"></i>
+                <i className="fas fa-arrow-circle-up" alt="upload project"></i>
               </button>
    
           </form>

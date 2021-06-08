@@ -60,17 +60,17 @@ export default function Profile({ aitor }) {
                 <div className="profile-buttons-container">
                     <div className="profile-button-container">
                         <div className="profile-button">
-                            <Link to={'/studies'}><i class="far fa-arrow-alt-circle-left"></i> studies</Link>
+                            <Link to={'/studies'}><i className="far fa-arrow-alt-circle-left"></i> studies</Link>
                         </div>
                     </div>
                     <div className="profile-button-container">
                         <div className="profile-button">
-                            <a href={MyResume} download="AitorArina|Resume.pdf">resume <i class="far fa-arrow-alt-circle-down"></i></a>
+                            <a href={MyResume} download="AitorArina|Resume.pdf">resume <i className="far fa-arrow-alt-circle-down"></i></a>
                         </div>
                     </div>
                     <div className="profile-button-container">
                         <div className="profile-button">
-                            <Link to={'/jobs'}><i class="far fa-arrow-alt-circle-right"></i> experience</Link>
+                            <Link to={'/jobs'}><i className="far fa-arrow-alt-circle-right"></i> experience</Link>
                         </div>
                         
                     </div>

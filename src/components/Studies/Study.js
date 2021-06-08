@@ -7,6 +7,8 @@ import './css/Study.css';
 export default function Study({ study }) {
   const { school, grade, description, learned, logo, begin, end, id } = study;
 
+  console.log(study)
+
   const eliminarJobPorId = () => {
     clienteAxios.delete(`/studies/delete/${id}`)
   }
@@ -61,7 +63,7 @@ export default function Study({ study }) {
             <button
               className="private-button-edit"
             >
-                <i class="fas fa-edit"></i>
+                <i className="fas fa-edit"></i>
             </button>
         </Link>
 
@@ -70,7 +72,7 @@ export default function Study({ study }) {
           className="private-button-delete"
               onClick={eliminarJobPorId}
           >
-              <i class="fa fa-trash" aria-hidden="true"></i>
+              <i className="fa fa-trash" aria-hidden="true"></i>
           </button>
         </Link>
 

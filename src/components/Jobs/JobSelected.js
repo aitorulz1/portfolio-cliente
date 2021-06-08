@@ -20,8 +20,6 @@ export default function JobSelected(props) {
 
   const { title, company, logo } = job;
 
-  console.log(job);
-
   return (
     <div>
       {title}

@@ -36,7 +36,6 @@ const ProyectoState = props => {
     const obtenerProyectos = async proyectos => {
         try {
             const resultado = await clienteAxios.get('/products', proyectos)
-            console.log(resultado.data);
 
             dispatch({
                 type: OBTENER_PROYECTOS,
@@ -57,8 +56,7 @@ const ProyectoState = props => {
     const agregarProyecto = async proyecto => {
         try {
             const resultado = await clienteAxios.post('/products', proyecto);
-            console.log(resultado.data);
-
+            console.log(resultado)
             dispatch({
                 type: AGREGAR_PROYECTOS,
                 payload: resultado.data
@@ -79,7 +77,7 @@ const ProyectoState = props => {
     const obtenerCategory = async category => {
         try {
             const resultado = await clienteAxios.get('/category/:category', category)
-            console.log(resultado)
+
         } catch (error) {
             const alerta = {
                 msg: 'Hubo un error',
@@ -117,7 +115,6 @@ const ProyectoState = props => {
     const eliminarProyecto = async proyecto => {
         try {
             const resultado = await clienteAxios.delete(`/products/${proyecto}`, proyecto)
-            console.log(resultado)
 
             dispatch({
                 type: ELIMINAR_PROYECTO,

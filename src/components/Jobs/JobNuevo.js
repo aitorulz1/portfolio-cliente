@@ -81,8 +81,6 @@ export default function JobNuevo() {
             end: ''
         })
 
-        console.log(job)
-
     }
 
     return (
@@ -92,7 +90,7 @@ export default function JobNuevo() {
             <div className="proyect-form">
 
             <div className="title-container">
-                New Job<i class="fas fa-user-tie"></i>
+                New Job<i className="fas fa-user-tie"></i>
             </div>
 
                 <form
@@ -124,8 +122,8 @@ export default function JobNuevo() {
                         </div>
 
                         <div className="cajetin-form">
-                            <label class="custom-file-upload">
-                            Select File <i class="far fa-file"></i>
+                            <label className="custom-file-upload">
+                            Select File <i className="far fa-file"></i>
                                 <input 
                                     className="line-form"
                                     type='file'
@@ -173,7 +171,7 @@ export default function JobNuevo() {
                         </div>
 
                         <button className="form-button" type="submit" value="Subir Proyecto">
-                            <i class="fas fa-arrow-circle-up" alt="upload project"></i>
+                            <i className="fas fa-arrow-circle-up" alt="upload project"></i>
                         </button>
 
                 </form>

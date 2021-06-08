@@ -13,7 +13,7 @@ import {
 const StudyState = props => {
 
     const initialState = {
-        studies: null
+        studies: []
     }
 
     const [ state, dispatch ] = useReducer(studyReducer, initialState);
@@ -21,7 +21,6 @@ const StudyState = props => {
     const obtenerStudies = async studies => {
         try {
             const resultado = await clienteAxios.get('/studies', studies)
-            console.log(resultado.data);
 
             dispatch({
                 type: OBTENER_STUDIES,
@@ -44,7 +43,6 @@ const StudyState = props => {
     const agregarStudy = async study => {
         try {
             const resultado = await clienteAxios.post('/studies', study)
-            console.log(resultado.data)
             
             dispatch({
                 type: AGREGAR_STUDIES,

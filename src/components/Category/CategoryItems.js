@@ -18,8 +18,6 @@ export default function CategoryItems({ porcategoria }) {
         console.log(id)
     }
 
-    console.log(porcategoria.id)
-
     if (id === null) return;
 
     return (
@@ -57,7 +55,7 @@ export default function CategoryItems({ porcategoria }) {
 
             <div className="button-container-ver">
                 <Link to={`/proyecto/${id}`}>
-                    <i class="far fa-eye"></i>
+                    <i className="far fa-eye"></i>
                 </Link>
             </div>
 

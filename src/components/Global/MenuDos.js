@@ -4,23 +4,11 @@ import './css/MenuDos.css';
 
 export default function MenuDos({setAbiertoDos, abiertouno, abiertodos}) {
 
-    const [ secondtoggle, setSecondToggle] = useState(false);
 
     const handleSecondToggle = () => {
-        setSecondToggle(secondtoggle => !secondtoggle)
+        setAbiertoDos( !abiertodos)
     }
 
-    if(secondtoggle) {
-        setAbiertoDos(true)
-    } else {
-        setAbiertoDos(false)
-    }
-
-    /*useEffect(() => {
-        if(abiertouno) {
-            handleSecondToggle();
-        }
-    }, [abiertouno])*/
 
 
     return (
@@ -28,7 +16,7 @@ export default function MenuDos({setAbiertoDos, abiertouno, abiertodos}) {
         <div className="sidebar-block">
       
             <div className="main-burger-button-dos">
-                    <label for="checks">
+                    <label htmlFor="checks">
                         <input type="checkbox" id="checks" onClick={handleSecondToggle}/>
                         <span className="secondmenu"></span>
                         <span className="secondmenu"></span>
@@ -37,7 +25,7 @@ export default function MenuDos({setAbiertoDos, abiertouno, abiertodos}) {
             </div>
 
             {
-                secondtoggle ?
+                abiertodos ?
                     (
                         <div className="menu-container">
 

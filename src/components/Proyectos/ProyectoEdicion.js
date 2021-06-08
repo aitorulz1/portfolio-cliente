@@ -98,7 +98,7 @@ export default function ProyectoEdicion(props) {
             <div className="proyect-form">
 
               <div className="title-container">
-                Edit Project<i class="fas fa-project-diagram"></i>
+                Edit Project<i className="fas fa-project-diagram"></i>
               </div>
 
               <form onSubmit={onSubmit} encType="multipart/form-data" >
@@ -114,8 +114,8 @@ export default function ProyectoEdicion(props) {
                 </div>
 
                 <div className="cajetin-form">
-                  <label class="custom-file-upload">
-                    Select File <i class="far fa-file"></i>
+                  <label className="custom-file-upload">
+                    Select File <i className="far fa-file"></i>
                     <input
                       className="line-form"
                       type="file"

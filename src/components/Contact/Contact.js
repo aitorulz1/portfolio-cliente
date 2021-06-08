@@ -2,15 +2,25 @@ import React, { useState, useEffect } from 'react';
 import clienteAxios from "../../service/axios";
 
 import './Contact.css';
-
+import { sendMail} from '../../helper/Mail';
+ 
 import Sidebar from "../Layout/Sidebar";
 import Topbar from "../Layout/Topbar";
 import Rightbar from "../Layout/Rightbar";
 
 export default function ToContact() {
 
-    const [aitor, guardarAitor] = useState({});
+    const [ aitor, guardarAitor ] = useState({});
     const { email } = aitor;
+    
+    const [ values, setValues ] = useState({
+        name: '',
+        mail: '',
+        phone: '',
+        message: '',
+        status: false
+    })
+    const { name, mail, phone, message, status } = values;
 
 
     useEffect(() => {
@@ -23,34 +33,34 @@ export default function ToContact() {
             }
         };
         obtenerAitor();
-    }, []);
+    }, [aitor]);
 
     console.log(aitor)
 
-    const [status, setStatus] = useState('Submit');
-
-    const onSubmit = async e => {
-        e.preventDefault();
-        setStatus('Sending...');
-        const { name, mail, phone, message } = e.target.elements;
-        let details = {
-            name: name.value,
-            mail: mail.value,
-            phone: phone.value,
-            message: message.value
-        };
-
-        const response = await clienteAxios.post('/mail', {
-            headers: {
-                'Content-type': 'application/json;charter=utf-8',
-            },
-            body: JSON.stringify(details),
-        });
-        setStatus('Submit');
-        let result = await response.json();
-        alert(result.status);
-        console.log('hola')
+    const onChange = name => e => {
+        setValues({ ...values, [name]:e.target.value})
     }
+
+
+    const onSubmit = e => {
+        e.preventDefault();
+        
+                console.log('name', name)
+                console.log('values email', mail)
+                console.log('phone', phone)
+                console.log('message', message)
+
+        sendMail({ name, mail }).then(data=> {
+            if(data.err){
+                console.log('err ', data.err)
+            } else {
+                console.log('Success', data);
+                setValues({...values, status:true})
+            }
+        }).catch(console.log('error in send mail'))
+    };
+
+
 
     return (
 
@@ -91,8 +101,8 @@ export default function ToContact() {
                                             type="text"
                                             name="name"
                                             id="name"
-                                            placeholder="nombre"
-                                            id="name"                                            
+                                            placeholder="nombre"                                                                                  
+                                            onChange={onChange}
                                         />
                                     </div>
 
@@ -103,6 +113,7 @@ export default function ToContact() {
                                             name="mail"
                                             id="mail"
                                             placeholder="email"                                            
+                                            onChange={onChange}
                                         />
                                     </div>
 
@@ -113,6 +124,7 @@ export default function ToContact() {
                                             name="phone"
                                             id="phone"
                                             placeholder="Phone Number"                                            
+                                            onChange={onChange}
                                         />
                                     </div>
 
@@ -123,11 +135,12 @@ export default function ToContact() {
                                             name="message"
                                             id="message"
                                             placeholder="message"                                            
+                                            onChange={onChange}
                                         />
                                     </div>
 
                                     <button className="form-button-contact" type="submit" >
-                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                        <i className="fa fa-envelope-o" aria-hidden="true"></i>
                                     </button>
 
                                 </form>
@@ -169,3 +182,5 @@ export default function ToContact() {
 
     )
 }
+
+

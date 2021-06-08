@@ -10,8 +10,6 @@ export default function ProfileScreen(props) {
 
   const [aitor, guardarAitor] = useState({});
 
-  console.log(aitor)
-
   useEffect(() => {
     const obtenerUser = async () => {
       const resultado = await clienteAxios.get('/users')

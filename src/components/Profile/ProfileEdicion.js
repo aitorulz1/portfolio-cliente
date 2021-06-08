@@ -81,7 +81,7 @@ export default function ProfileEdicion(props) {
             <div className="proyect-form">
 
               <div className="title-container">
-                Me<i class="far fa-meh-blank"></i>
+                Me<i className="far fa-meh-blank"></i>
               </div>
 
               <form className="login" onSubmit={onSubmit}>
@@ -108,8 +108,8 @@ export default function ProfileEdicion(props) {
                 </div>
 
                 <div className="cajetin-form">
-                  <label class="custom-file-upload">
-                    Select File <i class="far fa-meh-blank"></i>
+                  <label className="custom-file-upload">
+                    Select File <i className="far fa-meh-blank"></i>
                     <input
                       className="line-form"
                       type="file"
@@ -145,7 +145,7 @@ export default function ProfileEdicion(props) {
 
 
                 <button className="form-button" type="submit" value="Subir Proyecto">
-                  <i class="fas fa-meh-blank"></i>
+                  <i className="fas fa-meh-blank"></i>
                 </button>
 
               </form>

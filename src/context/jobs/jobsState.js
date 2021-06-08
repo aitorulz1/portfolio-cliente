@@ -17,7 +17,7 @@ const JobsState = props => {
 
     const initialState = {
         formulario: false,
-        jobs: null
+        jobs: []
     
     }
 
@@ -27,7 +27,6 @@ const JobsState = props => {
     const obtenerJobs = async jobs => {
         try {
             const resultado = await clienteAxios.get('/jobs', jobs)
-            console.log(resultado.data);
 
             dispatch({
                 type: OBTENER_JOBS,
@@ -50,7 +49,6 @@ const JobsState = props => {
     const agregarJobs = async job => {
         try {
             const resultado = await clienteAxios.post('/jobs', job);
-            console.log(resultado.data)
 
             dispatch({
                 type: AGREGAR_JOBS,

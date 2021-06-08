@@ -94,7 +94,7 @@ export default function StudyNuevo() {
       <div className="proyect-form">
 
           <div className="title-container">
-            New Study<i class="fas fa-graduation-cap"></i>
+            New Study<i className="fas fa-graduation-cap"></i>
           </div>
       
         <form onSubmit={onSubmit} encType="multipart/form-data">
@@ -122,8 +122,8 @@ export default function StudyNuevo() {
           </div>
 
           <div className="cajetin-form">
-            <label class="custom-file-upload">
-                Select File <i class="far fa-file"></i>
+            <label className="custom-file-upload">
+                Select File <i className="far fa-file"></i>
               <input
                 className="line-form"
                 type="file"
@@ -180,7 +180,7 @@ export default function StudyNuevo() {
           </div>
 
             <button className="form-button" type="submit" value="Subir Proyecto">
-              <i class="fas fa-arrow-circle-up" alt="upload project"></i>
+              <i className="fas fa-arrow-circle-up" alt="upload project"></i>
             </button>
 
 

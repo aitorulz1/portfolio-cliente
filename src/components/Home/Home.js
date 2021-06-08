@@ -22,7 +22,7 @@ export default function Home() {
             setLength(length => (length === 6 ? 0 : length + 1));
         }, 750)
 
-    }, [])
+    }, [setLength])
 
     return (
         <div className="home-container">

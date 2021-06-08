@@ -44,7 +44,7 @@ export default function CategoryItems({ porcategoria }) {
             
                 <Link to={`/proyecto/editar/${id}`}>
                     <div className='button-edit-regular'>
-                        <i class="fas fa-pen"></i>
+                        <i className="fas fa-pen"></i>
                     </div>
                 </Link>
                 
@@ -53,7 +53,7 @@ export default function CategoryItems({ porcategoria }) {
                     className='button-delete-regular'
                     onClick={() => onClickEliminar([porcategoria.id])}
                 >
-                    <i class="far fa-times-circle"></i>
+                    <i className="far fa-times-circle"></i>
                 </div>
 
 
@@ -77,7 +77,7 @@ export default function CategoryItems({ porcategoria }) {
 
             <div className="button-container-ver">
                 <Link to={`/proyecto/${id}`}>
-                    <i class="far fa-eye"></i>
+                    <i className="far fa-eye"></i>
                 </Link>
             </div>
 

@@ -15,8 +15,6 @@ export default function StudyEdicion(props) {
 
   const { school, grade, end, begin, logo, description, learned } = study;
 
-  console.log(study);
-
   useEffect(() => {
     const obtenerStudy = async () => {
       const resultado = await clienteAxios.get(`/studies/${id}`);
@@ -52,9 +50,7 @@ export default function StudyEdicion(props) {
         body: data,
       }
     );
-    console.log(respuesta);
     const file = await respuesta.json();
-
     console.log(file.secure_url);
 
     const resultado = await clienteAxios.patch(`/studies/${id}`, {
@@ -108,8 +104,8 @@ export default function StudyEdicion(props) {
                 </div>
 
                 <div className="cajetin-form">
-                  <label class="custom-file-upload">
-                    Select File <i class="far fa-file"></i>
+                  <label className="custom-file-upload">
+                    Select File <i className="far fa-file"></i>
                       <input
                         className="line-form"
                         type="file"

@@ -10,8 +10,6 @@ export default function ToProfile() {
     const [ aitor, guardarAitor ] = useState({})
 
     const { name, email, username, id } = aitor;
-
-    console.log(aitor)
     
     useEffect(() => {
       const obtenerUser = async() => {

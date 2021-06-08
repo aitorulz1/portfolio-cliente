@@ -12,14 +12,9 @@ export default function AllCategories({setAbiertoUno, abiertouno, abiertodos}) {
     const [toggle, setToggle] = useState(false);
 
     const handleToggle = () => {
-        setToggle(toggle => !toggle);
+        setAbiertoUno(!abiertouno);
     }
 
-    if(toggle) {
-        setAbiertoUno(true)
-    } else {
-        setAbiertoUno(false)
-    }
 
     useEffect(() => {
         const getData = async () => {
@@ -41,7 +36,7 @@ export default function AllCategories({setAbiertoUno, abiertouno, abiertodos}) {
       
             
             <div className="main-burger-button">
-                    <label for="check">
+                    <label htmlFor="check">
                         <input type="checkbox" id="check" onClick={handleToggle}/>
                         <span></span>
                         <span></span>
@@ -49,7 +44,7 @@ export default function AllCategories({setAbiertoUno, abiertouno, abiertodos}) {
                     </label>    
             </div>
 
-            { toggle ?
+            { abiertouno ?
                 ( 
                     <div className="menu-container">
 

@@ -19,7 +19,7 @@ export default function Proyecto({ proyecto }) {
   };
 
   const seleccionarProyectoEditar = (proyecto) => {
-    console.log(proyecto);
+    
   };
 
   return (

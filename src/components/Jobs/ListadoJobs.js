@@ -13,8 +13,6 @@ export default function ListadoJobs() {
 
   if (!jobs) return null;
 
-  console.log(jobs);
-
   return (
     <ul>
       {jobs.map((job) => (
