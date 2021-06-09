@@ -148,7 +148,7 @@
 }
 
 .coverflow__arrowWrapper__3qbYP {
-    display: flex;
+    display: contents !important;
     align-items: center;
     overflow: hidden;
 }

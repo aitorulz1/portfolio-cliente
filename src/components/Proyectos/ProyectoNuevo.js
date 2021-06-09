@@ -201,7 +201,7 @@ export default function ProyectoNuevo() {
             </div>
 
             <div className="cajetin-form">
-              <select className="line-form" name="skill"  multiple="true" onChange={onChange}>
+              <select className="line-form" name="skill"  multiple={true} onChange={onChange}>
                 <option value="select">-- Select --</option>
                 {skills.map((skilltech) => (
                   <option

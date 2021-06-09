@@ -111,7 +111,7 @@ export default function ByCategory() {
                         (
                             <StyleRoot>
                                 <Coverflow
-                                    displayQuantityOfSide={3}
+                                    displayQuantityOfSide={2}
                                     navigation
                                     infiniteScroll
                                     enableHeading        

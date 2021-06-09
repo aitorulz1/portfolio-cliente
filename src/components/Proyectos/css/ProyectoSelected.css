@@ -106,6 +106,10 @@ span.category:hover {
     top: 20%;
 }
 
+.links-container a {
+    color: #fdf39d;
+}
+
 .image-single-container a {
     position: absolute;
     right: 6%;
