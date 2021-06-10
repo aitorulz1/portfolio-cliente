@@ -24,13 +24,8 @@ export default function CategoryItems({ porcategoria }) {
 
     const date = `${day} · ${month} · ${year}`;
 
-    
-    
-
-
-    console.log(porcategoria.id)
-
     if (id === null) return;
+    
 
     return (
         <div className="project-container-regular">

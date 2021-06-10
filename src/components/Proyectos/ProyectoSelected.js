@@ -8,6 +8,9 @@ import Sidebar from "../Layout/Sidebar";
 import Topbar from "../Layout/Topbar";
 import Rightbar from "../Layout/Rightbar";
 
+import Modal from '@material-ui/core/Modal';
+import { makeStyles } from '@material-ui/core/styles';
+
 import './css/ProyectoSelected.css';
 
 export default function ProyectoSelected() {
@@ -15,6 +18,16 @@ export default function ProyectoSelected() {
   const { proyecto } = useParams();
 
   const [proyect, guardarProyect] = useState({});
+
+  const [showvideo, setShowVideo] = useState(false);
+
+  const showVideo = () => {
+    setShowVideo(true)
+  }
+
+  const hideVideo = () => {
+    setShowVideo(false)
+  }
 
   useEffect(() => {
     const proyectoSeleceted = async () => {
@@ -28,7 +41,11 @@ export default function ProyectoSelected() {
     proyectoSeleceted();
   }, [proyecto]);
 
-  const { name, productPicture, category, linkto, description, end, begin } = proyect;
+  const { name, productPicture, category, linkto, github, video, skill, description, end, begin } = proyect;
+
+  const videoModal = `${video}?autoplay=1&showinfo=0&controls=0&rel=0&modestbranding=0&loop=1&fs=1`
+
+  console.log(proyect)
 
   if (proyect === null) return;
 
@@ -45,7 +62,7 @@ export default function ProyectoSelected() {
 
           <Link to={`/category/${category}`} className="back-to">
             <div className="arrow">
-              <i className="fa fa-arrow-circle-left" aria-hidden="true"></i>              
+              <i className="fa fa-arrow-circle-left" aria-hidden="true"></i>
             </div>
             <div className="back-txt">go back</div>
           </Link>
@@ -54,11 +71,19 @@ export default function ProyectoSelected() {
 
             <div className="title-single-container">{name} | <Link to={`/category/${category}`}><span className="category">{category}</span></Link></div>
 
-
-
             <div className="image-single-container">
+
+              {showvideo ?
+                (
+                  <div className="video-container">
+                    <iframe id="video-modal" src={videoModal} frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay"></iframe>
+                  </div>
+                ) : null
+              }
+
               <img src={productPicture} />
-            </div>                      
+
+            </div>
 
             <div className="date-container">
 
@@ -67,20 +92,37 @@ export default function ProyectoSelected() {
 
             </div>
 
-
             <div className="description-single-container">
               {description}
             </div>
- 
+
             <div className="links-container">
-                {linkto ?
-                  (<a href={linkto} target="_blank">
+              {linkto ?
+                (<a href={linkto} target="_blank">
                   <i className="fa fa-external-link" aria-hidden="true"></i>
-                  </a>) : null
+                </a>) : null
+              }
+              {
+                video ?
+                  (<a onClick={showVideo}><i className="fa fa-play-circle" aria-hidden="true"></i></a>) : null
+              }
+              <div>
+
+                {
+                  showvideo ?
+                  (
+                    <a onClick={hideVideo}><i class="fas fa-times-circle"></i></a>
+                  ) : null
                 }
+                
               </div>
-
-
+              {
+                github ?
+                  (<a href={github} target="_blank">
+                    <i className="fa fa-github" aria-hidden="true"></i>
+                  </a>) : null
+              }
+            </div>
 
           </div>
 

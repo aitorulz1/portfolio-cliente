@@ -24,6 +24,8 @@ export default function ByCategory() {
     const [slider, guardarImagenSlides] = useState([]);
 
     const [sliderview, setSliderView] = useState(true);
+
+    const [ showwarn, setShowWarn ] = useState(true)
     
     const aNormal = () => {
             setSliderView(false)
@@ -32,6 +34,10 @@ export default function ByCategory() {
     const aSlider = () => {
             setSliderView(true)
     }
+
+    setTimeout(() => {
+        setShowWarn(false)
+    }, 5000)
 
 
     // para pasar los parametros
@@ -109,24 +115,32 @@ export default function ByCategory() {
                     {
                         sliderview ?
                         (
-                            <StyleRoot>
-                                <Coverflow
-                                    displayQuantityOfSide={2}
-                                    navigation
-                                    infiniteScroll
-                                    enableHeading        
-                                >
-                                    
+                            <div>
+                                <StyleRoot>
+                                    <Coverflow
+                                        displayQuantityOfSide={2}
+                                        navigation
+                                        infiniteScroll
+                                        enableHeading        
+                                    >
+                                        
 
-                                    {porcategorias.map(porcategoria => (
-                                        <CategoryItems
-                                            key={porcategoria.id}
-                                            porcategoria={porcategoria}
-                                        />
-                                    ))}
+                                        {porcategorias.map(porcategoria => (
+                                            <CategoryItems
+                                                key={porcategoria.id}
+                                                porcategoria={porcategoria}
+                                            />
+                                        ))}
 
-                                </Coverflow>
-                            </StyleRoot>
+
+                                    </Coverflow>
+                                </StyleRoot>
+
+                                {showwarn ?                             
+                                (<div className="warning">push on an arrow to start</div>)
+                                : null
+                                }
+                            </div>
                         ) 
                         : 
                         (

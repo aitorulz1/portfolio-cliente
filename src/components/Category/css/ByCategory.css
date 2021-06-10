@@ -89,6 +89,13 @@
 
 }
 
+.warning {
+    position: absolute;
+    bottom: 17%;
+    margin-left: calc(50% - 90px);
+    color: #fff;
+}
+
 
 
 /* ------------------------ Carousel ------------------------ */
@@ -96,7 +103,7 @@
 
 .coverflow__coverflow__53z9A {
     position: relative;
-    width: 90% !important;
+    width: 100% !important;
     height: 100% !important;
     margin: auto !important;
     overflow: hidden;
@@ -114,11 +121,9 @@
 }
 
 .coverflow__stage__14oqC {
-    height: 100%;
-    /*width: 110% !important;*/
-    width: 100% !important;
-    /*margin-left: -5% !important;*/
-    margin-left: 0% !important;
+    height: 75% !important;
+    width: 70% !important;
+    margin-left: 15% !important;
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -180,10 +185,10 @@
 
 #coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v.coverflow__right__1tzAF {
     right: 40% !important;
-    bottom: 5%;
+    bottom: 0%;
 }
 
 #coverflow__arrow1__2X2XF .coverflow__arrow__IDi7v.coverflow__left__PhMc6 {
     left: 40% !important;
-    bottom: 5%;
+    bottom: 0%;
 }
