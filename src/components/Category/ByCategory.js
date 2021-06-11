@@ -24,8 +24,6 @@ export default function ByCategory() {
     const [slider, guardarImagenSlides] = useState([]);
 
     const [sliderview, setSliderView] = useState(true);
-
-    const [ showwarn, setShowWarn ] = useState(true)
     
     const aNormal = () => {
             setSliderView(false)
@@ -34,10 +32,6 @@ export default function ByCategory() {
     const aSlider = () => {
             setSliderView(true)
     }
-
-    setTimeout(() => {
-        setShowWarn(false)
-    }, 5000)
 
 
     // para pasar los parametros
@@ -49,6 +43,7 @@ export default function ByCategory() {
 
             try {
                 const respuesta = await clienteAxios.get(`/category/${category}`);
+                console.log(respuesta.data);
                 guardarPorCategorias(respuesta.data);
 
             } catch (error) {
@@ -73,11 +68,19 @@ export default function ByCategory() {
     }, [category])
 
 
+    const alPhabetically = () => {
+        const dataArray = [...porcategorias];
+        guardarPorCategorias(dataArray.sort((a,b) => a.name.localeCompare(b.name)));
+        console.log(porcategorias)
+    }
 
+    const byDate = () => {
+        const dataArray = [...porcategorias];
+        guardarPorCategorias(dataArray.sort((a,b) => a.begin.localeCompare(b.begin)));
+        console.log(porcategorias)
+    }
 
-
-
-
+    
     return (
 
 
@@ -98,16 +101,32 @@ export default function ByCategory() {
 
                     {sliderview ? 
                         <div className="button">
-                            <button onClick={aNormal} className="regular"></button>
+                            <div className="upper-buttons-container"><button onClick={() => alPhabetically()} className="alphabet"></button></div>
+                            
+                            <div className="upper-buttons-container">
+                                <button onClick={aNormal} className="regular-slide">
+                                    <div className="horizontal"></div>
+                                    <div className="horizontal"></div>
+                                    <div className="horizontal"></div>
+                                </button>
+                            </div>
+
+                            <div className="upper-buttons-container"><button onClick={() => byDate()} className="time-order"></button></div>
                         </div>
                             :
                         <div className="button">
 
-                            <div className="upper-buttons-container"><button onClick={aSlider} className="alphabet"></button></div>
+                            <div className="upper-buttons-container"><button onClick={() => alPhabetically()} className="alphabet"></button></div>
                             
-                            <div className="upper-buttons-container"><button onClick={aSlider} className="cover-flow"></button></div>
+                            <div className="upper-buttons-container">
+                                <button onClick={aSlider} className="regular">
+                                    <div className="vertical"></div>
+                                    <div className="vertical"></div>
+                                    <div className="vertical"></div>
+                                </button>
+                            </div>
                             
-                            <div className="upper-buttons-container"><button onClick={aSlider} className="time-order"></button></div>
+                            <div className="upper-buttons-container"><button onClick={() => byDate()} className="time-order"></button></div>
 
                         </div>
                     }
@@ -115,32 +134,24 @@ export default function ByCategory() {
                     {
                         sliderview ?
                         (
-                            <div>
-                                <StyleRoot>
-                                    <Coverflow
-                                        displayQuantityOfSide={2}
-                                        navigation
-                                        infiniteScroll
-                                        enableHeading        
-                                    >
-                                        
+                            <StyleRoot>
+                                <Coverflow
+                                    displayQuantityOfSide={3}
+                                    navigation
+                                    infiniteScroll
+                                    enableHeading        
+                                >
+                                    
 
-                                        {porcategorias.map(porcategoria => (
-                                            <CategoryItems
-                                                key={porcategoria.id}
-                                                porcategoria={porcategoria}
-                                            />
-                                        ))}
+                                    {porcategorias.map(porcategoria => (
+                                        <CategoryItems
+                                            key={porcategoria.id}
+                                            porcategoria={porcategoria}
+                                        />
+                                    ))}
 
-
-                                    </Coverflow>
-                                </StyleRoot>
-
-                                {showwarn ?                             
-                                (<div className="warning">push on an arrow to start</div>)
-                                : null
-                                }
-                            </div>
+                                </Coverflow>
+                            </StyleRoot>
                         ) 
                         : 
                         (
@@ -175,3 +186,4 @@ export default function ByCategory() {
     )
 
 }
+
