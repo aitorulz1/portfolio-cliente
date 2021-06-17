@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import clienteAxios from "../../service/axios";
+import Select from 'react-select';
 
 import Sidebar from '../Layout/Sidebar';
 import Topbar from '../Layout/Topbar';
@@ -9,8 +10,10 @@ import Rightbar from '../Layout/Rightbar';
 export default function ProyectoEdicion(props) {
   const [proyecto, guardarProyecto] = useState({});
 
-  const { name, productPicture, category, description, linkto, github, video, tags, end, begin } = proyecto;
+  const { name, productPicture, category, description, linkto, skill, github, video, tags, end, begin } = proyecto;
 
+  const [skills, getSkills] = useState([]);
+  
   const [categories, guardarCategories] = useState([]);
 
   const id = props.match.params.proyecto;
@@ -37,7 +40,26 @@ export default function ProyectoEdicion(props) {
       }
     };
     obtenerProyecto();
+
+    const getFeatures = async () => {
+      try {
+        const resultado = await clienteAxios.get("/skills");
+        getSkills(resultado.data)
+
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    getFeatures();
   }, []);
+
+  const newOne = skills.map((s, i) => ({ value: s.skills, label: s.skills }))
+
+  const [selectedValue, setSelectedValue] = useState([]);
+
+  const handleChange = (e) => {
+    setSelectedValue(Array.isArray(e) ? e.map(x => x.value) : []);
+  }
 
   const onChange = (e) => {
     const { name, value, files, file } = e.target;
@@ -51,7 +73,7 @@ export default function ProyectoEdicion(props) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    
+
 
     // Cloudinary
     const data = new FormData();
@@ -72,6 +94,7 @@ export default function ProyectoEdicion(props) {
 
     const resultado = await clienteAxios.patch(`/products/${id}`, {
       ...proyecto,
+      skill: selectedValue,
       productPicture: file.secure_url,
     });
     history.push(`/category/${category}`);
@@ -93,12 +116,12 @@ export default function ProyectoEdicion(props) {
 
         <div className="middle-container">
 
-          
+
           <div className="proyect-form-container">
             <div className="proyect-form">
 
               <div className="title-container">
-                Edit Project<i className="fas fa-project-diagram"></i>
+                Edit Project<i class="fas fa-project-diagram"></i>
               </div>
 
               <form onSubmit={onSubmit} encType="multipart/form-data" >
@@ -114,8 +137,8 @@ export default function ProyectoEdicion(props) {
                 </div>
 
                 <div className="cajetin-form">
-                  <label className="custom-file-upload">
-                    Select File <i className="far fa-file"></i>
+                  <label class="custom-file-upload">
+                    Select File <i class="far fa-file"></i>
                     <input
                       className="line-form"
                       type="file"
@@ -129,13 +152,24 @@ export default function ProyectoEdicion(props) {
 
                 <div className="cajetin-form">
                   <select className="line-form" name="category" onChange={onChange}>
-                    <option>-- Select --</option>
+                    <option>Select...</option>
                     {categories.map((categorySelect) => (
                       <option key={categorySelect.id} value={categorySelect.category}>
                         {categorySelect.category}
                       </option>
                     ))}
                   </select>
+                </div>
+
+                <div className="cajetin-form">
+                  <Select
+                    isMulti
+                    className="line-form-select"
+                    options={newOne}
+                    value={newOne.filter(obj => selectedValue.includes(obj.value))}
+                    onChange={handleChange}
+                  >
+                  </Select>
                 </div>
 
                 <div className="cajetin-form">
@@ -206,11 +240,11 @@ export default function ProyectoEdicion(props) {
 
 
 
-                  <button className="form-button" type="submit" value="Subir Proyecto">
-           
-                        Guardar Cambios
-           
-                  </button>
+                <button className="form-button" type="submit" value="Subir Proyecto">
+
+                  Guardar Cambios
+
+                </button>
 
 
               </form>

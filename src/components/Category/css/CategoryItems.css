@@ -107,6 +107,11 @@
     border: 2px outset #192f2d;
     text-align: center;
     text-shadow: -1px -1px rgb(0 0 0 / 20%);
+
+    /* border-radius: 25px;
+    background: #3a4140;
+    box-shadow:  5px 5px 11px #313736,
+                -5px -5px 11px #434b4a; */
 }
 
 .button-container-ver:hover {
@@ -115,9 +120,14 @@
     box-shadow: inset 05px 10px 20px #182a28,
                 inset -10px -10px 20px #203836;
     transition: 1s;
+
+    border-radius: 25px;
+    /* background: linear-gradient(145deg, #343b3a, #3e4644);
+    box-shadow:  5px 5px 11px #313736,
+                -5px -5px 11px #434b4a; */
 }
 
 .button-container-ver a {
     color: #fff7a5;
-    font-size: 15px;
+    font-size: 13px;
 }

@@ -19,11 +19,11 @@ import './css/ByCategory.css';
 
 export default function ByCategory() {
 
-    const [porcategorias, guardarPorCategorias] = useState([]);
+    const [ porcategorias, guardarPorCategorias ] = useState([]);
 
-    const [slider, guardarImagenSlides] = useState([]);
+    const [ slider, guardarImagenSlides ] = useState([]);
 
-    const [sliderview, setSliderView] = useState(true);
+    const [ sliderview, setSliderView ] = useState(true);
     
     const aNormal = () => {
             setSliderView(false)

@@ -49,6 +49,7 @@ export default function ProyectoSelected() {
 
   if (proyect === null) return;
 
+
   return (
     <div className="main-container">
       <div className="left-area">
@@ -96,6 +97,12 @@ export default function ProyectoSelected() {
               {description}
             </div>
 
+            <div className="skills-container">
+              <div className="skills">
+                {skill ? skill.map((s) => s + " | ") : null}
+              </div>
+            </div>
+
             <div className="links-container">
               {linkto ?
                 (<a href={linkto} target="_blank">
@@ -110,11 +117,11 @@ export default function ProyectoSelected() {
 
                 {
                   showvideo ?
-                  (
-                    <a onClick={hideVideo}><i class="fas fa-times-circle"></i></a>
-                  ) : null
+                    (
+                      <a onClick={hideVideo}><i class="fas fa-times-circle"></i></a>
+                    ) : null
                 }
-                
+
               </div>
               {
                 github ?

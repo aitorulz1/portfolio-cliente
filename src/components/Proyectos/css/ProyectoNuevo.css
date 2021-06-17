@@ -42,6 +42,7 @@ i.fas.fa-project-diagram{
     border-bottom: 1px solid #fff7a5;
     outline: none;
     padding: 10px;
+    padding: 10px 0px 10px 10px;
 }
 
 input {
@@ -111,9 +112,9 @@ input::-webkit-calendar-picker-indicator {
     color: #011E1B;
     font-size: 14px;
     background: #fff174;  /* Fondo, debe ser más claro que el borde */
-	border: 3px outset #fff7a5;  /* Grosor del Borde */  /* Color del Borde */
-	text-align: center;  /* Alineación del texto */
-	text-shadow: -1px -1px rgba(0,0,0,.2);
+    border: 3px outset #fff7a5;  /* Grosor del Borde */  /* Color del Borde */
+    text-align: center;  /* Alineación del texto */
+    text-shadow: -1px -1px rgba(0,0,0,.2);
 }
 
 i.far.fa-file{
@@ -147,4 +148,37 @@ button.form-button:hover {
 
 i.fas.fa-arrow-circle-up {
     font-size: 18px;
+}
+
+
+/*------------------ Multi Select ------------------*/
+
+.line-form-select {
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid #fff7a5;
+    outline: none;
+    padding: 0px;
+}
+
+.css-yk16xz-control {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    min-height: 0px;
+}
+
+.css-tlfecz-indicatorContainer {
+    padding: 0px !important;
+}
+
+.css-1wa3eu0-placeholder {
+    color: #fff78f !important;
+    font-size: 15px;
+}
+
+.css-tj5bde-Svg {
+    height: 17px !important;
+    width: 17px !important;
+    color: #fff174;
 }

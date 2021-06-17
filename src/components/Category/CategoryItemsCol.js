@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom';
 
 import './css/CategoryItemsCol.css';
 
+import authContext from "../../context/auth/authContext";
+
 export default function CategoryItems({ porcategoria }) {
 
     const proyectosContext = useContext(proyectoContext);
     const { eliminarProyecto } = proyectosContext;
+
+    const { autenticado } = useContext(authContext);
 
     const { name, category, begin, end, description, productPicture, user, id } = porcategoria;
 
@@ -15,8 +19,8 @@ export default function CategoryItems({ porcategoria }) {
         eliminarProyecto(id)
     }
 
-    
-    const shortDescr = description.slice(0, 70)+'...'
+
+    const shortDescr = description.slice(0, 70) + '...'
 
     const year = end.slice(0, 4);
     const month = end.slice(5, 7);
@@ -25,7 +29,7 @@ export default function CategoryItems({ porcategoria }) {
     const date = `${day} · ${month} · ${year}`;
 
     if (id === null) return;
-    
+
 
     return (
         <div className="project-container-regular">
@@ -33,30 +37,30 @@ export default function CategoryItems({ porcategoria }) {
             <div className="main-title-regular">
                 {name}
             </div>
-            
 
-            <div className="edit-del-cont">
-            
-                <Link to={`/proyecto/editar/${id}`}>
-                    <div className='button-edit-regular'>
-                        <i className="fas fa-pen"></i>
+            {autenticado ? (
+                <div className="edit-del-cont">
+
+                    <Link to={`/proyecto/editar/${id}`}>
+                        <div className='button-edit-regular'>
+                            <i className="fas fa-pen"></i>
+                        </div>
+                    </Link>
+
+                    <div
+                        type='button'
+                        className='button-delete-regular'
+                        onClick={() => onClickEliminar([porcategoria.id])}
+                    >
+                        <i className="far fa-times-circle"></i>
                     </div>
-                </Link>
-                
-                <div
-                    type='button'
-                    className='button-delete-regular'
-                    onClick={() => onClickEliminar([porcategoria.id])}
-                >
-                    <i className="far fa-times-circle"></i>
+
                 </div>
-
-
-            </div>
+            ) : null}
 
             <div className="image-container">
                 <img src={productPicture} />
-            </div>            
+            </div>
 
             <div className="end-date">
                 {date}
@@ -65,18 +69,18 @@ export default function CategoryItems({ porcategoria }) {
             <div className="main-descr-regular">
                 {shortDescr}
             </div>
-            
-      
 
-        <div className="slider-container-button">
 
-            <div className="button-container-ver">
-                <Link to={`/proyecto/${id}`}>
-                    <i className="far fa-eye"></i>
-                </Link>
+
+            <div className="slider-container-button">
+
+                <div className="button-container-ver">
+                    <Link to={`/proyecto/${id}`}>
+                        <i className="far fa-eye"></i>
+                    </Link>
+                </div>
+
             </div>
-
-        </div>
 
 
         </div>
