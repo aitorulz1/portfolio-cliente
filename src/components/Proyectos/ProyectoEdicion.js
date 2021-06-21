@@ -1,19 +1,31 @@
 import React, { useEffect, useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import clienteAxios from "../../service/axios";
-import Select from 'react-select';
+import Select from "react-select";
 
-import Sidebar from '../Layout/Sidebar';
-import Topbar from '../Layout/Topbar';
-import Rightbar from '../Layout/Rightbar';
+import Sidebar from "../Layout/Sidebar";
+import Topbar from "../Layout/Topbar";
+import Rightbar from "../Layout/Rightbar";
 
 export default function ProyectoEdicion(props) {
   const [proyecto, guardarProyecto] = useState({});
 
-  const { name, productPicture, category, description, linkto, skill, github, video, tags, end, begin } = proyecto;
+  const {
+    name,
+    productPicture,
+    category,
+    description,
+    linkto,
+    skill,
+    github,
+    video,
+    tags,
+    end,
+    begin,
+  } = proyecto;
 
   const [skills, getSkills] = useState([]);
-  
+
   const [categories, guardarCategories] = useState([]);
 
   const id = props.match.params.proyecto;
@@ -44,8 +56,7 @@ export default function ProyectoEdicion(props) {
     const getFeatures = async () => {
       try {
         const resultado = await clienteAxios.get("/skills");
-        getSkills(resultado.data)
-
+        getSkills(resultado.data);
       } catch (error) {
         console.error(error);
       }
@@ -53,13 +64,13 @@ export default function ProyectoEdicion(props) {
     getFeatures();
   }, []);
 
-  const newOne = skills.map((s, i) => ({ value: s.skills, label: s.skills }))
+  const newOne = skills.map((s, i) => ({ value: s.skills, label: s.skills }));
 
   const [selectedValue, setSelectedValue] = useState([]);
 
   const handleChange = (e) => {
-    setSelectedValue(Array.isArray(e) ? e.map(x => x.value) : []);
-  }
+    setSelectedValue(Array.isArray(e) ? e.map((x) => x.value) : []);
+  };
 
   const onChange = (e) => {
     const { name, value, files, file } = e.target;
@@ -73,7 +84,6 @@ export default function ProyectoEdicion(props) {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-
 
     // Cloudinary
     const data = new FormData();
@@ -101,30 +111,22 @@ export default function ProyectoEdicion(props) {
   };
 
   return (
-
     <div className="main-container">
-
       <div className="left-area">
-
         <Sidebar />
-
       </div>
 
       <div className="middle-area">
-
         <Topbar />
 
         <div className="middle-container">
-
-
           <div className="proyect-form-container">
             <div className="proyect-form">
-
               <div className="title-container">
                 Edit Project<i class="fas fa-project-diagram"></i>
               </div>
 
-              <form onSubmit={onSubmit} encType="multipart/form-data" >
+              <form onSubmit={onSubmit} encType="multipart/form-data">
                 <div className="cajetin-form">
                   <input
                     className="line-form"
@@ -151,10 +153,17 @@ export default function ProyectoEdicion(props) {
                 </div>
 
                 <div className="cajetin-form">
-                  <select className="line-form" name="category" onChange={onChange}>
+                  <select
+                    className="line-form"
+                    name="category"
+                    onChange={onChange}
+                  >
                     <option>Select...</option>
                     {categories.map((categorySelect) => (
-                      <option key={categorySelect.id} value={categorySelect.category}>
+                      <option
+                        key={categorySelect.id}
+                        value={categorySelect.category}
+                      >
                         {categorySelect.category}
                       </option>
                     ))}
@@ -166,10 +175,11 @@ export default function ProyectoEdicion(props) {
                     isMulti
                     className="line-form-select"
                     options={newOne}
-                    value={newOne.filter(obj => selectedValue.includes(obj.value))}
+                    value={newOne.filter((obj) =>
+                      selectedValue.includes(obj.value)
+                    )}
                     onChange={handleChange}
-                  >
-                  </Select>
+                  ></Select>
                 </div>
 
                 <div className="cajetin-form">
@@ -238,31 +248,22 @@ export default function ProyectoEdicion(props) {
                   />
                 </div>
 
-
-
-                <button className="form-button" type="submit" value="Subir Proyecto">
-
+                <button
+                  className="form-button"
+                  type="submit"
+                  value="Subir Proyecto"
+                >
                   Guardar Cambios
-
                 </button>
-
-
               </form>
             </div>
           </div>
-
         </div>
-
-
-
       </div>
 
       <div className="right-area">
-
         <Rightbar />
-
       </div>
-
     </div>
   );
 }

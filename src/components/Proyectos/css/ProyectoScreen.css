@@ -1,7 +1,7 @@
-.middle-container{
-    position: relative;
-    min-height: 90vh;
-    display: table;
-    width: 95%;
-    margin: 0 auto;
+.middle-container {
+  position: relative;
+  min-height: 90vh;
+  display: table;
+  width: 95%;
+  margin: 0 auto;
 }

@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import clienteAxios from "../../service/axios";
 
-import Sidebar from '../Layout/Sidebar';
-import Topbar from '../Layout/Topbar';
-import Rightbar from '../Layout/Rightbar';
+import Sidebar from "../Layout/Sidebar";
+import Topbar from "../Layout/Topbar";
+import Rightbar from "../Layout/Rightbar";
 
 export default function StudyEdicion(props) {
   const id = props.match.params.study;
@@ -33,7 +33,7 @@ export default function StudyEdicion(props) {
     console.log(file);
   };
 
-  const onSubmit = async e => {
+  const onSubmit = async (e) => {
     e.preventDefault();
 
     guardarError(false);
@@ -57,14 +57,11 @@ export default function StudyEdicion(props) {
       ...study,
       logo: file.secure_url,
     });
-    console.log(resultado)
-  }
+    console.log(resultado);
+  };
 
   return (
-
-
     <div className="main-container">
-
       <div className="left-area">
         <Sidebar />
       </div>
@@ -73,11 +70,8 @@ export default function StudyEdicion(props) {
         <Topbar />
 
         <div className="middle-container">
-
           <div className="proyect-form-container">
-
             <div className="proyect-form">
-
               <form onSubmit={onSubmit} encType="multipart/form-data">
                 {/* {error ? 'Completa todos los campos' : null} */}
 
@@ -106,15 +100,15 @@ export default function StudyEdicion(props) {
                 <div className="cajetin-form">
                   <label className="custom-file-upload">
                     Select File <i className="far fa-file"></i>
-                      <input
-                        className="line-form"
-                        type="file"
-                        name="logo"
-                        id="logo"
-                        placeholder="imagen"
-                        onChange={onChange}
-                      />
-                    </label>
+                    <input
+                      className="line-form"
+                      type="file"
+                      name="logo"
+                      id="logo"
+                      placeholder="imagen"
+                      onChange={onChange}
+                    />
+                  </label>
                 </div>
 
                 <div className="cajetin-form">
@@ -161,29 +155,22 @@ export default function StudyEdicion(props) {
                   />
                 </div>
 
-
-                <button className="form-button" type="submit" value="Subir Proyecto">
+                <button
+                  className="form-button"
+                  type="submit"
+                  value="Subir Proyecto"
+                >
                   Editar Proyecto
                 </button>
-
               </form>
-
             </div>
-
           </div>
-
         </div>
-
       </div>
-
 
       <div className="right-area">
-
         <Rightbar />
-
       </div>
-
     </div>
-
   );
 }

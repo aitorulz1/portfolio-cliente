@@ -1,15 +1,13 @@
 .contact-container {
-    height: 50vh;
+  height: 50vh;
 }
 
 .contact-link-container {
-    padding-top: calc(5vh - 1.5%);
-    text-align: center;
+  padding-top: calc(5vh - 1.5%);
+  text-align: center;
 }
 
-.contact-link-container a{
-    color: #fdf39d;
-    text-decoration: none;
+.contact-link-container a {
+  color: #fdf39d;
+  text-decoration: none;
 }
-
-

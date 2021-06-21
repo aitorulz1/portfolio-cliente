@@ -1,115 +1,107 @@
 .studies-container-single {
-    position: relative;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 996px;
-    padding: 10% 0%;
-    display: table;
-    border-bottom: 1px solid #fcf5b8;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 996px;
+  padding: 10% 0%;
+  display: table;
+  border-bottom: 1px solid #fcf5b8;
 }
 
 .studies-logo-container {
-    position: relative;
-    width: 30%;
-    padding-top: 5%;
-    float: left;
-    text-align: center;
+  position: relative;
+  width: 30%;
+  padding-top: 5%;
+  float: left;
+  text-align: center;
 }
 
 .studies-logo-container img {
-    width: 40%;
-    max-width: 90px;
+  width: 40%;
+  max-width: 90px;
 }
 
 .studies-content-container {
-    position: relative;
-    width: 70%;
-    float: left;
+  position: relative;
+  width: 70%;
+  float: left;
 }
 
-
 .study-first {
-    padding-bottom: 5%;
+  padding-bottom: 5%;
 }
 
 span.grade {
-    color: #f2ebad;
+  color: #f2ebad;
 }
 
 span.school {
-    color: #e8db6b;
+  color: #e8db6b;
 }
 
-
-
 .begin {
-    color: #fff;
-    font-family: elephant;
-    font-weight: 600;
+  color: #fff;
+  font-family: elephant;
+  font-weight: 600;
 }
 
 .end {
-    color: #fff;
-    font-family: elephant;
-    font-weight: 600;
+  color: #fff;
+  font-family: elephant;
+  font-weight: 600;
 }
 
-
-
 .description {
-    color: #e8db6b;
-    font-size: 14px;
-    line-height: 2;
+  color: #e8db6b;
+  font-size: 14px;
+  line-height: 2;
 }
 
 .learned {
-    color: #f2ebad;
-    font-size: 14px;
-    line-height: 2;
+  color: #f2ebad;
+  font-size: 14px;
+  line-height: 2;
 }
 
-
 .private-buttons-container {
-    position: relative;
-    width: 100%;
-    display: table;
-    text-align: right;
-    padding-top: 2.5%;
-} 
-
+  position: relative;
+  width: 100%;
+  display: table;
+  text-align: right;
+  padding-top: 2.5%;
+}
 
 .private-button-edit {
-    border-radius: 15px;
-    color:#e8db6b;
-    background: #363d3d;
-    box-shadow: 5px 5px 9px #333535, -5px -5px 9px #474949;
-    padding: 10px 0px;
-    margin: 0 auto;
-    width: 15%;
-    cursor: pointer;
-    border:none;
-    border-bottom: 1px solid #212c2a;
-    margin-right: 2.5%;
+  border-radius: 15px;
+  color: #e8db6b;
+  background: #363d3d;
+  box-shadow: 5px 5px 9px #333535, -5px -5px 9px #474949;
+  padding: 10px 0px;
+  margin: 0 auto;
+  width: 15%;
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid #212c2a;
+  margin-right: 2.5%;
 }
 
 .private-button-delete {
-    border-radius: 15px;
-    color:#bd0000;
-    background: #363d3d;
-    box-shadow: 5px 5px 9px #333535, -5px -5px 9px #474949;
-    padding: 10px 0px;
-    margin: 0 auto;
-    width: 15%;
-    cursor: pointer;
-    border:none;
-    border-bottom: 1px solid #212c2a;
+  border-radius: 15px;
+  color: #bd0000;
+  background: #363d3d;
+  box-shadow: 5px 5px 9px #333535, -5px -5px 9px #474949;
+  padding: 10px 0px;
+  margin: 0 auto;
+  width: 15%;
+  cursor: pointer;
+  border: none;
+  border-bottom: 1px solid #212c2a;
 }
 
-.private-button-delete:hover, .private-button-edit:hover {
-    border-radius: 15px;
-    background: #363d3d;
-    box-shadow: inset 5px 5px 9px #373939,
-                inset -5px -5px 9px #434545;
-    border-bottom: 0px solid #212c2a;
-
+.private-button-delete:hover,
+.private-button-edit:hover {
+  border-radius: 15px;
+  background: #363d3d;
+  box-shadow: inset 5px 5px 9px #373939, inset -5px -5px 9px #434545;
+  border-bottom: 0px solid #212c2a;
 }

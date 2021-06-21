@@ -1,0 +1,53 @@
+.job-container {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 996px;
+  padding: 7.5% 0%;
+  display: table;
+  border-bottom: 1px solid #fcf5b8;
+}
+
+.job-content {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.job-logo {
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.job-logo img {
+  width: 100%;
+  max-width: 120px;
+}
+
+.job-first {
+  padding-bottom: 5%;
+  text-align: center;
+}
+
+span.charge {
+  color: #f2ebad;
+  font-size: 13px;
+}
+
+.job-description {
+  text-align: center;
+  color: #cccccc;
+}
+
+.j-description {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.private-job-buttons-container {
+  position: relative;
+  width: 100%;
+  display: table;
+  text-align: center;
+  padding-top: 5%;
+}

@@ -1,45 +1,45 @@
 .single-container {
-    width: 75%;
-    position: absolute;
-    top: 44%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 75%;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .title-single-container {
-    text-align: center;
-    text-transform: lowercase;
-    padding: 7.5% 0% 5% 0%;
-    color: rgb(254, 255, 220);
-    font-size: 20px;
+  text-align: center;
+  text-transform: lowercase;
+  padding: 7.5% 0% 5% 0%;
+  color: rgb(254, 255, 220);
+  font-size: 20px;
 }
-
-
 
 /*------------------ back ------------------*/
 
-.back-to{
-    margin-top: 2.5%;
-    left: 5%;
-    position: absolute;
-    cursor: pointer;
-    width: fit-content;
-    color: #fdf283;
+.back-to {
+  margin-top: 2.5%;
+  left: 5%;
+  position: absolute;
+  cursor: pointer;
+  width: fit-content;
+  color: #fdf283;
 }
 
-.back-to:hover{
-    color: #0f2825;
-    transition: 1s;
+.back-to:hover {
+  color: #0f2825;
+  transition: 1s;
 }
 
-i.fa.fa-arrow-circle-left, i.fa.fa-arrow-left {
-    font-size: 24px;
+i.fa.fa-arrow-circle-left,
+i.fa.fa-arrow-left {
+  font-size: 24px;
 }
 
-i.fa.fa-arrow-circle-left:hover, i.fa.fa-arrow-left:hover {
-    color: #0f2825;
-    font-size: 22px;
-    transition: 1s;
+i.fa.fa-arrow-circle-left:hover,
+i.fa.fa-arrow-left:hover {
+  color: #0f2825;
+  font-size: 22px;
+  transition: 1s;
 }
 
 .fa-arrow-left,
@@ -54,160 +54,162 @@ i.fa.fa-arrow-circle-left:hover, i.fa.fa-arrow-left:hover {
 }
 
 .arrow {
-    float: left;
+  float: left;
 }
 
 .back-txt {
-    color: transparent;
-    float: left;
-    padding-left: 10px;
-    font-size: 14px;
+  color: transparent;
+  float: left;
+  padding-left: 10px;
+  font-size: 14px;
 }
 
 .back-txt:hover {
-    color: #0f2825;
-    transition: 1s;
+  color: #0f2825;
+  transition: 1s;
 }
 
 /*------------------ fin back ------------------*/
 
-
 span.category {
-    font-size: 16px;
-    color: #fdf283;
+  font-size: 16px;
+  color: #fdf283;
 }
 
 .title-single-container a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 span.category:hover {
-    color: #ffec3a;
-    font-size: 17px;
-    transition: 1s;
+  color: #ffec3a;
+  font-size: 17px;
+  transition: 1s;
 }
 
 .image-single-container {
-    width: 80%;
-    display: table;
-    -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 7.5%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0));
-    overflow: hidden;
-    margin: 0 auto;
-    margin-bottom: 7.5%;
+  width: 80%;
+  display: table;
+  -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(
+          0,
+          0,
+          0,
+          0.1
+        )
+        7.5%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0));
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 7.5%;
 }
 
 .image-single-container img {
-    width: 100%;
+  width: 100%;
 }
 
 .skills-container {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    display: table;
-    padding-top: 2.5%;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: table;
+  padding-top: 2.5%;
 }
 
 .skills {
-    color: #fdf283;
-    font-size: 10px;
-    letter-spacing: 1px;
+  color: #fdf283;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
 
 .links-container {
-    position: absolute;
-    right: 3.5%;
-    top: 20%;
+  position: absolute;
+  right: 3.5%;
+  top: 20%;
 }
 
 .links-container a {
-    color: #fdf39d;
-    text-decoration: none;
-    padding-bottom: 70%;
-    display: table;
-    font-size: 20px;
-    cursor: pointer;
+  color: #fdf39d;
+  text-decoration: none;
+  padding-bottom: 70%;
+  display: table;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 i.fas.fa-times-circle {
-    font-size: 18px;
-    color: #f00;
+  font-size: 18px;
+  color: #f00;
 }
 
 .image-single-container a {
-    position: absolute;
-    right: 6%;
-    color: #fcec3a;
+  position: absolute;
+  right: 6%;
+  color: #fcec3a;
 }
 
 .image-single-container a:hover {
-    font-size: 20px;
-    color: #0f2825;
-    transition: 1s;
+  font-size: 20px;
+  color: #0f2825;
+  transition: 1s;
 }
 
 .description-single-container {
-    text-align: center;
-    color: #fbf7cb;
-    font-size: 11.5px;
-    max-width: 400px;
-    line-height: 2;
-    margin: 0 auto;
-    margin-top: 7.5%;
-    letter-spacing: 1.5px;
-
+  text-align: center;
+  color: #fbf7cb;
+  font-size: 11.5px;
+  max-width: 400px;
+  line-height: 2;
+  margin: 0 auto;
+  margin-top: 7.5%;
+  letter-spacing: 1.5px;
 }
 
 .date-container {
-    position: absolute;
-    display: table;
-    text-align: center;
-    /* padding: 2.5% 0%; */
-    transform: rotate(270deg);
-    color: #fdf39d;
-    font-size: 12px;
-    width: 25%;
-    margin-left: -7.5%;
-    margin-top: -20%;
+  position: absolute;
+  display: table;
+  text-align: center;
+  /* padding: 2.5% 0%; */
+  transform: rotate(270deg);
+  color: #fdf39d;
+  font-size: 12px;
+  width: 25%;
+  margin-left: -7.5%;
+  margin-top: -20%;
 }
 
-
 .date-begin {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .date-end {
-    display: inline-flex;
-    padding-left: 10px;
+  display: inline-flex;
+  padding-left: 10px;
 }
 
-
 .video-container {
-    position: absolute;
-    width: 81%;
-    height: 66%;
-    transform: translate(-0.5%, -0.5%);
-    background-color: #fff;
-    display: table;
-    box-shadow: -2px 1px 23px 0px rgb(0 0 0 / 16%);
-    padding: 25px 0px 45px 0px;
-    z-index: 10;
-    padding-bottom: 1.8%;
-    padding-top: 25px;
+  position: absolute;
+  width: 81%;
+  height: 66%;
+  transform: translate(-0.5%, -0.5%);
+  background-color: #fff;
+  display: table;
+  box-shadow: -2px 1px 23px 0px rgb(0 0 0 / 16%);
+  padding: 25px 0px 45px 0px;
+  z-index: 10;
+  padding-bottom: 1.8%;
+  padding-top: 25px;
 }
 
 .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #video-modal {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .ytp-hide-controls .ytp-watermark {
-    display: none !important;
+  display: none !important;
 }

@@ -1,34 +1,34 @@
 .profile-container {
-    position: relative;
-    height: 50vh;
+  position: relative;
+  height: 50vh;
 }
 
 .profile-line {
-    border-right: 1px solid #fdf39d;
-    position: absolute;
-    left: Calc(50% - 0.5px);
-    height: 77%;
+  border-right: 1px solid #fdf39d;
+  position: absolute;
+  left: Calc(50% - 0.5px);
+  height: 77%;
 }
 
-.profile-line:hover{
-    color: #082320;
-    transition: 2s;
+.profile-line:hover {
+  color: #082320;
+  transition: 2s;
 }
 
 .profile-link-container {
-    text-align: center;
-    transform: rotate(90deg);
-    left: Calc(50% - 20px);
-    position: absolute;
-    bottom: 5.5vh;
+  text-align: center;
+  transform: rotate(90deg);
+  left: Calc(50% - 20px);
+  position: absolute;
+  bottom: 5.5vh;
 }
 
-.profile-link-container a{
-    color: #fdf39d;
-    text-decoration: none;
+.profile-link-container a {
+  color: #fdf39d;
+  text-decoration: none;
 }
 
-.profile-link-container a:hover{
-    color: #848484;
-    transition: 2s;
+.profile-link-container a:hover {
+  color: #848484;
+  transition: 2s;
 }

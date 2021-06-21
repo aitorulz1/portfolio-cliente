@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 
 import studyContext from "../../context/studies/studyContext";
 
-import './css/StudyNuevo.css';
+import "./css/StudyNuevo.css";
 
 export default function StudyNuevo() {
   const studiesContext = useContext(studyContext);
@@ -92,14 +92,12 @@ export default function StudyNuevo() {
   return (
     <div className="proyect-form-container">
       <div className="proyect-form">
+        <div className="title-container">
+          New Study<i className="fas fa-graduation-cap"></i>
+        </div>
 
-          <div className="title-container">
-            New Study<i className="fas fa-graduation-cap"></i>
-          </div>
-      
         <form onSubmit={onSubmit} encType="multipart/form-data">
-
-                <div className="cajetin-form">
+          <div className="cajetin-form">
             <input
               className="line-form"
               type="text"
@@ -123,7 +121,7 @@ export default function StudyNuevo() {
 
           <div className="cajetin-form">
             <label className="custom-file-upload">
-                Select File <i className="far fa-file"></i>
+              Select File <i className="far fa-file"></i>
               <input
                 className="line-form"
                 type="file"
@@ -179,11 +177,9 @@ export default function StudyNuevo() {
             />
           </div>
 
-            <button className="form-button" type="submit" value="Subir Proyecto">
-              <i className="fas fa-arrow-circle-up" alt="upload project"></i>
-            </button>
-
-
+          <button className="form-button" type="submit" value="Subir Proyecto">
+            <i className="fas fa-arrow-circle-up" alt="upload project"></i>
+          </button>
         </form>
       </div>
     </div>

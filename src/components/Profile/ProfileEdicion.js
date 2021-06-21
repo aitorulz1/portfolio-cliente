@@ -5,7 +5,7 @@ import Sidebar from "../Layout/Sidebar";
 import Topbar from "../Layout/Topbar";
 import Rightbar from "../Layout/Rightbar";
 
-import './css/ProfileEdicion.css'
+import "./css/ProfileEdicion.css";
 
 export default function ProfileEdicion(props) {
   const [aitor, guardarAitor] = useState({});
@@ -63,7 +63,6 @@ export default function ProfileEdicion(props) {
     console.log(resultado);
   };
 
-
   return (
     <div className="main-container">
       <div className="left-area">
@@ -74,12 +73,8 @@ export default function ProfileEdicion(props) {
         <Topbar />
 
         <div className="middle-container">
-
-
-
           <div className="proyect-form-container">
             <div className="proyect-form">
-
               <div className="title-container">
                 Me<i className="far fa-meh-blank"></i>
               </div>
@@ -133,30 +128,29 @@ export default function ProfileEdicion(props) {
                 </div>
 
                 <div className="cajetin-form">
-                  <input
+                  <textarea
                     placeholder="description"
                     className="line-form"
                     type="text"
                     name="description"
                     value={description}
                     onChange={onChange}
+                    cols="50"
+                    rows="5"
                   />
                 </div>
 
-
-                <button className="form-button" type="submit" value="Subir Proyecto">
+                <button
+                  className="form-button"
+                  type="submit"
+                  value="Subir Proyecto"
+                >
                   <i className="fas fa-meh-blank"></i>
                 </button>
-
               </form>
             </div>
           </div>
-
-
-
         </div>
-
-
       </div>
 
       <div className="right-area">

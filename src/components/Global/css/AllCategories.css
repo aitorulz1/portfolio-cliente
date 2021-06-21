@@ -1,76 +1,65 @@
-
 .sidebar-block {
-    height: 33vh;
-  }
+  height: 33vh;
+}
 
-.burger-container{
-    display:grid;
-    place-items:center;
-    margin:0;
-    padding:0;
-  }
-  
-  label{
-    display:flex;
-    flex-direction:column;
-    width:40px;
-    cursor:pointer;
-  }
-  
-  label span{
-    background: #ffec3a;
-    border-radius:10px;
-    height: 3px;
-    margin: 3px 0;
-    transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-  }
-  
-  
-  span:nth-of-type(1){
-    width:100%;
-    
-  }
-  
-  span:nth-of-type(2){
-    width:100%;
-  }
-  
-  
-  span:nth-of-type(3){
-    width: 50%;
-    margin-left: 19px;
-  
-  }
-  
-  
-  input[type="checkbox"]{
-    display:none;
-  }
-  
-  
-  input[type="checkbox"]:checked ~ span:nth-of-type(1){
-    transform-origin:bottom;
-    transform:rotatez(45deg) translate(6px,6px)
-  }
-  
-  
-  input[type="checkbox"]:checked ~ span:nth-of-type(2){
-    
-    transform-origin:top;
-    transform:rotatez(-45deg)
-  }
-  
-  
-  input[type="checkbox"]:checked ~ span:nth-of-type(3){
-    /*transform-origin:bottom;
+.burger-container {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  cursor: pointer;
+}
+
+label span {
+  background: #ffec3a;
+  border-radius: 10px;
+  height: 3px;
+  margin: 3px 0;
+  transition: 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+span:nth-of-type(1) {
+  width: 100%;
+}
+
+span:nth-of-type(2) {
+  width: 100%;
+}
+
+span:nth-of-type(3) {
+  width: 50%;
+  margin-left: 19px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(1) {
+  transform-origin: bottom;
+  transform: rotatez(45deg) translate(6px, 6px);
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(2) {
+  transform-origin: top;
+  transform: rotatez(-45deg);
+}
+
+input[type="checkbox"]:checked ~ span:nth-of-type(3) {
+  /*transform-origin:bottom;
     width:50%;
     transform: translate(-10px,-11px) rotatez(45deg);*/
-    display: none;
-  }
-  
-  .main-burger-button {
-    position: relative;
-    display: inline-block;
-    padding-top: 10%;
-  }
+  display: none;
+}
 
+.main-burger-button {
+  position: relative;
+  display: inline-block;
+  padding-top: 10%;
+}

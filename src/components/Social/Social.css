@@ -1,48 +1,47 @@
-
 .social-container {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    bottom: calc(4vh - 0.5%);
-    color: #000;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: calc(4vh - 0.5%);
+  color: #000;
 }
 
-.social-item{
-    position: relative;
-    margin: 0 auto;
-    margin-top: 10px;
-    font-size: 14px;
-    padding: 5px 5px;
+.social-item {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 5px 5px;
 }
 
 .social-item a {
-    display: inline-block;
+  display: inline-block;
 }
 
 .github {
-    background-image: url(../../assets/rrss/icon-github.png);
-    background-repeat: no-repeat;
-    text-align: center;
-    width: 22px;
-    height: 20px;
+  background-image: url(../../assets/rrss/icon-github.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 22px;
+  height: 20px;
 }
 
 .linkedin {
-    background-image: url(../../assets/rrss/icon-linkedin.png);
-    background-repeat: no-repeat;
-    text-align: center;
-    width: 22px;
-    height: 20px;
+  background-image: url(../../assets/rrss/icon-linkedin.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 22px;
+  height: 20px;
 }
 
 .github:hover {
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-         box-shadow: 0 8px 6px -6px black;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
 }
 
 .linkedin:hover {
-    -webkit-box-shadow: 0 8px 6px -6px black;
-    -moz-box-shadow: 0 8px 6px -6px black;
-         box-shadow: 0 8px 6px -6px black;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
 }

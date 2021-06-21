@@ -1,114 +1,99 @@
-
-/* Container */
-
-.register-background{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    /*background-image: url('../../assets/images/background/background-01.jpg');*/
-    background-size: cover;
-    background-repeat: no-repeat;
-    background: linear-gradient(to bottom right, #636262, #011E1B);
+.register-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: linear-gradient(to bottom right, #636262, #011e1b);
 }
 
 .fa-fw {
-    width: 1.28571429em;
-    text-align: center;
-    display: none;
+  width: 1.28571429em;
+  text-align: center;
+  display: none;
 }
 
-.register-container{
-    width: 100%;
-    max-width: 450px;
-    display: table;
-    flex-direction: column;
-    border: 0px solid #ccc;
-    box-sizing: border-box;
-    margin: 0 auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /*background-image: url('../../assets/images/background/white-layer.png');*/
+.register-container {
+  width: 100%;
+  max-width: 450px;
+  display: table;
+  flex-direction: column;
+  border: 0px solid #ccc;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .login-wrap {
-    width: 80%;
-    margin: 0 auto;  
+  width: 80%;
+  margin: 0 auto;
 }
 
-
-/* Inputs */
-
 .log-form-group {
-    margin: 0px;
-    width: calc(100% - 25px);
-    padding: 10px 0px 10px 10px;
+  margin: 0px;
+  width: calc(100% - 25px);
+  padding: 10px 0px 10px 10px;
 }
 
 .log-form-group label {
-    padding: 10px 0px;
-    display: table;
-    font-size: 14px;
-    font-family: century;
-    color: #ffffff
+  padding: 10px 0px;
+  display: table;
+  font-size: 14px;
+  font-family: century;
+  color: #ffffff;
 }
 
-/* Neumorphic buttons: https://neumorphism.io/#e0e0e0 */
-
 input.icon-input {
-        border-radius: 35px;
-        outline: none;
-        border: none;
-        background-color: transparent;
-        padding: 15px 0px 15px 15px;
-        box-shadow:  inset 2px 2px 5px #bebebe,
-        inset -2px -2px 5px #ffffff;
+  border-radius: 35px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 15px 0px 15px 15px;
+  box-shadow: inset 2px 2px 5px #bebebe, inset -2px -2px 5px #ffffff;
 }
 
 input.log-form-group {
-        border-radius: 35px;
-        outline: none;
-        border: none;
-        background-color: transparent;
-        padding: 15px 0px 15px 15px;
-        background: #1c312f;
-        box-shadow: inset 20px 20px 60px #182a28, inset -20px -20px 60px #203836;
+  border-radius: 35px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 15px 0px 15px 15px;
+  background: #1c312f;
+  box-shadow: inset 20px 20px 60px #182a28, inset -20px -20px 60px #203836;
 }
 
 input.button {
-    width: 100%;
-    outline: none;
-    border-radius: 35px;
-    border-style: none;
-    color: #f3ffbd;
-    background: linear-gradient( 
-        145deg
-         , #192c2a, #1e3432);
-            box-shadow: 0px 7px 10px #182a28, 0px -5px 15px #203836;
-    padding: 15px 0px 15px 0px;
-    margin-top: 20px;
-    font-size: 14px;
-    text-shadow: 0 0 black;
-    cursor: pointer;
+  width: 100%;
+  outline: none;
+  border-radius: 35px;
+  border-style: none;
+  color: #f3ffbd;
+  background: linear-gradient(145deg, #192c2a, #1e3432);
+  box-shadow: 0px 7px 10px #182a28, 0px -5px 15px #203836;
+  padding: 15px 0px 15px 0px;
+  margin-top: 20px;
+  font-size: 14px;
+  text-shadow: 0 0 black;
+  cursor: pointer;
 }
 
 input.button:hover {
-    border-radius: 50px;
-    background: #1c312f;
-    box-shadow: inset 05px 10px 20px #182a28,
-                inset -10px -10px 20px #203836;
+  border-radius: 50px;
+  background: #1c312f;
+  box-shadow: inset 05px 10px 20px #182a28, inset -10px -10px 20px #203836;
 }
-
 
 /* -------------- Alertas -------------- */
 
 .alerta-ok {
-    background-color: rgb(109, 211, 109);
-    color: rgb(2, 103, 2)
+  background-color: rgb(109, 211, 109);
+  color: rgb(2, 103, 2);
 }
 
 .alerta-error {
-    background-color: rgb(230, 78, 78);
-    color: #fff;
+  background-color: rgb(230, 78, 78);
+  color: #fff;
 }

@@ -1,105 +1,107 @@
 .profile-conatiner {
-    position: relative;
-    width: 100%;
-    display: table;
+  position: relative;
+  width: 100%;
+  display: table;
 }
 
 .profile-content-conatiner {
-    position: relative;
-    margin: 0 auto;
-    width: 90%;
-    max-width: 960px;
-    padding: 5% 0%;
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 960px;
+  padding: 5% 0%;
 }
-
 
 .profile-name-container {
-    width: 100%;
-    position: relative;
-    text-align: center;
-    padding: 5% 0%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 5% 0%;
 }
 
-span.name{
-    color: #fdf39d;
-    font-family: elephant;
-    font-size: 46px;
-    font-weight: bold;
+span.name {
+  color: #fdf39d;
+  font-family: elephant;
+  font-size: 46px;
+  font-weight: bold;
 }
 
-span.mail, span.mail a{
-    color: #fff06f;
-    padding: 2.5% 0%;
-    font-size: 18px;
-    text-decoration: none;
+span.mail,
+span.mail a {
+  color: #fff06f;
+  padding: 2.5% 0%;
+  font-size: 15px;
+  text-decoration: none;
 }
-
-
 
 .profile-features-container {
-    position: relative;
-    display: table;
-    width: 100%;
+  position: relative;
+  display: table;
+  width: 100%;
 }
 
 .profile-features-container ul {
-    width: 100%;
-    padding-left: 5%;
-    columns: 4;
+  width: 100%;
+  padding-left: 5%;
+  columns: 4;
 }
 
-.profile-features-container ul li a{
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 2;
-    text-decoration: none;
+.profile-features-container ul li a {
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+  text-decoration: none;
 }
 
 li::marker {
-    color: #fff06f;
-    font-size: 10px;
+  color: #fff06f;
+  font-size: 10px;
 }
 
-
-
+.profile-desc-container {
+  text-align: justify;
+  line-height: 2;
+  font-size: 12px;
+  color: #f9f4c8;
+  display: table;
+  padding-bottom: 5%;
+}
 
 .profile-buttons-container {
-    position: relative;
-    width: 100%;
-    display: inline-flex;
-    padding: 10% 0% 5% 0%;
-    color: #fff06f;
-    font-size: 16px;
-    text-align: center;
+  position: relative;
+  width: 100%;
+  display: inline-flex;
+  padding: 10% 0% 5% 0%;
+  color: #fff06f;
+  font-size: 16px;
+  text-align: center;
 }
 
 .profile-buttons-container a {
-    color: #fff06f;
-    text-decoration: none;
+  color: #fff06f;
+  text-decoration: none;
 }
 
 .profile-button-container {
-    width: 33%;
+  width: 33%;
 }
 
 .profile-button {
-    border-radius: 15px;
-    background: #363d3d;
-    box-shadow: 5px 5px 9px #333535, -5px -5px 9px #474949;
-    padding: 10px 0px;
-    margin: 0 auto;
-    width: 80%;
-    cursor: pointer;
-    border-bottom: 1px solid #212c2a;
+  border-radius: 15px;
+  background: #363d3d;
+  box-shadow: 5px 5px 9px #333535, -5px -5px 9px #474949;
+  padding: 10px 0px;
+  margin: 0 auto;
+  width: 80%;
+  cursor: pointer;
+  border-bottom: 1px solid #212c2a;
 }
 
 .profile-button:hover {
-    border-radius: 15px;
-    background: #363d3d;
-    box-shadow: inset 5px 5px 9px #373939,
-                inset -5px -5px 9px #434545;
-    border-bottom: 0px solid #212c2a;
-
+  border-radius: 15px;
+  background: #363d3d;
+  box-shadow: inset 5px 5px 9px #373939, inset -5px -5px 9px #434545;
+  border-bottom: 0px solid #212c2a;
 }

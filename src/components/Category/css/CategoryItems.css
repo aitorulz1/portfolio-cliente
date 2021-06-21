@@ -1,86 +1,87 @@
 .project-container {
-    width: 100%;
-    float: left;
-    text-align: center;
+  width: 100%;
+  float: left;
+  text-align: center;
 }
 
 .main-title {
-    padding: 0% 0% 10% 0%;
-    color: #fef7a6;
-    text-transform: lowercase;
+  padding: 0% 0% 10% 0%;
+  color: #fef7a6;
+  text-transform: lowercase;
 }
 
 .button-container-mern {
-    position: relative;
-    display: table;
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: -7%;
-    z-index: 1;
+  position: relative;
+  display: table;
+  width: 95%;
+  margin: 0 auto;
+  margin-bottom: -7%;
+  z-index: 1;
 }
 
 .button-edit {
-    width: 50%;
-    float: left;
-    color: #253734;
-    text-align: left;
-    font-size: 14px;
-    -webkit-filter: drop-shadow(2px 4px 3px #b9b9b9);
-    filter: drop-shadow(2px 4px 3px #b9b9b9);
+  width: 50%;
+  float: left;
+  color: #253734;
+  text-align: left;
+  font-size: 14px;
+  -webkit-filter: drop-shadow(2px 4px 3px #b9b9b9);
+  filter: drop-shadow(2px 4px 3px #b9b9b9);
 }
 
 .button-delete {
-    width: 50%;
-    float: left;
-    color: #04201c;
-    text-align: right;
-    -webkit-filter: drop-shadow(2px 4px 3px #b9b9b9);
-    filter: drop-shadow(2px 4px 3px #b9b9b9);
+  width: 50%;
+  float: left;
+  color: #04201c;
+  text-align: right;
+  -webkit-filter: drop-shadow(2px 4px 3px #b9b9b9);
+  filter: drop-shadow(2px 4px 3px #b9b9b9);
 }
 
 .button-edit:hover {
-    width: 50%;
-    float: left;
-    color: #333333;
-    text-align: left;
-    font-size: 14px;
-    -webkit-filter: drop-shadow(1px 3px 4px #fff);
-    filter: drop-shadow(1px 3px 4px #fff);
-    transition: 1.5s;
+  width: 50%;
+  float: left;
+  color: #333333;
+  text-align: left;
+  font-size: 14px;
+  -webkit-filter: drop-shadow(1px 3px 4px #fff);
+  filter: drop-shadow(1px 3px 4px #fff);
+  transition: 1.5s;
 }
 
 .button-delete:hover {
-    width: 50%;
-    float: left;
-    color: #ff0000;
-    text-align: right;
-    -webkit-filter: drop-shadow(1px 3px 4px #ff9999);
-    filter: drop-shadow(1px 3px 4px #ff9999);
-    transition: 1.5s;
+  width: 50%;
+  float: left;
+  color: #ff0000;
+  text-align: right;
+  -webkit-filter: drop-shadow(1px 3px 4px #ff9999);
+  filter: drop-shadow(1px 3px 4px #ff9999);
+  transition: 1.5s;
 }
-
-
 
 .image-container {
-    width: 100%;
-    display: table;
-    -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1) 7.5%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0));
-    overflow: hidden;
-    margin: 0% 0% 10% 0%;
+  width: 100%;
+  display: table;
+  -webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.3), rgba(
+          0,
+          0,
+          0,
+          0.1
+        )
+        7.5%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0));
+  overflow: hidden;
+  margin: 0% 0% 10% 0%;
 }
 
-.image-container img{
-    width: 100%;
+.image-container img {
+  width: 100%;
 }
-
-
 
 .slider-container-button {
-    display: table;
-    width: 100%;
-    padding: 5% 0% 10% 0%;
+  display: table;
+  width: 100%;
+  padding: 5% 0% 10% 0%;
 }
-
 
 /*.button-container-ver{
     width: 50%;
@@ -95,39 +96,38 @@
     cursor: pointer;
 }*/
 
-.button-container-ver{
-    width: 33%;
-    min-width: 20px;
-    padding: 3px;
-    margin: 0 auto;
-    margin-bottom: 0%;
-    border-radius: 50px;
-    cursor: pointer;
-    background: #183331;
-    border: 2px outset #192f2d;
-    text-align: center;
-    text-shadow: -1px -1px rgb(0 0 0 / 20%);
+.button-container-ver {
+  width: 33%;
+  min-width: 20px;
+  padding: 3px;
+  margin: 0 auto;
+  margin-bottom: 0%;
+  border-radius: 50px;
+  cursor: pointer;
+  background: #183331;
+  border: 2px outset #192f2d;
+  text-align: center;
+  text-shadow: -1px -1px rgb(0 0 0 / 20%);
 
-    /* border-radius: 25px;
+  /* border-radius: 25px;
     background: #3a4140;
     box-shadow:  5px 5px 11px #313736,
                 -5px -5px 11px #434b4a; */
 }
 
 .button-container-ver:hover {
-    border-radius: 50px;
-    background: #1c312f;
-    box-shadow: inset 05px 10px 20px #182a28,
-                inset -10px -10px 20px #203836;
-    transition: 1s;
+  border-radius: 50px;
+  background: #1c312f;
+  box-shadow: inset 05px 10px 20px #182a28, inset -10px -10px 20px #203836;
+  transition: 1s;
 
-    border-radius: 25px;
-    /* background: linear-gradient(145deg, #343b3a, #3e4644);
+  border-radius: 25px;
+  /* background: linear-gradient(145deg, #343b3a, #3e4644);
     box-shadow:  5px 5px 11px #313736,
                 -5px -5px 11px #434b4a; */
 }
 
 .button-container-ver a {
-    color: #fff7a5;
-    font-size: 13px;
+  color: #fff7a5;
+  font-size: 13px;
 }

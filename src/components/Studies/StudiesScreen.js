@@ -10,7 +10,6 @@ import "../Layout/css/Main.css";
 export default function StudiesScreen() {
   return (
     <div className="main-container">
-
       <div className="left-area">
         <Sidebar />
       </div>
@@ -21,13 +20,11 @@ export default function StudiesScreen() {
         <div className="middle-container">
           <StudyNuevo />
         </div>
-
       </div>
 
       <div className="right-area">
         <Rightbar />
       </div>
-
     </div>
   );
 }

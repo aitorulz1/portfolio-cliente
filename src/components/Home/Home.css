@@ -1,87 +1,87 @@
 .home-container {
-    position: absolute;
-    width: 100%;
-    top: 44%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .home-content-container {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 95%;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 95%;
 }
 
 .middle-pos {
-    position: relative;
-    margin-top: 10%;
-    left: 10%;
-    display: table;
-    width: 75%;
+  position: relative;
+  margin-top: 10%;
+  left: 10%;
+  display: table;
+  width: 75%;
 }
 
 .who {
-    color: #ffe608;
-    padding-bottom: 2.5%;
-    font-size: 20px;
+  color: #ffe608;
+  padding-bottom: 2.5%;
+  font-size: 20px;
 }
 
 .who a {
-    color: #ffe608;
-    padding-bottom: 2.5%;
-    font-size: 24px;
-    text-decoration: none;
+  color: #ffe608;
+  padding-bottom: 2.5%;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .who a:hover {
-    transition: 1s;
-    color: #04201d;
-    cursor: pointer;
+  transition: 1s;
+  color: #04201d;
+  cursor: pointer;
 }
 
 .what {
-    color: #f4eca5;
-    padding-bottom: 1.5%;
-    font-size: 30px;
+  color: #f4eca5;
+  padding-bottom: 1.5%;
+  font-size: 30px;
 }
 
 .techs {
-    color: #fff070;
-    font-size: 120px;
+  color: #fff070;
+  font-size: 120px;
 }
 
 .brief {
-    color: #fff;
-    text-align: right;
-    font-size: 14px;
-    width: 85%;
-    float: right;
-    padding-top: 2.5%;
-    line-height: 2;
-    display: table;
-    padding-bottom: 10%;
+  color: #fff;
+  text-align: right;
+  font-size: 14px;
+  width: 85%;
+  float: right;
+  padding-top: 2.5%;
+  line-height: 2;
+  display: table;
+  padding-bottom: 10%;
 }
 
 button.cover-button {
-    float: right;
-    background: none;
-    border: 1px solid #fff070;
-    padding: 15px 50px;
-    color: #fff070;
+  float: right;
+  background: none;
+  border: 1px solid #fff070;
+  padding: 15px 50px;
+  color: #fff070;
 }
 
-button.cover-button:hover{
-    background: #f4eca5;
-    transition: 1s;
-    color: #04201d;
-    cursor: pointer;
+button.cover-button:hover {
+  background: #f4eca5;
+  transition: 1s;
+  color: #04201d;
+  cursor: pointer;
 }
 
-button.cover-button a{
-    color: #fff070;
-    text-decoration: none;
+button.cover-button a {
+  color: #fff070;
+  text-decoration: none;
 }
-button.cover-button a:hover{
-    color: #04201d;
+button.cover-button a:hover {
+  color: #04201d;
 }

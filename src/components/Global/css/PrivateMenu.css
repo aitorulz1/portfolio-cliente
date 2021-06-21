@@ -1,66 +1,63 @@
 .private-menu-container {
-    display: inline-flex;
-    /*margin-top: calc(5vh - 1.5%);*/
-    width: 100%;
+  display: inline-flex;
+  /*margin-top: calc(5vh - 1.5%);*/
+  width: 100%;
 }
 
-nav{
-    width: 100%;
+nav {
+  width: 100%;
 }
 
 nav ul {
-    list-style-type: none;
-    list-style: none;
+  list-style-type: none;
+  list-style: none;
 }
 
 ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 0px;
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
 }
 
-.vl{
-    border-left: 2px solid #fdf39d;
-    height: 1.5vh;
-    margin-bottom: 2vh;
-    margin-left: Calc(50% - 1px);
+.vl {
+  border-left: 2px solid #fdf39d;
+  height: 1.5vh;
+  margin-bottom: 2vh;
+  margin-left: Calc(50% - 1px);
 }
-
 
 .lp {
-    display: table;
-    width: 100%;
-    cursor: pointer;
+  display: table;
+  width: 100%;
+  cursor: pointer;
 }
 
-nav li {    
-    position: relative;
-    float: left;
-    width: 20%;
+nav li {
+  position: relative;
+  float: left;
+  width: 20%;
 }
 
-nav li a {    
-    color:#fdf39d;
-    text-decoration: none;
+nav li a {
+  color: #fdf39d;
+  text-decoration: none;
 }
 
-nav li a:hover {    
-    color:#011E1B;
-    transition: 1s;
+nav li a:hover {
+  color: #011e1b;
+  transition: 1s;
 }
 
 i.fa.fa-power-off {
-    color:#fdf39d;
-    font-size: 16px;
+  color: #fdf39d;
+  font-size: 16px;
 }
 
 i.fa.fa-power-off:hover {
-    color:#011E1B;
-    transition: 1s;
+  color: #011e1b;
+  transition: 1s;
 }
-
-

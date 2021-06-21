@@ -2,12 +2,11 @@ import React, { Fragment, useState, useEffect, useContext } from "react";
 import clienteAxios from "../../service/axios";
 
 import proyectoContext from "../../context/proyectos/proyectoContext";
-import Select from 'react-select';
+import Select from "react-select";
 
 import "./css/ProyectoNuevo.css";
 
 export default function ProyectoNuevo(props) {
-
   const proyectosContext = useContext(proyectoContext);
   const { agregarProyecto } = proyectosContext;
 
@@ -24,7 +23,18 @@ export default function ProyectoNuevo(props) {
     end: "",
   });
 
-  const { name, productPicture, category, description, linkto, github, video, skill, begin, end } = proyecto;
+  const {
+    name,
+    productPicture,
+    category,
+    description,
+    linkto,
+    github,
+    video,
+    skill,
+    begin,
+    end,
+  } = proyecto;
 
   const [skills, getSkills] = useState([]);
 
@@ -37,7 +47,6 @@ export default function ProyectoNuevo(props) {
       try {
         const respuesta = await clienteAxios.get("/categories");
         guardarCategorias(respuesta.data);
-
       } catch (error) {
         console.error(error);
       }
@@ -47,8 +56,7 @@ export default function ProyectoNuevo(props) {
     const getFeatures = async () => {
       try {
         const resultado = await clienteAxios.get("/skills");
-        getSkills(resultado.data)
-
+        getSkills(resultado.data);
       } catch (error) {
         console.error(error);
       }
@@ -56,17 +64,13 @@ export default function ProyectoNuevo(props) {
     getFeatures();
   }, []);
 
-
-
-  const newOne = skills.map((s, i) => ({ value: s.skills, label: s.skills }))
+  const newOne = skills.map((s, i) => ({ value: s.skills, label: s.skills }));
 
   const [selectedValue, setSelectedValue] = useState([]);
 
   const handleChange = (e) => {
-    setSelectedValue(Array.isArray(e) ? e.map(x => x.value) : []);
-  }
-
-
+    setSelectedValue(Array.isArray(e) ? e.map((x) => x.value) : []);
+  };
 
   const onChange = (e) => {
     const { name, value, files, file } = e.target;
@@ -91,8 +95,8 @@ export default function ProyectoNuevo(props) {
       guardarError(true);
 
       setTimeout(() => {
-        guardarError(false)
-      }, 3000)
+        guardarError(false);
+      }, 3000);
       return;
     }
 
@@ -146,20 +150,17 @@ export default function ProyectoNuevo(props) {
     console.log(proyecto);
   };
 
-
-
-
   return (
     <div className="proyect-form-container">
-
       <div className="proyect-form">
-
         <div className="title-container">
           New Project<i class="fas fa-project-diagram"></i>
         </div>
 
         <form onSubmit={onSubmit} encType="multipart/form-data">
-          {error ? <div className="error-red">Completa todos los campos</div> : null}
+          {error ? (
+            <div className="error-red">Completa todos los campos</div>
+          ) : null}
 
           <div className="cajetin-form">
             <input
@@ -190,10 +191,7 @@ export default function ProyectoNuevo(props) {
             <select className="line-form" name="category" onChange={onChange}>
               <option value="select">Select...</option>
               {categorias.map((categorySelect) => (
-                <option
-                  key={categorySelect.id}
-                  value={categorySelect.category}
-                >
+                <option key={categorySelect.id} value={categorySelect.category}>
                   {categorySelect.category}
                 </option>
               ))}
@@ -205,12 +203,10 @@ export default function ProyectoNuevo(props) {
               isMulti
               className="line-form-select"
               options={newOne}
-              value={newOne.filter(obj => selectedValue.includes(obj.value))}
+              value={newOne.filter((obj) => selectedValue.includes(obj.value))}
               onChange={handleChange}
-            >
-            </Select>
+            ></Select>
           </div>
-
 
           <div className="cajetin-form">
             <input
@@ -278,13 +274,10 @@ export default function ProyectoNuevo(props) {
             />
           </div>
 
-
           <button className="form-button" type="submit" value="Subir Proyecto">
             <i class="fas fa-arrow-circle-up" alt="upload project"></i>
           </button>
-
         </form>
-
       </div>
     </div>
   );
