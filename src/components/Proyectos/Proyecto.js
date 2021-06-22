@@ -39,7 +39,7 @@ export default function Proyecto({ proyecto }) {
     <div className="project-container-regular">
       <div className="main-title-regular">{name}</div>
 
-      {autenticado ? (
+      
         <div className="edit-del-cont">
           <Link to={`/proyecto/editar/${id}`}>
             <div
@@ -59,7 +59,7 @@ export default function Proyecto({ proyecto }) {
             <i className="far fa-times-circle"></i>
           </div>
         </div>
-      ) : null}
+      
 
       <div className="image-container">
         <img src={productPicture} />

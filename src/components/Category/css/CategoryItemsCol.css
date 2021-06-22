@@ -57,6 +57,7 @@
   color: #fef7a6;
   text-transform: lowercase;
   text-align: center;
+  line-height: 2;
 }
 
 .end-date {

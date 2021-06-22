@@ -5,6 +5,8 @@ export default function CategoryItems(skill) {
 
     const { skills, id } = skill.skill;
 
+    console.log(skill.skill)
+
     return(
         <li>
                 <Link to={`/skills/${skills}`}>

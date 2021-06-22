@@ -83,36 +83,16 @@
   padding: 5% 0% 10% 0%;
 }
 
-/*.button-container-ver{
-    width: 50%;
-    min-width: 20px;
-    background: #102826;
-    padding: 3px;
-    margin: 0 auto;
-    margin-bottom: 0%;
-    border-radius: 8px;
-    background: linear-gradient(145deg, #192c2a, #1e3432);
-    box-shadow: 0px 7px 10px #182a28, 0px -5px 15px #203836;
-    cursor: pointer;
-}*/
-
-.button-container-ver {
-  width: 33%;
-  min-width: 20px;
-  padding: 3px;
+.button-container-ver{
+  border-radius: 15px;
+  background: #363d3d;
+  box-shadow: 5px 5px 9px #333535, -5px -5px 9px #474949;
+  padding: 10px 0px;
   margin: 0 auto;
-  margin-bottom: 0%;
-  border-radius: 50px;
+  width: 33%; 
   cursor: pointer;
-  background: #183331;
-  border: 2px outset #192f2d;
+  border-bottom: 1px solid #212c2a;
   text-align: center;
-  text-shadow: -1px -1px rgb(0 0 0 / 20%);
-
-  /* border-radius: 25px;
-    background: #3a4140;
-    box-shadow:  5px 5px 11px #313736,
-                -5px -5px 11px #434b4a; */
 }
 
 .button-container-ver:hover {
@@ -120,11 +100,7 @@
   background: #1c312f;
   box-shadow: inset 05px 10px 20px #182a28, inset -10px -10px 20px #203836;
   transition: 1s;
-
   border-radius: 25px;
-  /* background: linear-gradient(145deg, #343b3a, #3e4644);
-    box-shadow:  5px 5px 11px #313736,
-                -5px -5px 11px #434b4a; */
 }
 
 .button-container-ver a {

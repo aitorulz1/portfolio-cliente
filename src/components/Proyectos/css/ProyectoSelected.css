@@ -110,7 +110,7 @@ span.category:hover {
   width: 100%;
   text-align: center;
   display: table;
-  padding-top: 2.5%;
+  padding: 4.5% 0% 2% 0%;
 }
 
 .skills {
@@ -155,7 +155,7 @@ i.fas.fa-times-circle {
   text-align: center;
   color: #fbf7cb;
   font-size: 11.5px;
-  max-width: 400px;
+  max-width: 500px;
   line-height: 2;
   margin: 0 auto;
   margin-top: 7.5%;

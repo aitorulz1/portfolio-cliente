@@ -33,7 +33,6 @@ export default function ToContact() {
     obtenerAitor();
   }, [aitor]);
 
-  console.log(aitor);
 
   const onChange = (name) => (e) => {
     setValues({ ...values, [name]: e.target.value });
