@@ -3,19 +3,24 @@ import React, { useEffect, useContext } from "react";
 import proyectoContext from "../../context/proyectos/proyectoContext";
 import Proyecto from "../Proyectos/Proyecto";
 
-// import wp from "../../assets/categories/icon-wp.png";
-import mern from "../../assets/categories/icon-mern.png";
-import react from "../../assets/categories/icon-react.png";
+import wpimg from "../../assets/categories/icon-wp.png";
+import mernimg from "../../assets/categories/icon-mern.png";
+import reactimg from "../../assets/categories/icon-react.png";
+
+import './css/ListadoProyectos.css'
 
 export default function ListadoProyectos() {
   const proyectosContext = useContext(proyectoContext);
   const { proyectos, obtenerProyectos } = proyectosContext;
 
-  const wp = (proyectos.filter(el => el.category === 'web'))
-  const mern = (proyectos.filter(el => el.category === 'mern'))
-  const react = (proyectos.filter(el => el.category === 'react'))
+  const wp = proyectos.filter(el => el.category === 'web');
+  const mern = proyectos.filter(el => el.category === 'mern')
+  const react = proyectos.filter(el => el.category === 'react')
 
-  
+  const wpb = () => {
+    
+  }
+
   
   useEffect(() => {
     obtenerProyectos();
@@ -31,20 +36,20 @@ export default function ListadoProyectos() {
     <div>
       <div className="button">
         <div className="upper-buttons-container">
-          <button src={wp}  onClick={() => wpbutton()}>WP</button>
+          <button className="categ-icon" src={wpimg}  onClick={() => wpb()}><img src={wpimg} className="cat-icon" /></button>
         </div>
 
         <div className="upper-buttons-container">
-          <img src={mern} />
+        <img src={mernimg} className="cat-icon" />
         </div>
 
         <div className="upper-buttons-container">
-          <img src={react} />
+        <img src={reactimg} className="cat-icon" />
         </div>
       </div>
 
       <ul>
-        {proyectos.map((proyecto) => (
+        {proyectos.filter(el => el.category === 'web').map((proyecto) => (
           <Proyecto key={proyecto.id} proyecto={proyecto} />
         ))}
       </ul>

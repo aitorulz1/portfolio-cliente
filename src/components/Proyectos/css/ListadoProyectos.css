@@ -1,0 +1,9 @@
+.cat-icon {
+    width: 30px;
+}
+
+button.categ-icon {
+    background: transparent !important;
+    border: none;
+    cursor: pointer;
+}
