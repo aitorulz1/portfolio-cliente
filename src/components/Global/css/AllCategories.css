@@ -52,9 +52,6 @@ input[type="checkbox"]:checked ~ span:nth-of-type(2) {
 }
 
 input[type="checkbox"]:checked ~ span:nth-of-type(3) {
-  /*transform-origin:bottom;
-    width:50%;
-    transform: translate(-10px,-11px) rotatez(45deg);*/
   display: none;
 }
 
@@ -62,4 +59,14 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   position: relative;
   display: inline-block;
   padding-top: 10%;
+}
+
+@media screen and (max-width: 670px) {
+  .sidebar-block {
+    display: none;
+  }
+
+  .social-container {
+    display: none;
+  }
 }

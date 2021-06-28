@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import "./Social.css";
 
@@ -10,14 +9,14 @@ export default function Social() {
   return (
     <div className="social-container">
       <div className="social-item">
-        <Link to="https://github.com/aitorulz1" target="_blank">
+        <a href="https://github.com/aitorulz1" target="_blank">
           <div className="github"></div>
-        </Link>
+        </a>
       </div>
       <div className="social-item">
-        <Link to="https://www.linkedin.com/in/aitorarina/" target="_blank">
+        <a href="https://www.linkedin.com/in/aitorarina/" target="_blank">
           <div className="linkedin"></div>
-        </Link>
+        </a>
       </div>
     </div>
   );

@@ -83,13 +83,13 @@
   padding: 5% 0% 10% 0%;
 }
 
-.button-container-ver{
+.button-container-ver {
   border-radius: 15px;
   background: #363d3d;
   box-shadow: 5px 5px 9px #333535, -5px -5px 9px #474949;
   padding: 10px 0px;
   margin: 0 auto;
-  width: 33%; 
+  width: 33%;
   cursor: pointer;
   border-bottom: 1px solid #212c2a;
   text-align: center;
@@ -106,4 +106,13 @@
 .button-container-ver a {
   color: #fff7a5;
   font-size: 13px;
+}
+
+@media screen and (max-width: 460px) {
+  .slider-container-button {
+    display: table;
+    width: 100%;
+    padding: 5% 0% 15% 0%;
+    border-bottom: 1px solid #e7e29a;
+  }
 }

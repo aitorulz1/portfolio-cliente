@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 
 import proyectoContext from "../../context/proyectos/proyectoContext";
 import Proyecto from "../Proyectos/Proyecto";
@@ -13,46 +13,66 @@ export default function ListadoProyectos() {
   const proyectosContext = useContext(proyectoContext);
   const { proyectos, obtenerProyectos } = proyectosContext;
 
+  
   const wp = proyectos.filter(el => el.category === 'web');
-  const mern = proyectos.filter(el => el.category === 'mern')
-  const react = proyectos.filter(el => el.category === 'react')
-
-  const wpb = () => {
-    
-  }
-
+  const mern = proyectos.filter(el => el.category === 'mern');
+  const react = proyectos.filter(el => el.category === 'react');
   
   useEffect(() => {
     obtenerProyectos();
   }, []);
+  
+  const [ cat, getCat ] = useState(proyectos)
+    
+  const wpb = (filtro) => {
+    getCat(filtro)
+  }
 
-  const wpbutton = () => {
-    return wp;
+  var mybutton = document.getElementById("myBtn");
+
+  window.onscroll = function () { scrollFunction() };
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+      } else {
+          mybutton.style.display = "none";
+      }
+  }
+
+  const topFunction = () => {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
   }
 
   if (!proyectos) return null;
+
 
   return (
     <div>
       <div className="button">
         <div className="upper-buttons-container">
-          <button className="categ-icon" src={wpimg}  onClick={() => wpb()}><img src={wpimg} className="cat-icon" /></button>
+          <button className="categ-icon"  onClick={() => wpb(wp)}><img src={wpimg} className="cat-icon" /></button>
         </div>
 
         <div className="upper-buttons-container">
-        <img src={mernimg} className="cat-icon" />
+          <button className="categ-icon"  onClick={() => wpb(mern)}><img src={mernimg} className="cat-icon" /></button>
         </div>
 
         <div className="upper-buttons-container">
-        <img src={reactimg} className="cat-icon" />
+          <button className="categ-icon"  onClick={() => wpb(react)}><img src={reactimg} className="cat-icon" /></button>
         </div>
       </div>
 
       <ul>
-        {proyectos.filter(el => el.category === 'web').map((proyecto) => (
+        {cat.map((proyecto) => (
           <Proyecto key={proyecto.id} proyecto={proyecto} />
         ))}
       </ul>
+
+      <button id="myBtn" onClick={topFunction}>
+                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      </button>
     </div>
   );
 }

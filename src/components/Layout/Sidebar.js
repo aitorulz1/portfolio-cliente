@@ -16,19 +16,11 @@ export default function Sidebar() {
         <div className="sidebar-container">
             <Logo />
             <AllCategories 
-                setAbiertoUno={valor=>{
-                    setAbiertoUno(valor);
-                    setAbiertoDos(!valor);
-                  }}
+                setAbiertoUno={setAbiertoUno}
                 abiertouno= {abiertouno}
-                abiertodos= {abiertodos}
             />
             <MenuDos 
-                setAbiertoDos={valor=>{
-                    setAbiertoUno(!valor);
-                    setAbiertoDos(valor);
-                  }}
-                abiertouno= {abiertouno}
+                setAbiertoDos={setAbiertoDos}
                 abiertodos= {abiertodos}
             />
             <Social />

@@ -85,3 +85,41 @@ button.cover-button a {
 button.cover-button a:hover {
   color: #04201d;
 }
+
+@media screen and (max-width: 460px) {
+  .middle-pos {
+    position: relative;
+    margin-top: 10%;
+    left: 0%;
+    display: table;
+    width: 100%;
+  }
+
+  .techs {
+    color: #fff070;
+    font-size: 65px;
+    text-align: center;
+    padding: 5% 0%;
+  }
+
+  .brief {
+    color: #fff;
+    text-align: left;
+    font-size: 14px;
+    width: 100%;
+    float: none;
+    padding-top: 2.5%;
+    line-height: 2;
+    display: table;
+    padding-bottom: 10%;
+  }
+
+  button.cover-button {
+    float: none;
+    background: none;
+    border: 1px solid #fff070;
+    padding: 15px 50px;
+    color: #fff070;
+    width: 100%;
+  }
+}

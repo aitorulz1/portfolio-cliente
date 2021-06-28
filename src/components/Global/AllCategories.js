@@ -8,7 +8,6 @@ import "./css/AllCategories.css";
 export default function AllCategories({
   setAbiertoUno,
   abiertouno,
-  abiertodos,
 }) {
   const [categories, getCategories] = useState([]);
 

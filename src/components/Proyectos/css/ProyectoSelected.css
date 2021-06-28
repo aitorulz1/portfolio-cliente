@@ -213,3 +213,53 @@ i.fas.fa-times-circle {
 .ytp-hide-controls .ytp-watermark {
   display: none !important;
 }
+
+@media screen and (max-width: 460px) {
+  .back-to {
+    margin-top: 2.5%;
+    left: 5%;
+    position: absolute;
+    cursor: pointer;
+    width: fit-content;
+    color: #fdf283;
+    z-index: 1000;
+  }
+  .single-container {
+    width: 90%;
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    margin: 0 auto;
+  }
+  .image-single-container {
+    width: 100%;
+  }
+  .date-container {
+    position: relative;
+    text-align: center;
+    transform: rotate(0deg);
+    color: #fdf39d;
+    font-size: 12px;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+
+  .links-container {
+    position: relative;
+    right: 0%;
+    top: 0%;
+    text-align: center;
+  }
+  .links-container a {
+    color: #fdf39d;
+    text-decoration: none;
+    padding-bottom: 0%;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10% 0%;
+  }
+}
