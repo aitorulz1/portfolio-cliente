@@ -80,6 +80,21 @@ export default function ToContact() {
                 </div>
               </div>
 
+
+              <div className="contact-info-container">
+                <div className="contact-info-content">
+                  <div className="contact-into-title">Contact Info</div>
+                  <div className="contact-into-subtitle">mail</div>
+                  <div className="contact-into-atr">
+                    <a href="mailto:aitorulz1@gmail.com">{email}</a>
+                  </div>
+                  <div className="contact-into-subtitle">phone number</div>
+                  <div className="contact-into-atr">
+                    <a href="tel:0034647528579">+34 647 528 579</a>
+                  </div>
+                </div>
+              </div>
+
               <div className="form-container">
                 <form onSubmit={onSubmit}>
                   <div className="cajetin-form">
@@ -132,19 +147,8 @@ export default function ToContact() {
                 </form>
               </div>
 
-              <div className="contact-info-container">
-                <div className="contact-info-content">
-                  <div className="contact-into-title">Contact Info</div>
-                  <div className="contact-into-subtitle">mail</div>
-                  <div className="contact-into-atr">
-                    <a href="mailto:aitorulz1@gmail.com">{email}</a>
-                  </div>
-                  <div className="contact-into-subtitle">phone number</div>
-                  <div className="contact-into-atr">
-                    <a href="tel:0034647528579">+34 647 528 579</a>
-                  </div>
-                </div>
-              </div>
+          
+
             </div>
           </div>
         </div>

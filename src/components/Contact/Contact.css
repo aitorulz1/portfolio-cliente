@@ -51,12 +51,13 @@
 
 .contact-info-container {
   width: 50%;
-  float: left;
+  float: right;
 }
 
 .contact-info-content {
   width: fit-content;
-  margin-left: Calc(50% - 100px);
+  margin-left: Calc(50% - 20%);
+  /* margin-left: Calc(50% - 100px); */
 }
 
 .contact-into-title {
@@ -97,4 +98,15 @@
   box-shadow: inset 0px 34px 0px -15px #fff174;
   background-color: #fff8a5;
   border: 2px solid #fff8a5;
+}
+
+@media screen and (max-width: 760px) {
+  .form-container {
+    float: none;
+    width: 100%;
+  }
+
+  .contact-info-container {
+    display: none;
+  }
 }

@@ -20,12 +20,17 @@ export default function ListadoProyectos() {
   
   useEffect(() => {
     obtenerProyectos();
+    console.log(proyectos)
   }, []);
+
+  useEffect(() => {
+    setCat(proyectos)
+  }, [proyectos]);
   
-  const [ cat, getCat ] = useState(proyectos)
+  const [ cat, setCat ] = useState(proyectos)
     
   const wpb = (filtro) => {
-    getCat(filtro)
+    setCat(filtro)
   }
 
   var mybutton = document.getElementById("myBtn");
@@ -46,6 +51,8 @@ export default function ListadoProyectos() {
   }
 
   if (!proyectos) return null;
+
+  console.log()
 
 
   return (
@@ -71,7 +78,7 @@ export default function ListadoProyectos() {
       </ul>
 
       <button id="myBtn" onClick={topFunction}>
-                <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                <i className="fa fa-arrow-up" aria-hidden="true"></i>
       </button>
     </div>
   );
