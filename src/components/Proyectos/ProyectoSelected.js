@@ -111,7 +111,7 @@ export default function ProyectoSelected() {
 
             <div className="skills-container">
               <div className="skills">
-                {skill ? skill.map((s) => s + " | ") : null}
+                {skill ? skill.map((s) => s + " | " ) : null}
               </div>
             </div>
 

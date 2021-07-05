@@ -104,9 +104,43 @@
   .form-container {
     float: none;
     width: 100%;
+    padding-bottom: 20%;
   }
 
   .contact-info-container {
-    display: none;
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .contact-info-content {
+    width: 100%;
+    margin-left: 0%;
+  }
+
+  .contact-into-title {
+    color: #fff8a5;
+    font-family: elephant;
+    font-size: 42px;
+    font-weight: bold;
+  }
+
+  .contact-into-atr {
+    padding-bottom: 25%;
+  }
+
+  .contact-into-subtitle {
+    color: #fff06f;
+    margin: 15% 0% 10% 0%;
+    font-size: 14px;
+  }
+
+  .form-container form {
+    width: 100%;
+  }
+
+  .contact-half {
+    width: 50%;
+    float: left;
+    text-align: left;
   }
 }

@@ -68,7 +68,6 @@ export default function ByCategory() {
     guardarPorCategorias(
       dataArray.sort((a, b) => a.begin.localeCompare(b.begin))
     );
-    console.log(porcategorias);
   };
 
   return (
@@ -132,27 +131,29 @@ export default function ByCategory() {
           )}
 
           {sliderview ? (
-            <StyleRoot>
-              <Coverflow
-                displayQuantityOfSide={3}
-                navigation
-                infiniteScroll
-                enableHeading
-              >
-                {porcategorias.map((porcategoria) => (
-                  <CategoryItems
-                    key={porcategoria.id}
-                    porcategoria={porcategoria}
-                  />
-                ))}
-              </Coverflow>
-            </StyleRoot>
+            <div className="slider-content">
+                <StyleRoot>
+                  <Coverflow
+                    displayQuantityOfSide={3}
+                    navigation
+                    infiniteScroll
+                    enableHeading
+                  >
+                    {porcategorias.map((porcategoria) => (
+                      <CategoryItems
+                        key={porcategoria.id}
+                        porcategoria={porcategoria}
+                      />
+                    ))}
+                  </Coverflow>
+                </StyleRoot>
+            </div>
           ) : (
             <div className="container-regular-view">
               {porcategorias.map((porcategoria) => (
                 <CategoryItemsCol
-                  key={porcategoria.id}
-                  porcategoria={porcategoria}
+                key={porcategoria.id}
+                porcategoria={porcategoria}
                 />
               ))}
             </div>

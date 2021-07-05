@@ -1,9 +1,9 @@
 .single-container {
   width: 75%;
-  position: absolute;
-  top: 44%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin: auto;
+  display: table;
+  padding-bottom: 10%;
 }
 
 .title-single-container {
@@ -214,7 +214,7 @@ i.fas.fa-times-circle {
   display: none !important;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 860px) {
   .back-to {
     margin-top: 2.5%;
     left: 5%;

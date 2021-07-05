@@ -37,7 +37,7 @@
     max-width: 100%;
     float: none;
     border-right: 0px solid #404948;
-    border-bottom: 1px solid #404948;
+    border-bottom: 0px solid #404948;
     position: fixed;
   }
 

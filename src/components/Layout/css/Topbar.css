@@ -44,6 +44,20 @@
 
 @media screen and (max-width: 670px) {
   .responsive-menu-container {
+    display: block;
+    padding: 5% 0%;
+}
+  .logo {
+    display: none;
+  }
+
+  .topbar-container {
+    position: relative;
+    height: 10vh;
+    width: 90%;
+    border-bottom: 1px solid #404948;
+    text-align: center;
+    margin: 0 auto;
     display: table;
   }
 }

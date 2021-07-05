@@ -105,3 +105,36 @@ li::marker {
   box-shadow: inset 5px 5px 9px #373939, inset -5px -5px 9px #434545;
   border-bottom: 0px solid #212c2a;
 }
+
+@media screen and (max-width: 870px) {
+  .profile-features-container ul {
+    columns: 3;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile-buttons-container {
+    position: relative;
+    width: 100%;
+    display: table;
+    padding: 10% 0% 5% 0%;
+    color: #fff06f;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .profile-button-container {
+    width: 100%;
+    margin: 5% 0%;
+  }
+
+  .profile-button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profile-features-container ul {
+    columns: 2;
+  }
+}
