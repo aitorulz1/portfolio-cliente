@@ -55,7 +55,21 @@ export default function ProyectoSelected() {
 
   const videoModal = `${video}?autoplay=1&showinfo=0&controls=0&rel=0&modestbranding=0&loop=1&fs=1`;
 
-  console.log(proyect);
+
+
+    // const yearb = begin.slice(0, 4);
+    // const monthb = begin.slice(5, 7);
+    // const dayb = begin.slice(8, 10);
+  
+    // const dateBegin = `${dayb} · ${monthb} · ${yearb}`;
+  
+    // const year = end.slice(0, 4);
+    // const month = end.slice(5, 7);
+    // const day = end.slice(8, 10);
+  
+    // const dateEnd = `${day} · ${month} · ${year}`;
+  
+
 
   if (proyect === null) return;
 
@@ -122,21 +136,27 @@ export default function ProyectoSelected() {
                 </a>
               ) : null}
               {video ? (
+                <div className="youtube-link">
                 <a onClick={showVideo}>
                   <i className="fa fa-play-circle" aria-hidden="true"></i>
                 </a>
+                </div>
               ) : null}
               <div>
                 {showvideo ? (
-                  <a onClick={hideVideo}>
-                    <i class="fas fa-times-circle"></i>
-                  </a>
+                 <div className="quite-button">
+                    <a onClick={hideVideo}>
+                      <i class="fas fa-times-circle"></i>
+                    </a>
+                </div>
                 ) : null}
               </div>
               {github ? (
-                <a href={github} target="_blank">
-                  <i className="fa fa-github" aria-hidden="true"></i>
-                </a>
+                <div className="github-link">
+                  <a href={github} target="_blank">
+                    <i className="fa fa-github" aria-hidden="true"></i>
+                  </a>
+                </div>
               ) : null}
             </div>
           </div>

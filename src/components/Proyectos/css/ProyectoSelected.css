@@ -246,6 +246,14 @@ i.fas.fa-times-circle {
     margin-top: 0%;
   }
 
+.skills-container {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: table;
+    padding: 4.5% 0% 7.5% 0%;
+}
+
   .links-container {
     position: relative;
     right: 0%;
@@ -261,5 +269,34 @@ i.fas.fa-times-circle {
     cursor: pointer;
     text-align: center;
     padding: 10% 0%;
+  }
+
+  .youtube-link a{
+    padding: 0% 0%; 
+    width:Calc(50% - 5px);
+    float: left;
+    text-align: right;
+    margin-right: 0px;
+  }
+  
+  .quite-button a{
+    padding: 0% 0%; 
+    float: left;
+    text-align: right;
+    margin-left: 7.5px;
+  }
+
+  .github-link a{
+    padding: 0% 0%;     
+    width: Calc(49% - 25px);
+    float: left;
+    text-align: left;
+    margin-left: 7.5px;
+  }
+
+  .video-container {
+    position: absolute;
+    width: 100%;
+    height: 40%;
   }
 }

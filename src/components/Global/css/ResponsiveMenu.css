@@ -3,6 +3,8 @@ label {
     flex-direction: column;
     width: 40px;
     cursor: pointer;
+    position: relative;
+    z-index: 1000;
   }
   
   label span.responsivemenu {
@@ -52,6 +54,4 @@ label {
   }
   
 
-  @media screen and (max-width: 460px) {
-  
-  }
+
