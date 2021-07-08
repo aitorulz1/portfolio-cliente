@@ -131,6 +131,15 @@ export default function ByCategory() {
           )}
 
           {sliderview ? (
+            <div className="container-regular-view">
+              {porcategorias.map((porcategoria) => (
+                <CategoryItemsCol
+                key={porcategoria.id}
+                porcategoria={porcategoria}
+                />
+              ))}
+            </div>
+          ) : (
             <div className="slider-content">
                 <StyleRoot>
                   <Coverflow
@@ -147,15 +156,6 @@ export default function ByCategory() {
                     ))}
                   </Coverflow>
                 </StyleRoot>
-            </div>
-          ) : (
-            <div className="container-regular-view">
-              {porcategorias.map((porcategoria) => (
-                <CategoryItemsCol
-                key={porcategoria.id}
-                porcategoria={porcategoria}
-                />
-              ))}
             </div>
           )}
         </div>

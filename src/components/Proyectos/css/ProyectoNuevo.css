@@ -33,7 +33,7 @@ i.fas.fa-project-diagram {
 .cajetin-form {
   width: 100%;
   padding: 15px 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .line-form {

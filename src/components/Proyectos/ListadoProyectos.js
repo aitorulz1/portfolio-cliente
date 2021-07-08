@@ -38,7 +38,7 @@ export default function ListadoProyectos() {
   };
   function scrollFunction() {
     if (
-      proyectos.length > 1 &&
+      proyectos.length > 0 &&
       document.body.scrollTop > 20 ||
       document.documentElement.scrollTop > 20
     ) {

@@ -13,6 +13,36 @@
   max-width: 95%;
 }
 
+.video-intro-container {
+  width: 100%;
+  height: 99%;
+  display: table;
+}
+
+.video-intro-container iframe {
+  width: 100%;
+  height: 101%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  z-index: 1000;
+  -webkit-box-shadow: 0 0 20px 0 #000000;
+  box-shadow: 0 0 20px 0 #000000;
+}
+
+.play-container {
+  position: absolute;
+  right: 5%;
+  width: 30px;
+  z-index: 100000;
+}
+
+.play-container img {
+  width: 100%;
+  cursor: pointer;
+}
+
 .middle-pos {
   position: relative;
   margin-top: 10%;
@@ -124,7 +154,6 @@ button.cover-button a:hover {
   }
 }
 
-
 @media screen and (max-width: 690px) {
   .techs {
     color: #fff070;
@@ -140,7 +169,7 @@ button.cover-button a:hover {
     padding: 15px 50px;
     color: #fff070;
     width: 60%;
-}
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -152,5 +181,5 @@ button.cover-button a:hover {
   }
   button.cover-button {
     width: 100%;
-}
+  }
 }
