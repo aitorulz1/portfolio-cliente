@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import clienteAxios from "../../service/axios";
 
 import Menu from "./Menu";
-import './css/ResponsiveMenu.css'
+import "./css/ResponsiveMenu.css";
 
-export default  function ResponsiveMenu () {
-
+export default function ResponsiveMenu() {
   const [categories, getCategories] = useState([]);
 
   const [toggle, setToggle] = useState(false);
 
   const handleToggleRes = () => {
-    setToggle(!toggle)
-  }
+    setToggle(!toggle);
+  };
 
   useEffect(() => {
     const getData = async () => {
@@ -27,8 +26,7 @@ export default  function ResponsiveMenu () {
     getData();
   }, []);
 
-    return (
-        
+  return (
     <div className="topbar-block">
       <div className="main-burger-button-tres">
         <label htmlFor="checkr">
@@ -46,19 +44,23 @@ export default  function ResponsiveMenu () {
             : categories.map((categoryx) => (
                 <Menu key={categoryx.id} categoryx={categoryx} />
               ))}
-          <div className="menu-items-responsive">
+          <div className="menu-items">
             <Link to={"/proyectos"}>all</Link>
+          </div>
+          <div className="menu-items-responsive">
+            <Link to={"/studies"}>studies</Link>
+          </div>
+          <div className="menu-items-responsive">
+            <Link to={"/jobs"}>jobs</Link>
           </div>
           <div className="menu-items-responsive">
             <Link to={"/profile/aitor-arina"}>profile</Link>
           </div>
           <div className="menu-items-responsive">
             <Link to={"/contact/aitor-arina"}>contact</Link>
-          </div>        
+          </div>
         </div>
       ) : null}
     </div>
-        
-    );
-};
-
+  );
+}

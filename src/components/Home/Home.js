@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Play from '../../assets/icons/main-play-icon.png';
+import Play from "../../assets/icons/main-play-icon.png";
+import Stop from "../../assets/icons/main-stop-icon.png";
 
 import "./Home.css";
 
@@ -16,7 +17,7 @@ export default function Home() {
   ];
 
   const [length, setLength] = useState(0);
-  const [ play, setPlay ] = useState(false);
+  const [play, setPlay] = useState(false);
 
   useEffect(() => {
     setInterval(() => {
@@ -26,15 +27,26 @@ export default function Home() {
 
   return (
     <div className="home-container">
-      <div className="play-container" onClick={() => setPlay(true)}><img src={Play} /></div>
+      {play ? (
+        <div className="stop-container" onClick={() => setPlay(false)}>
+          <img src={Stop} />
+        </div>
+      ) : (
+        <div className="play-container" onClick={() => setPlay(true)}>
+          <img src={Play} />
+        </div>
+      )}
       <div className="home-content-container">
-          {
-            play ?
-            <div className="video-intro-container">
-              <iframe src="https://www.youtube.com/embed/1LboqhxgQK8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            : null
-          }
+        {play ? (
+          <div className="video-intro-container">
+            <iframe
+              src="https://www.youtube.com/embed/1LboqhxgQK8"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        ) : null}
         <div className="middle-pos">
           <div className="who">
             Hi there, my name is{" "}

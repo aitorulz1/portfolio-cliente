@@ -134,28 +134,28 @@ export default function ByCategory() {
             <div className="container-regular-view">
               {porcategorias.map((porcategoria) => (
                 <CategoryItemsCol
-                key={porcategoria.id}
-                porcategoria={porcategoria}
+                  key={porcategoria.id}
+                  porcategoria={porcategoria}
                 />
               ))}
             </div>
           ) : (
             <div className="slider-content">
-                <StyleRoot>
-                  <Coverflow
-                    displayQuantityOfSide={3}
-                    navigation
-                    infiniteScroll
-                    enableHeading
-                  >
-                    {porcategorias.map((porcategoria) => (
-                      <CategoryItems
-                        key={porcategoria.id}
-                        porcategoria={porcategoria}
-                      />
-                    ))}
-                  </Coverflow>
-                </StyleRoot>
+              <StyleRoot>
+                <Coverflow
+                  displayQuantityOfSide={3}
+                  navigation
+                  infiniteScroll
+                  enableHeading
+                >
+                  {porcategorias.map((porcategoria) => (
+                    <CategoryItems
+                      key={porcategoria.id}
+                      porcategoria={porcategoria}
+                    />
+                  ))}
+                </Coverflow>
+              </StyleRoot>
             </div>
           )}
         </div>

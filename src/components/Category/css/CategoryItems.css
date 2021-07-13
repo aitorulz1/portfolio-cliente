@@ -101,6 +101,7 @@
   box-shadow: inset 05px 10px 20px #182a28, inset -10px -10px 20px #203836;
   transition: 1s;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .button-container-ver a {

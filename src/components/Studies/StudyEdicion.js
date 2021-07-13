@@ -160,7 +160,7 @@ export default function StudyEdicion(props) {
                   type="submit"
                   value="Subir Proyecto"
                 >
-                  Editar Proyecto
+                  Save Changes
                 </button>
               </form>
             </div>

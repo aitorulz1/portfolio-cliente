@@ -170,7 +170,7 @@ export default function JobEdicion(props) {
                   type="submit"
                   value="Subir Proyecto"
                 >
-                  Edit Job
+                  Save Changes
                 </button>
               </form>
             </div>

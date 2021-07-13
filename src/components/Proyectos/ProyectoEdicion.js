@@ -253,7 +253,7 @@ export default function ProyectoEdicion(props) {
                   type="submit"
                   value="Subir Proyecto"
                 >
-                  Guardar Cambios
+                  Save Changes
                 </button>
               </form>
             </div>
