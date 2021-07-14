@@ -9,7 +9,7 @@ import './css/Sidebar.css'
 
 export default function Sidebar() {
 
-    const [ abiertouno, setAbiertoUno ] = useState(false);
+    const [ abiertouno, setAbiertoUno ] = useState(true);
     const [ abiertodos, setAbiertoDos ] = useState(false);
 
     return (

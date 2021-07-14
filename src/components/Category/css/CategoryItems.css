@@ -15,14 +15,14 @@
   display: table;
   width: 95%;
   margin: 0 auto;
-  margin-bottom: -7%;
+  margin-bottom: -10%;
   z-index: 1;
 }
 
 .button-edit {
   width: 50%;
   float: left;
-  color: #253734;
+  color: #789489;
   text-align: left;
   font-size: 14px;
   -webkit-filter: drop-shadow(2px 4px 3px #b9b9b9);
@@ -32,7 +32,7 @@
 .button-delete {
   width: 50%;
   float: left;
-  color: #04201c;
+  color: #ffa1a1;
   text-align: right;
   -webkit-filter: drop-shadow(2px 4px 3px #b9b9b9);
   filter: drop-shadow(2px 4px 3px #b9b9b9);

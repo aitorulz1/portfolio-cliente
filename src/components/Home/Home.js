@@ -40,7 +40,7 @@ export default function Home() {
         {play ? (
           <div className="video-intro-container">
             <iframe
-              src="https://www.youtube.com/embed/1LboqhxgQK8"
+              src="https://www.youtube.com/embed/1LboqhxgQK8?autoplay=1&showinfo=0&controls=0&rel=0&modestbranding=0&loop=1&fs=1`"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen

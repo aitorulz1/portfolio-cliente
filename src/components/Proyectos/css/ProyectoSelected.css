@@ -23,6 +23,7 @@
   cursor: pointer;
   width: fit-content;
   color: #fdf283;
+  z-index: 1000;
 }
 
 .back-to:hover {
@@ -110,7 +111,7 @@ span.category:hover {
   width: 100%;
   text-align: center;
   display: table;
-  padding: 4.5% 0% 2% 0%;
+  padding: 20px 0% 2% 0%;
 }
 
 .skills {

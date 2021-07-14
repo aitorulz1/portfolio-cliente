@@ -18,10 +18,9 @@
   padding-top: 1%;
   padding-left: 3%;
   float: left;
-  color: #253734;
+  color: #789489;
   text-align: left;
   font-size: 14px;
-  filter: drop-shadow(2px 4px 3px #b9b9b9);
   cursor: pointer;
 }
 
@@ -29,9 +28,8 @@
   width: 50%;
   padding-top: 1%;
   float: left;
-  color: #04201c;
-  text-align: right;
-  filter: drop-shadow(2px 4px 3px #b9b9b9);
+  color: #ffa1a1;
+  text-align: right;  
   cursor: pointer;
 }
 

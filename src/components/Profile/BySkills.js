@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import clienteAxios from "../../service/axios";
 import { useParams } from "react-router-dom";
 import BySkillsChild from "./BySkillsChild";
+import { Link } from "react-router-dom";
 
 import Sidebar from "../Layout/Sidebar";
 import Topbar from "../Layout/Topbar";
@@ -35,6 +36,12 @@ export default function BySkills() {
         <Topbar />
 
         <div className="middle-container">
+            <Link to={`/profile/aitor-arina`} className="back-to">
+              <div className="arrow">
+                <i className="fa fa-arrow-circle-left" aria-hidden="true"></i>
+              </div>
+              <div className="back-txt">go back</div>
+            </Link>
           {getskills.map((skillx) => (
             <BySkillsChild key={skillx.id} skillx={skillx} />
           ))}

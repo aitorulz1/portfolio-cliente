@@ -32,12 +32,12 @@ export default function AllCategories({
   return (
     <div className="sidebar-block">
       <div className="main-burger-button">
-        <label htmlFor="check">
+        {/* <label htmlFor="check">
           <input type="checkbox" id="check" onClick={handleToggle} />
           <span></span>
           <span></span>
           <span></span>
-        </label>
+        </label> */}
       </div>
 
       {abiertouno ? (
