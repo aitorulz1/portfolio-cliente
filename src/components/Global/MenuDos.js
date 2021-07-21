@@ -31,10 +31,6 @@ export default function MenuDos({ setAbiertoDos, abiertouno, abiertodos }) {
           <div className="menu-items">
             <Link to={"/profile/aitor-arina"}>me</Link>
           </div>
-
-          <div className="menu-items">
-            <Link to={"/contact/aitor-arina"}>contact</Link>
-          </div>
         </div>
       ) : null}
     </div>

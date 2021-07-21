@@ -10,6 +10,10 @@
   margin-bottom: 2vh;
 }
 
+.responsive-log {
+  display: none;
+}
+
 .logo a {
   color: #fdf39d;
   text-decoration: none;
@@ -56,5 +60,22 @@
     border-bottom: 1px solid #faf6c8;
     width: 90%;
     margin: auto;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .responsive-log {
+    display: block;
+    width: 100px;
+    margin-top: calc(3vh - 0.5%);
+    margin-bottom: 2vh;
+    position: relative;
+    z-index: 1000;
+  }
+
+  .responsive-log a img {
+    width: 70%;
   }
 }

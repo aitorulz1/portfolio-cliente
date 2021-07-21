@@ -5,8 +5,7 @@ import {
     AGREGAR_PROYECTOS,
     OBTENER_PROYECTOS,
     ELIMINAR_PROYECTO,
-    PROYECTO_ACTUAL,
-    PROYECTO_ERROR
+    PROYECTO_ACTUAL
 } from '../../types';
 
 export default (state, action) => {

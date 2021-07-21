@@ -8,7 +8,7 @@ import Rightbar from "../Layout/Rightbar";
 export default function JobEdicion(props) {
   const [job, guardarJob] = useState({});
 
-  const { title, company, logo, description, background, techs, begin, end } =
+  const { title, company, description, background, techs, begin, end } =
     job;
 
   const id = props.match.params.job;

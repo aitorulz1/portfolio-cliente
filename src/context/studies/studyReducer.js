@@ -2,11 +2,7 @@ import React from 'react';
 
 import {
     AGREGAR_STUDIES,
-    OBTENER_STUDIES,
-    ELIMINAR_STUDIES,
-    EDITAR_STUDY,
-    STUDY_ACTUAL,
-    STUDY_ERROR
+    OBTENER_STUDIES
 } from '../../types'
 
 export default (state, action) => {

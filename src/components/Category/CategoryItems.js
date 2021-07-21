@@ -59,11 +59,11 @@ export default function CategoryItems({ porcategoria }) {
       </div>
 
       <div className="slider-container-button">
-        <div className="button-container-ver">
-          <Link to={`/proyecto/${id}`}>
+        <Link to={`/proyecto/${id}`}>
+          <div className="button-container-ver">
             <i className="far fa-eye"></i>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   );

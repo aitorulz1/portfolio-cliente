@@ -2,11 +2,7 @@ import React from 'react';
 
 import {
     AGREGAR_JOBS,
-    OBTENER_JOBS,
-    ELIMINAR_JOBS,
-    EDITAR_JOB,
-    JOB_ACTUAL,
-    JOB_ERROR
+    OBTENER_JOBS
 } from '../../types'
 
 export default (state, action) => {
