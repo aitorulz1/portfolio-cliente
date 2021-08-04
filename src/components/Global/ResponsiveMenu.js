@@ -44,23 +44,23 @@ export default function ResponsiveMenu() {
             : categories.map((categoryx) => (
                 <Menu key={categoryx.id} categoryx={categoryx} />
               ))}
-          <div className="menu-items">
-            <Link to={"/proyectos"}>all</Link>
+              <div className="menu-items">
+                <Link to={"/proyectos"}>all</Link>
+              </div>
+              <div className="menu-items-responsive">
+                <Link to={"/studies"}>studies</Link>
+              </div>
+              <div className="menu-items-responsive">
+                <Link to={"/jobs"}>jobs</Link>
+              </div>
+              <div className="menu-items-responsive">
+                <Link to={"/profile/aitor-arina"}>profile</Link>
+              </div>
+              <div className="menu-items-responsive">
+                <Link to={"/contact/aitor-arina"}>contact</Link>
+              </div>
           </div>
-          <div className="menu-items-responsive">
-            <Link to={"/studies"}>studies</Link>
-          </div>
-          <div className="menu-items-responsive">
-            <Link to={"/jobs"}>jobs</Link>
-          </div>
-          <div className="menu-items-responsive">
-            <Link to={"/profile/aitor-arina"}>profile</Link>
-          </div>
-          <div className="menu-items-responsive">
-            <Link to={"/contact/aitor-arina"}>contact</Link>
-          </div>
-        </div>
-      ) : null}
-    </div>
+        ) : null}
+      </div>
   );
 }
